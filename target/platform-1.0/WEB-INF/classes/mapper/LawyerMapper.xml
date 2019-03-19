@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.LawyerMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Lawyer" >
+    <result column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="name_" property="name" jdbcType="VARCHAR" />
+    <result column="phone_" property="phone" jdbcType="VARCHAR" />
+    <result column="wx_code_" property="wxCode" jdbcType="VARCHAR" />
+    <result column="wx_image" property="wxImage" jdbcType="VARCHAR" />
+
+    <result column="diqu_id_" property="diquId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.Lawyer" >
+    insert into lawyer (id_, name_, phone_, 
+      wx_code_, wx_image)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{wxCode,jdbcType=VARCHAR}, #{wxImage,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectByPrimaryKeyy" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+   select * from lawyer where  id_ = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String">
+   delete from lawyer where id_ = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+
+    select l.*,q.name as diquName from lawyer l left join  yd_diqu q on l.diqu_id_ = q.id
+     <where>
+
+
+       <if test="name != null and name != ''" >
+      and  l.name_ =     #{name,jdbcType=VARCHAR}
+       </if>
+       <if test="phone != null and phone != ''" >
+       and l.phone_ =  #{phone,jdbcType=VARCHAR}
+       </if>
+       <if test="wxCode != null" >
+      and l.wx_code_ =   #{wxCode,jdbcType=VARCHAR}
+       </if>
+       <if test="wxImage != null" >
+     and l.wx_imgae =     #{wxImage,jdbcType=VARCHAR}
+       </if>
+       <if test="createBy != null" >
+      and l.create_by =    #{createBy,jdbcType=VARCHAR}
+       </if>
+       <if test="createTime != null" >
+      and  l.create_time =    #{createTime,jdbcType=TIMESTAMP}
+       </if>
+       <if test="diquId != null" >
+         and l.diqu_id_ =  #{diquId,jdbcType=VARCHAR}
+       </if>
+
+     </where>
+
+  </select>
+
+
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.Lawyer" >
+     update  lawyer
+       <set>
+
+         <if test="name != null" >
+          name_ =  #{name,jdbcType=VARCHAR},
+         </if>
+         <if test="phone != null" >
+         phone_  =  #{phone,jdbcType=VARCHAR},
+         </if>
+         <if test="wxCode != null" >
+          wx_code_ =  #{wxCode,jdbcType=VARCHAR},
+         </if>
+         <if test="wxImage != null" >
+         wx_image =   #{wxImage,jdbcType=VARCHAR},
+         </if>
+         <if test="createBy != null" >
+         create_by =   #{createBy,jdbcType=VARCHAR},
+         </if>
+         <if test="createTime != null" >
+         create_time =   #{createTime,jdbcType=TIMESTAMP},
+         </if>
+         <if test="diquId != null" >
+          diqu_id_ =   #{diquId,jdbcType=VARCHAR},
+         </if>
+       </set>
+  where id_ = #{id,jdbcType=VARCHAR}
+  </update>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.Lawyer" >
+    insert into lawyer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id_,
+      </if>
+      <if test="name != null" >
+        name_,
+      </if>
+      <if test="phone != null" >
+        phone_,
+      </if>
+      <if test="wxCode != null" >
+        wx_code_,
+      </if>
+      <if test="wxImage != null" >
+        wx_image,
+      </if>
+
+
+      <if test="createBy != null" >
+        create_by,
+      </if>
+
+      <if test="createTime != null" >
+        create_time,
+      </if>
+
+      <if test="diquId != null" >
+        diqu_id_,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="wxCode != null" >
+        #{wxCode,jdbcType=VARCHAR},
+      </if>
+      <if test="wxImage != null" >
+        #{wxImage,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="diquId != null" >
+        #{diquId,jdbcType=VARCHAR},
+      </if>
+
+    </trim>
+  </insert>
+</mapper>

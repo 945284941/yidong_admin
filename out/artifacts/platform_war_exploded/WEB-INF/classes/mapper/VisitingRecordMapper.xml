@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.VisitingRecordMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.VisitingRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="action_name" property="actionName" jdbcType="VARCHAR" />
+    <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <resultMap id="BaseResultMapWithUserName" type="cn.ctrl.platform.orm.entity.VisitingRecord" extends="BaseResultMap">
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="truename" property="truename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, action_name, create_by, create_time
+  </sql>
+  <select id="gainVisitingRecordId" resultMap="BaseResultMapWithUserName" parameterType="Map">
+    select r.*,a.username,a.truename FROM visiting_record r left join sys_user a on a.id = r.create_by
+    WHERE 1=1
+    <if test="trueName != null and trueName != '' ">
+      and a.truename like '%${trueName}%'
+    </if>
+    <if test="startTime != null and startTime != '' ">
+      and r.create_time &gt;= #{startTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="endTime != null and endTime != '' ">
+      and r.create_time &lt;= #{endTime,jdbcType=TIMESTAMP}
+    </if>
+    order by r.create_time desc
+  </select>
+</mapper>

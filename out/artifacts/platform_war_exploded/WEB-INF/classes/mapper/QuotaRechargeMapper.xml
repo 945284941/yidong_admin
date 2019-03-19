@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.QuotaRechargeMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.QuotaRecharge" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="actual_recharge" property="actualRecharge" jdbcType="DOUBLE" />
+    <result column="should_recharge" property="shouldRecharge" jdbcType="DOUBLE" />
+    <result column="is_del" property="isDel" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_userid" property="createUserid" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, actual_recharge, should_recharge, is_del, create_time, create_userid
+  </sql>
+
+  <select id="selectRechargeList" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from quota_recharge
+    where 1 = 1
+    <if test="name != null and name != '' ">
+      and create_userid like '%${name}%'
+    </if>
+    order by create_time desc
+  </select>
+
+  <delete id="deleteRechargeById" parameterType="string" >
+    delete from quota_recharge
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insertRecharge" parameterType="cn.ctrl.platform.orm.entity.QuotaRecharge" >
+    insert into quota_recharge
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="actualRecharge != null" >
+        actual_recharge,
+      </if>
+      <if test="shouldRecharge != null" >
+        should_recharge,
+      </if>
+      <if test="isDel != null" >
+        is_del,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="createUserid != null" >
+        create_userid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="actualRecharge != null" >
+        #{actualRecharge,jdbcType=DOUBLE},
+      </if>
+      <if test="shouldRecharge != null" >
+        #{shouldRecharge,jdbcType=DOUBLE},
+      </if>
+      <if test="isDel != null" >
+        #{isDel,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserid != null" >
+        #{createUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectRechargeById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from quota_recharge
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateRecharge" parameterType="cn.ctrl.platform.orm.entity.QuotaRecharge" >
+    update quota_recharge
+    <set >
+      <if test="actualRecharge != null" >
+        actual_recharge = #{actualRecharge,jdbcType=DOUBLE},
+      </if>
+      <if test="shouldRecharge != null" >
+        should_recharge = #{shouldRecharge,jdbcType=DOUBLE},
+      </if>
+      <if test="isDel != null" >
+        is_del = #{isDel,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserid != null" >
+        create_userid = #{createUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

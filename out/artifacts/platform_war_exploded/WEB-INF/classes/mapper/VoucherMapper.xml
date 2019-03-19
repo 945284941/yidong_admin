@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.VoucherMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Voucher" >
+    <id column="voucher_id" property="voucherId" jdbcType="VARCHAR" />
+    <result column="seller_id" property="sellerId" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="DECIMAL" />
+    <result column="start_date" property="startDate" jdbcType="TIMESTAMP" />
+    <result column="end_date" property="endDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    voucher_id, seller_id, title, remark, type, money, start_date, end_date
+  </sql>
+
+  <select id="selectVoucherList" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from voucher
+    where seller_id = #{sellerId,jdbcType=VARCHAR}
+    <if test="title != null and title != '' ">
+      and title like '%${title}%'
+    </if>
+  </select>
+
+  <delete id="deleteVoucher" parameterType="java.lang.String" >
+    delete from voucher
+    where voucher_id = #{voucherId,jdbcType=VARCHAR}
+  </delete>
+
+
+  <delete id="deleteVoucherBySellerId" parameterType="java.lang.String" >
+    delete from voucher
+    where seller_id = #{sellerId,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insertVoucher" parameterType="cn.ctrl.platform.orm.entity.Voucher" >
+    insert into voucher
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="voucherId != null" >
+        voucher_id,
+      </if>
+      <if test="sellerId != null" >
+        seller_id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="money != null" >
+        money,
+      </if>
+      <if test="startDate != null" >
+        start_date,
+      </if>
+      <if test="endDate != null" >
+        end_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="voucherId != null" >
+        #{voucherId,jdbcType=VARCHAR},
+      </if>
+      <if test="sellerId != null" >
+        #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="startDate != null" >
+        #{startDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endDate != null" >
+        #{endDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectVoucherById" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from voucher
+    where voucher_id = #{voucherId,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateVoucher" parameterType="cn.ctrl.platform.orm.entity.Voucher" >
+    update voucher
+    <set >
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null" >
+        money = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="startDate != null" >
+        start_date = #{startDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endDate != null" >
+        end_date = #{endDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where voucher_id = #{voucherId,jdbcType=VARCHAR}
+  </update>
+
+</mapper>

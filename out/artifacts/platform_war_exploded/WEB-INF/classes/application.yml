@@ -1,0 +1,93 @@
+server:
+  port: 8080
+
+spring:
+  freemarker:
+    content-type: text/html
+    cache: false
+    charset: utf-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    check-template-location: true
+    request-context-attribute: request
+  #redis
+  redis:
+    host: localhost
+    port: 6379
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+  #数据源
+  datasource:
+     url: jdbc:mysql://mysql.chengjian.javactrl.com:3306/ekt?useUnicode=true&characterEncoding=utf-8
+     username: ekt
+     password: ekt@2018
+     driver-class-name: com.mysql.jdbc.Driver
+     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: platform
+
+logging:
+  level:
+    root: INFO
+    tk.mybatis: TRACE
+    cn.ctrl: DEBUG
+  path: log
+#验证码
+kaptcha:
+  session:
+    key: kaptcha.code
+  #border: no
+  #渲染效果：水纹：WaterRipple；鱼眼：FishEyeGimpy；阴影：ShadowGimpy
+  obscurificator:
+    impl: com.google.code.kaptcha.impl.WaterRipple
+  #不要噪点
+  noise:
+    impl: com.google.code.kaptcha.impl.NoNoise
+  image:
+    width: 90
+    height: 33
+  textproducer:
+    font:
+      size: 25
+      color: black
+    char:
+      length: 4
+      space: 5
+  #和登录框背景颜色一致
+  background:
+    clear:
+      from: 247,247,247
+      to: 247,247,247
+
+#mybatis 配置文件
+mybatis:
+    type-aliases-package: cn.ctrl.platform.orm.entity
+    mapper-locations: classpath:mapper/*.xml
+
+mapper:
+    mappers:
+        - cn.ctrl.platform.component.basic.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+#shiro
+shiro.login.url: /login
+shiro.loginsuccess.url: /
+shiro.unauthorize.url: /unauthorize
+
+#七牛
+qiniu.accesskey: tshdx5C1TMKJqHXxkX3Xl4o7uxsiT7nOgM-z_69C
+qiniu.secretkey: UdwyxcUYLDNtfJGLUGJz-t_GxXqce8O0-l5uM6L7
+qiniu.bucketname: ektimg
+qiniu.serverurl: http://p9hkbnwvn.bkt.clouddn.com
+qiniu.localurl: /home/qiniu/
+qiniu.directory.image: image

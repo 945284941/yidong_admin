@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.CarouselMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Carousel" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="seller_id" property="sellerId" jdbcType="VARCHAR" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="points_id" property="pointsId" jdbcType="VARCHAR" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="href" property="href" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, seller_id, product_id, points_id, img_url, type, href, remark
+  </sql>
+
+
+  <select id="selectCarouselList" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from carousel
+    where 1 = 1
+    <if test="Type != null and Type != '' ">
+      and type like '%${Type}%'
+    </if>
+  </select>
+
+  <insert id="insertCarousel" parameterType="cn.ctrl.platform.orm.entity.Carousel">
+    insert into carousel
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sellerId != null" >
+        seller_id,
+      </if>
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="pointsId != null" >
+        points_id,
+      </if>
+      <if test="imgUrl != null" >
+        img_url,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="href != null" >
+        href,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sellerId != null" >
+        #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null" >
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="pointsId != null" >
+        #{pointsId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="href != null" >
+        #{href,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="deleteCarouselById" parameterType="string">
+     delete from carousel
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="selectCarouselById" resultMap="BaseResultMap" parameterType="string">
+    select
+    <include refid="Base_Column_List" />
+    from carousel
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateCarouselById" parameterType="cn.ctrl.platform.orm.entity.Carousel" >
+    update carousel
+    <set >
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="pointsId != null" >
+        points_id = #{pointsId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="href != null" >
+        href = #{href,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+  <select id="selectSellerCarouselById" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from carousel
+    where seller_id = #{sellerId,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="delectSellerCarouselById" parameterType="string">
+     delete from carousel
+    where seller_id = #{sellerId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deleteProductCarouselById" parameterType="string">
+     delete from carousel
+    where product_id = #{productId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deletePointsProductCarouselById" parameterType="string">
+     delete from carousel
+    where points_id = #{pointsId,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="selectProductCarouselById" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from carousel
+    where product_id = #{productId,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectPointsProductCarouselById" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from carousel
+    where points_id = #{pointsId,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateSellerCarousel" parameterType="Map">
+    update carousel
+    <set >
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="pointsId != null" >
+        points_id = #{pointsId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="href != null" >
+        href = #{href,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where seller_id = #{sellerId,jdbcType=VARCHAR}
+  </update>
+
+
+  <update id="updateProductCarousel" parameterType="Map">
+    update carousel
+    <set >
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="pointsId != null" >
+        points_id = #{pointsId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="href != null" >
+        href = #{href,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where product_id = #{productId,jdbcType=VARCHAR}
+  </update>
+
+
+  <update id="updatePointsProductCarousel" parameterType="Map">
+    update carousel
+    <set >
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="productId != null" >
+        product_id = #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="pointsId != null" >
+        points_id = #{pointsId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="href != null" >
+        href = #{href,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where points_id = #{pointsId,jdbcType=VARCHAR}
+  </update>
+</mapper>

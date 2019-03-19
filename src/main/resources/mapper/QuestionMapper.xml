@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.QuestionMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Question" >
+    <result column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="create_time_" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_by_" property="createBy" jdbcType="VARCHAR" />
+    <result column="lawyer_id_" property="lawyerId" jdbcType="VARCHAR" />
+    <result column="question_" property="question" jdbcType="VARCHAR" />
+    <result column="answer" property="answer" jdbcType="VARCHAR" />
+    <result column="question_time_" property="questionTime" jdbcType="TIMESTAMP" />
+    <result column="state_" property="state" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.Question" >
+    insert into question (id_, create_time_, create_by_, 
+      lawyer_id_, question_, answer, 
+      question_time_)
+    values (#{id,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, 
+      #{lawyerId,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
+      #{questionTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.Question" >
+    insert into question
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id_,
+      </if>
+      <if test="createTime != null" >
+        create_time_,
+      </if>
+      <if test="createBy != null" >
+        create_by_,
+      </if>
+      <if test="lawyerId != null" >
+        lawyer_id_,
+      </if>
+      <if test="question != null" >
+        question_,
+      </if>
+      <if test="answer != null" >
+        answer,
+      </if>
+      <if test="questionTime != null" >
+        question_time_,
+      </if>
+      <if test="state != null" >
+        state_,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lawyerId != null" >
+        #{lawyerId,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null" >
+        #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null" >
+        #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="questionTime != null" >
+        #{questionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectByPrimaryKeyy" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+   select * from question where  id_ = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String">
+   delete from question where id_ = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+
+    select q.*,  m.name as memberName ,l.name_ as lawyerName   from question q
+        left join  yd_yuangong m  on q.create_by_ = m.id
+        left join lawyer l on l.id_ = q.lawyer_id_ left join yd_bumen b on m.department_id = b.id
+    <where>
+      <if test="diquId != null" >
+        and b.diqu_id =   #{diquId,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createTime != null" >
+      and q.create_time =   #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="createBy != null" >
+        and q.create_b_ =    #{createBy,jdbcType=VARCHAR}
+      </if>
+      <if test="lawyerId != null and lawyerId != ''" >
+        and q.lawyer_id_ =   #{lawyerId,jdbcType=VARCHAR}
+      </if>
+      <if test="question != null and question != '' " >
+        and q.question_ like '%${question}%'
+      </if>
+      <if test="answer != null" >
+        and q.answer =   #{answer,jdbcType=VARCHAR}
+      </if>
+      <if test="questionTime != null" >
+        and q.question_time_ =   #{questionTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="state != null and state  != '' " >
+        and q.state_ =   #{state,jdbcType=VARCHAR}
+      </if>
+    </where>
+
+  </select>
+
+
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.Question" >
+    update  question
+    <set>
+      <if test="createTime != null" >
+        create_time =   #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+       create_b_ =    #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lawyerId != null" >
+        lawyer_id_ =   #{lawyerId,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null " >
+     question_ =   #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null" >
+        answer =   #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="questionTime != null" >
+        question_time_ =   #{questionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        state_ =   #{state,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id_ = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

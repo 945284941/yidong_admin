@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.ProductTypeMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.ProductType" >
+    <id column="type_id" property="typeId" jdbcType="VARCHAR" />
+    <result column="type_class_id" property="typeClassId" jdbcType="VARCHAR" />
+    <result column="type_name" property="typeName" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    type_id, type_class_id, type_name
+  </sql>
+
+  <select id="selectProductTypeList" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from product_type
+  </select>
+
+
+  <select id="selectProductTypeByName" resultMap="BaseResultMap" parameterType="Map">
+    select
+    <include refid="Base_Column_List" />
+    from product_type
+    where 1 = 1
+    <if test="Name != null and Name != '' ">
+      and type_name like '%${Name}%'
+    </if>
+  </select>
+
+  <insert id="insertProductType" parameterType="Map">
+    insert into product_type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="typeClassId != null" >
+        type_class_id,
+      </if>
+      <if test="typeName != null" >
+        type_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="typeId != null" >
+        #{typeId,jdbcType=VARCHAR},
+      </if>
+      <if test="typeClassId != null" >
+        #{typeClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="typeName != null" >
+        #{typeName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="deleteProductTypeById" parameterType="string">
+    delete from product_type
+    where type_id = #{typeId,jdbcType=VARCHAR}
+  </delete>
+
+  <delete id="deleteProductTypeByTypeClassId" parameterType="string">
+    delete from product_type
+    where type_class_id = #{type_class_id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="selectProductTypeById" resultMap="BaseResultMap"  parameterType="string">
+    select
+    <include refid="Base_Column_List" />
+    from product_type
+    where type_id = #{typeId,jdbcType=VARCHAR}
+  </select>
+
+ <update id="updateProductType" parameterType="Map">
+   update product_type
+   <set >
+     <if test="typeClassId != null" >
+       type_class_id = #{typeClassId,jdbcType=VARCHAR},
+     </if>
+     <if test="typeName != null" >
+       type_name = #{typeName,jdbcType=VARCHAR},
+     </if>
+   </set>
+   where type_id = #{typeId,jdbcType=VARCHAR}
+ </update>
+
+</mapper>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdHuodongYuangongMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdHuodongYuangong" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="huodong_id" property="huodongId" jdbcType="VARCHAR" />
+    <result column="yuangong_id" property="yuangongId" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, huodong_id, yuangong_id, status
+  </sql>
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+    y.* ,g.name as name ,g.dianhua
+    from yd_huodong_yuangong y left join yd_yuangong g on
+      y.yuangong_id = g.id
+    <where>
+      <if test="huodongId != null" >
+     and   y.huodong_id = #{huodongId,jdbcType=VARCHAR}
+      </if>
+      <if test="yuangongId != null" >
+        and   y.yuangong_id = #{yuangongId,jdbcType=VARCHAR}
+      </if>
+      <if test="status != null" >
+        and   y.status = #{status,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from yd_huodong_yuangong
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_huodong_yuangong
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdHuodongYuangong" >
+    insert into yd_huodong_yuangong (id, huodong_id, yuangong_id, 
+      status)
+    values (#{id,jdbcType=VARCHAR}, #{huodongId,jdbcType=VARCHAR}, #{yuangongId,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodongYuangong" >
+    insert into yd_huodong_yuangong
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="huodongId != null" >
+        huodong_id,
+      </if>
+      <if test="yuangongId != null" >
+        yuangong_id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="huodongId != null" >
+        #{huodongId,jdbcType=VARCHAR},
+      </if>
+      <if test="yuangongId != null" >
+        #{yuangongId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodongYuangong" >
+    update yd_huodong_yuangong
+    <set >
+      <if test="huodongId != null" >
+        huodong_id = #{huodongId,jdbcType=VARCHAR},
+      </if>
+      <if test="yuangongId != null" >
+        yuangong_id = #{yuangongId,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdHuodongYuangong" >
+    update yd_huodong_yuangong
+    set huodong_id = #{huodongId,jdbcType=VARCHAR},
+      yuangong_id = #{yuangongId,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

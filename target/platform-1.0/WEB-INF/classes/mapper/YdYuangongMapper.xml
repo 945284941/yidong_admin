@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdYuangongMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdYuangong" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="dianhua" property="dianhua" jdbcType="VARCHAR" />
+    <result column="department_id" property="departmentId" jdbcType="VARCHAR" />
+    <result column="gonghao" property="gonghao" jdbcType="VARCHAR" />
+    <result column="zhiwei_id" property="zhiweiId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, dianhua, department_id, gonghao, zhiwei_id
+  </sql>
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+
+    select y.*,z.name as zhiWeiName,b.name as departmentName,b.diqu_id
+
+    from yd_yuangong y left join yd_zhiwei z on y.zhiwei_id = z.id
+
+     left join yd_bumen b on y.department_id = b.id
+     <where>
+       <if test="diquId != null and diquId != '' " >
+         and  b.diqu_id = #{diquId,jdbcType=VARCHAR}
+       </if>
+
+       <if test="departmentName != null and departmentName != '' " >
+         and  b.name like '%${departmentName}%'
+       </if>
+       <if test="zhiWeiName != null and zhiWeiName != '' " >
+         and  z.name like '%${zhiWeiName}%'
+       </if>
+       <if test="name != null and name != '' " >
+       and  y.name like '%${name}%'
+       </if>
+       <if test="dianhua != null and dianhua != '' " >
+         and  y.dianhua = #{dianhua,jdbcType=VARCHAR}
+       </if>
+       <if test="departmentId != null" >
+         and  y.department_id = #{departmentId,jdbcType=VARCHAR}
+       </if>
+       <if test="gonghao != null and gonghao != '' " >
+         and  y.gonghao = #{gonghao,jdbcType=VARCHAR}
+       </if>
+       <if test="zhiweiId != null" >
+         and  y.zhiwei_id = #{zhiweiId,jdbcType=VARCHAR}
+       </if>
+     </where>
+
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from yd_yuangong
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_yuangong
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdYuangong" >
+    insert into yd_yuangong (id, name, dianhua, 
+      department_id, gonghao, zhiwei_id
+      )
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{dianhua,jdbcType=VARCHAR}, 
+      #{departmentId,jdbcType=VARCHAR}, #{gonghao,jdbcType=VARCHAR}, #{zhiweiId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdYuangong" >
+    insert into yd_yuangong
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="dianhua != null" >
+        dianhua,
+      </if>
+      <if test="departmentId != null" >
+        department_id,
+      </if>
+      <if test="gonghao != null" >
+        gonghao,
+      </if>
+      <if test="zhiweiId != null" >
+        zhiwei_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dianhua != null" >
+        #{dianhua,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null" >
+        #{departmentId,jdbcType=VARCHAR},
+      </if>
+      <if test="gonghao != null" >
+        #{gonghao,jdbcType=VARCHAR},
+      </if>
+      <if test="zhiweiId != null" >
+        #{zhiweiId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdYuangong" >
+    update yd_yuangong
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dianhua != null" >
+        dianhua = #{dianhua,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null" >
+        department_id = #{departmentId,jdbcType=VARCHAR},
+      </if>
+      <if test="gonghao != null" >
+        gonghao = #{gonghao,jdbcType=VARCHAR},
+      </if>
+      <if test="zhiweiId != null" >
+        zhiwei_id = #{zhiweiId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdYuangong" >
+    update yd_yuangong
+    set name = #{name,jdbcType=VARCHAR},
+      dianhua = #{dianhua,jdbcType=VARCHAR},
+      department_id = #{departmentId,jdbcType=VARCHAR},
+      gonghao = #{gonghao,jdbcType=VARCHAR},
+      zhiwei_id = #{zhiweiId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

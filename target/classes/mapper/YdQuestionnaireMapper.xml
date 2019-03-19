@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdQuestionnaireMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdQuestionnaire" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="community_id" property="communityId" jdbcType="VARCHAR" />
+    <result column="release_state" property="releaseState" jdbcType="VARCHAR" />
+    <result column="questionnaire_type" property="questionnaireType" jdbcType="VARCHAR" />
+    <result column="admin_id" property="adminId" jdbcType="VARCHAR" />
+    <result column="disabled" property="disabled" jdbcType="VARCHAR" />
+    <result column="miaoshu" property="miaoshu" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, create_time, community_id, release_state, questionnaire_type, admin_id, 
+    disabled,miaoshu
+  </sql>
+  <select id="findTongjiByQuYu" resultMap="BaseResultMap">
+
+    select    ifnull(a.num,0) as num ,d.name as title from
+     yd_diqu d
+    left join   (
+    select community_id,count(*) as num from yd_questionnaire group by community_id
+    )a on a.community_id = d.id
+  </select>
+
+  <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    q.*,u.truename as createName,d.name as diQuName
+
+    from yd_questionnaire q left join sys_user u  on q.admin_id =  u.id
+     left join yd_diqu d on q.community_id = d.id
+
+    <where>
+
+      <if test="title != null and title != '' " >
+        and  q.title like '%${title}%'
+      </if>
+      <if test="diQuName != null and diQuName != '' " >
+        and  d.name like '%${diQuName}%'
+      </if>
+      <if test="createTime != null" >
+        and  q.create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="communityId != null and communityId" >
+        and  q.community_id = #{communityId,jdbcType=VARCHAR}
+      </if>
+      <if test="releaseState != null and releaseState != '' " >
+        and  q.release_state = #{releaseState,jdbcType=VARCHAR}
+      </if>
+      <if test="questionnaireType != null and questionnaireType != '' " >
+        questionnaire_type = #{questionnaireType,jdbcType=VARCHAR}
+      </if>
+      <if test="adminId != null" >
+        and  q.admin_id = #{adminId,jdbcType=VARCHAR}
+      </if>
+      <if test="disabled != null" >
+        and  q.disabled = #{disabled,jdbcType=VARCHAR}
+      </if>
+
+    </where>
+    order by q.create_time desc
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+   select
+    q.*,u.truename as createName,d.name as diQuName
+
+    from yd_questionnaire q left join sys_user u  on q.admin_id =  u.id
+     left join yd_diqu d on q.community_id = d.id
+
+
+
+    where q.id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_questionnaire
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaire" >
+    insert into yd_questionnaire (id, title, create_time, 
+      community_id, release_state, questionnaire_type, 
+      admin_id, disabled)
+    values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{communityId,jdbcType=VARCHAR}, #{releaseState,jdbcType=VARCHAR}, #{questionnaireType,jdbcType=VARCHAR}, 
+      #{adminId,jdbcType=VARCHAR}, #{disabled,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaire" >
+    insert into yd_questionnaire
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="communityId != null" >
+        community_id,
+      </if>
+      <if test="releaseState != null" >
+        release_state,
+      </if>
+      <if test="questionnaireType != null" >
+        questionnaire_type,
+      </if>
+      <if test="adminId != null" >
+        admin_id,
+      </if>
+      <if test="disabled != null" >
+      disabled,
+    </if>
+      <if test="miaoshu != null" >
+        miaoshu,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="communityId != null" >
+        #{communityId,jdbcType=VARCHAR},
+      </if>
+      <if test="releaseState != null" >
+        #{releaseState,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireType != null" >
+        #{questionnaireType,jdbcType=VARCHAR},
+      </if>
+      <if test="adminId != null" >
+        #{adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="disabled != null" >
+        #{disabled,jdbcType=VARCHAR},
+      </if>
+      <if test="miaoshu != null" >
+
+        #{miaoshu,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaire" >
+    update yd_questionnaire
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="communityId != null" >
+        community_id = #{communityId,jdbcType=VARCHAR},
+      </if>
+      <if test="releaseState != null" >
+        release_state = #{releaseState,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireType != null" >
+        questionnaire_type = #{questionnaireType,jdbcType=VARCHAR},
+      </if>
+      <if test="adminId != null" >
+        admin_id = #{adminId,jdbcType=VARCHAR},
+      </if>
+      <if test="disabled != null" >
+        disabled = #{disabled,jdbcType=VARCHAR},
+      </if>
+      <if test="miaoshu != null" >
+
+        miaoshu = #{miaoshu,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaire" >
+    update yd_questionnaire
+    set title = #{title,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      community_id = #{communityId,jdbcType=VARCHAR},
+      release_state = #{releaseState,jdbcType=VARCHAR},
+      questionnaire_type = #{questionnaireType,jdbcType=VARCHAR},
+      admin_id = #{adminId,jdbcType=VARCHAR},
+      disabled = #{disabled,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

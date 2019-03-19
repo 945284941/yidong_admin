@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdNewsMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdNews" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="diqu_id" property="diquId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="create_by_" property="createBy" jdbcType="VARCHAR" />
+    <result column="cat_id_" property="catId" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="cn.ctrl.platform.orm.entity.YdNews" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, diqu_id, create_time, img_url,create_by_,cat_id_
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="findAllCount" resultType="long" parameterType="java.util.Map">
+    select  count(*) from yd_news
+  </select>
+  <select id="findTongjiByQuYu" resultMap="BaseResultMap">
+
+    select  ifnull(a.num,0) as num ,d.name as name from
+     yd_diqu d
+    left join   (
+    select diqu_id,count(*) as num from yd_news group by diqu_id
+    )a on a.diqu_id = d.id
+  </select>
+
+  <select id="findAll" resultMap="ResultMapWithBLOBs" parameterType="java.util.Map">
+
+    select
+     n.* ,u.truename as createName , d.name as diquName ,c.name as newCatName
+    from yd_news n left join  sys_user u on n.create_by_ = u.id
+
+    left join yd_diqu d on d.id = n.diqu_id left join  yd_new_cat c on c.id = n.cat_id_
+    <where>
+      <if test="name != null and name != '' " >
+      and   n.name like '%${name}%'
+    </if>
+      <if test="diquName != null and diquName != '' " >
+        and   d.name like '%${diquName}%'
+      </if>
+      <if test="diquId != null" >
+        and  n.diqu_id = #{diquId,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null" >
+        and  n.create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="imgUrl != null" >
+        and   n.img_url = #{imgUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="content != null" >
+     and   n.content = #{content,jdbcType=LONGVARCHAR}
+      </if>
+    </where>
+     order by create_time desc
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from yd_news
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_news
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
+    insert into yd_news (id, name, diqu_id, 
+      create_time, img_url, content
+      )
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{diquId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{imgUrl,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
+    insert into yd_news
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="diquId != null" >
+        diqu_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="imgUrl != null" >
+        img_url,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="createBy != null" >
+        create_by_,
+      </if>
+      <if test="catId != null" >
+        cat_id_,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+        #{diquId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="catId != null" >
+        #{catId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
+    update yd_news
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+        diqu_id = #{diquId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="catId != null" >
+       cat_id_ =  #{catId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBss" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
+    update yd_news
+    set name = #{name,jdbcType=VARCHAR},
+      diqu_id = #{diquId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      img_url = #{imgUrl,jdbcType=VARCHAR},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
+    update yd_news
+    set name = #{name,jdbcType=VARCHAR},
+      diqu_id = #{diquId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      img_url = #{imgUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

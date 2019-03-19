@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ctrl.platform.orm.mapper.SysRoleMapper">
+    <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.SysRole">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="pid" jdbcType="VARCHAR" property="pid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="ptree" jdbcType="VARCHAR" property="ptree"/>
+        <result column="deep" jdbcType="INTEGER" property="deep"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        id, pid, name, ptree, deep, status, del_flag, create_time, create_by, update_time,
+        update_by, remark
+    </sql>
+    <!--wanghuifeng  获取我所拥有的角色-->
+    <select id="getRolesByUserId" parameterType="String" resultMap="BaseResultMap">
+        select DISTINCT role.* from role_and_user roleuser,sys_role role,sys_user sysuser where roleuser.user_id = sysuser.id and roleuser.role_id = role.id and sysuser.id = #{id}
+     </select>
+    <select id="getRoleByUserId" parameterType="String" resultMap="BaseResultMap">
+        select DISTINCT role.* from role_and_user roleuser,sys_role role,sys_user sysuser where roleuser.user_id = sysuser.id and roleuser.role_id = role.id and sysuser.id = #{id}
+    </select>
+    <!--wanghuifeng  根据父类查找子类角色-->
+    <select id="getSubRolesByParentRole" parameterType="cn.ctrl.platform.orm.entity.SysRole" resultMap="BaseResultMap">
+        select * from sys_role where ptree LIKE CONCAT(#{ptree},'%')
+    </select>
+    <!--wanghuifeng  获取由我创建的角色-->
+    <select id="getRolesCreateByMe"  parameterType="String" resultMap="BaseResultMap">
+        select * FROM  sys_role WHERE create_by=#{id}
+    </select>
+
+    <!--zhangya  通过角色名称获取角色-->
+    <select id="selectByName"  parameterType="String" resultMap="BaseResultMap">
+        select * FROM  sys_role WHERE name=#{name}
+    </select>
+</mapper>

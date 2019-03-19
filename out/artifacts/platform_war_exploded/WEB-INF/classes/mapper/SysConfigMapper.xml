@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.SysConfigMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.SysConfig" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="value_" property="value" jdbcType="VARCHAR" />
+    <result column="key_" property="key" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, value_, key_, remark
+  </sql>
+
+  <select id="selectValueByKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_config
+    where key_ = #{key_,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectConfigByKey" resultMap="BaseResultMap" parameterType="Map">
+    select
+    <include refid="Base_Column_List" />
+    from sys_config
+    where 1 = 1
+    <if test="key != null and key != '' ">
+      and key_ like '%${key}%'
+    </if>
+  </select>
+
+  <insert id="insertConfig" parameterType="cn.ctrl.platform.orm.entity.SysConfig" >
+    insert into sys_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="value != null" >
+        value_,
+      </if>
+      <if test="key != null" >
+        key_,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null" >
+        #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="deleteConfigById" parameterType="string">
+      delete from sys_config
+      where id = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="selectConfigById" resultMap="BaseResultMap" parameterType="Map">
+    select
+    <include refid="Base_Column_List" />
+    from sys_config
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <update id="updateConfig" parameterType="Map">
+    update sys_config
+    <set >
+      <if test="value != null" >
+        value_ = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null" >
+        key_ = #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

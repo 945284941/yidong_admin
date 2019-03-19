@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdHuodongMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdHuodong" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="read_num" property="readNum" jdbcType="INTEGER" />
+    <result column="cat_id" property="catId" jdbcType="VARCHAR" />
+    <result column="create_id" property="createId" jdbcType="VARCHAR" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="check_status" property="checkStatus" jdbcType="VARCHAR" />
+    <result column="diqu_id" property="diquId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, content, read_num, cat_id, create_id, img_url, create_time, start_time, 
+    end_time, check_status, diqu_id
+  </sql>
+
+  <select id="findTongjiByQuYu" resultMap="BaseResultMap">
+
+    select    ifnull(a.num,0) as num ,d.name as title from
+     yd_diqu d
+    left join   (
+    select diqu_id,count(*) as num from yd_huodong group by diqu_id
+    )a on a.diqu_id = d.id
+  </select>
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select
+   y.* , c.name as catName,q.name as diQuName,u.truename as  createName
+    from yd_huodong y
+
+       left join yd_huodong_cat c on y.cat_id = c.id
+
+       left join sys_user u on u.id = y.create_id
+
+       left join yd_diqu q on q.id = y.diqu_id
+
+    <where>
+      <if test="title != null and title != '' " >
+      and  y.title like '%${title}%'
+      </if>
+      <if test="diQuName != null and diQuName != '' " >
+        and  q.name like '%${diQuName}%'
+      </if>
+      <if test="content != null" >
+        and y.content = #{content,jdbcType=VARCHAR}
+      </if>
+      <if test="readNum != null" >
+        and  y.read_num = #{readNum,jdbcType=INTEGER}
+      </if>
+      <if test="catId != null and catId != '' " >
+        and y.cat_id = #{catId,jdbcType=VARCHAR}
+      </if>
+      <if test="createId != null" >
+        and y.create_id = #{createId,jdbcType=INTEGER}
+      </if>
+      <if test="imgUrl != null" >
+        and  y.img_url = #{imgUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="createTime != null" >
+        and  y.create_time = #{createTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="startTime != null" >
+        and y.start_time = #{startTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="endTime != null" >
+        and y.end_time = #{endTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="checkStatus != null and checkStatus != '' " >
+        and y.check_status = #{checkStatus,jdbcType=VARCHAR}
+      </if>
+      <if test="diquId != null" >
+        and y.diqu_id = #{diquId,jdbcType=VARCHAR}
+      </if>
+    </where>
+    order by create_time desc
+  </select>
+
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from yd_huodong
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_huodong
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdHuodong" >
+    insert into yd_huodong (id, title, content, 
+      read_num, cat_id, create_id, 
+      img_url, create_time, start_time, 
+      end_time, check_status, diqu_id
+      )
+    values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{readNum,jdbcType=INTEGER}, #{catId,jdbcType=VARCHAR}, #{createId,jdbcType=INTEGER}, 
+      #{imgUrl,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{startTime,jdbcType=TIMESTAMP}, 
+      #{endTime,jdbcType=TIMESTAMP}, #{checkStatus,jdbcType=VARCHAR}, #{diquId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodong" >
+    insert into yd_huodong
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="readNum != null" >
+        read_num,
+      </if>
+      <if test="catId != null" >
+        cat_id,
+      </if>
+      <if test="createId != null" >
+        create_id,
+      </if>
+      <if test="imgUrl != null" >
+        img_url,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="startTime != null" >
+        start_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="checkStatus != null" >
+        check_status,
+      </if>
+      <if test="diquId != null" >
+        diqu_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="readNum != null" >
+        #{readNum,jdbcType=INTEGER},
+      </if>
+      <if test="catId != null" >
+        #{catId,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="startTime != null" >
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkStatus != null" >
+        #{checkStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+        #{diquId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodong" >
+    update yd_huodong
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="readNum != null" >
+        read_num = #{readNum,jdbcType=INTEGER},
+      </if>
+      <if test="catId != null" >
+        cat_id = #{catId,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        create_id = #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="startTime != null" >
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkStatus != null" >
+        check_status = #{checkStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+        diqu_id = #{diquId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdHuodong" >
+    update yd_huodong
+    set title = #{title,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      read_num = #{readNum,jdbcType=INTEGER},
+      cat_id = #{catId,jdbcType=VARCHAR},
+      create_id = #{createId,jdbcType=INTEGER},
+      img_url = #{imgUrl,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      check_status = #{checkStatus,jdbcType=VARCHAR},
+      diqu_id = #{diquId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

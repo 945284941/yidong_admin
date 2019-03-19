@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ctrl.platform.orm.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.SysUser">
+
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="truename" jdbcType="VARCHAR" property="truename"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        id, username,truename, password, create_by, create_time, status, update_by, update_time
+    </sql>
+    <select id="isExist" resultType="Boolean" parameterType="cn.ctrl.platform.orm.entity.SysUser">
+    select id from sys_user WHERE  username=#{username}
+  </select>
+    <select id="findUsersByRoleIds" parameterType="Map" resultMap="BaseResultMap">
+        select DISTINCT sysuser.* from sys_user sysuser INNER JOIN role_and_user roleAndUser ON
+        sysuser.id=roleAndUser.user_id where roleAndUser.role_id in
+        <foreach collection="roleIds" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        <if test="username != null and username != '' ">
+            and sysuser.username=#{username}
+        </if>
+        <if test="truename != null and truename != '' ">
+            and sysuser.truename=#{truename}
+        </if>
+        <if test="roleId != null and roleId != '' ">
+            and roleAndUser.role_id = #{roleId}
+        </if>
+        order by sysuser.create_time desc
+    </select>
+    <select id="selectByUsername" parameterType="cn.ctrl.platform.orm.entity.SysUser" resultMap="BaseResultMap">
+        select * from sys_user where username = #{username}
+    </select>
+    <update id="rePassword"  parameterType="cn.ctrl.platform.orm.entity.SysUser">
+        update sys_user
+        set password = #{newPassword}
+        where username = #{username}
+    </update>
+    <!--<select id="selectByUsername" resultMap="BaseResultMap" parameterType="cn.ctrl.platform.orm.entity.SysUser">
+        select * from sys_user WHERE  username=#{username}
+    </select>
+    -->
+</mapper>

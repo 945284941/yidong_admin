@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdQuestionnaireMessageMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdQuestionnaireMessage" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="questionnaire_id" property="questionnaireId" jdbcType="VARCHAR" />
+    <result column="question" property="question" jdbcType="VARCHAR" />
+    <result column="a" property="a" jdbcType="VARCHAR" />
+    <result column="b" property="b" jdbcType="VARCHAR" />
+    <result column="c" property="c" jdbcType="VARCHAR" />
+    <result column="choose_type" property="chooseType" jdbcType="VARCHAR" />
+    <result column="sort_num" property="sortNum" jdbcType="INTEGER" />
+    <result column="disabled" property="disabled" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, questionnaire_id, question, a, b, c, choose_type, sort_num, disabled, create_time
+  </sql>
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+   select <include refid="Base_Column_List"/> from yd_questionnaire_message
+      where 1=1
+    <if test="questionnaireId != null" >
+     and questionnaire_id = #{questionnaireId,jdbcType=VARCHAR}
+    </if>
+    <if test="question != null and question != ''" >
+      and  question like '%${question}%'
+    </if>
+    <if test="a != null" >
+      and  a = #{a,jdbcType=VARCHAR}
+    </if>
+    <if test="b != null" >
+      and  b = #{b,jdbcType=VARCHAR}
+    </if>
+    <if test="c != null" >
+      and  c = #{c,jdbcType=VARCHAR}
+    </if>
+    <if test="chooseType != null" >
+      and  choose_type = #{chooseType,jdbcType=VARCHAR}
+    </if>
+    <if test="sortNum != null" >
+      and  sort_num = #{sortNum,jdbcType=INTEGER}
+    </if>
+    <if test="disabled != null" >
+      and  disabled = #{disabled,jdbcType=VARCHAR}
+    </if>
+    <if test="createTime != null" >
+      and create_time = #{createTime,jdbcType=TIMESTAMP}
+    </if>
+  </select>
+  <select id="findOneByQuestionId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from yd_questionnaire_message
+
+    where questionnaire_id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from yd_questionnaire_message
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_questionnaire_message
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessage" >
+    insert into yd_questionnaire_message (id, questionnaire_id, question, 
+      a, b, c, choose_type, 
+      sort_num, disabled, create_time
+      )
+    values (#{id,jdbcType=VARCHAR}, #{questionnaireId,jdbcType=VARCHAR}, #{question,jdbcType=VARCHAR}, 
+      #{a,jdbcType=VARCHAR}, #{b,jdbcType=VARCHAR}, #{c,jdbcType=VARCHAR}, #{chooseType,jdbcType=VARCHAR}, 
+      #{sortNum,jdbcType=INTEGER}, #{disabled,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessage" >
+    insert into yd_questionnaire_message
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="questionnaireId != null" >
+        questionnaire_id,
+      </if>
+      <if test="question != null" >
+        question,
+      </if>
+      <if test="a != null" >
+        a,
+      </if>
+      <if test="b != null" >
+        b,
+      </if>
+      <if test="c != null" >
+        c,
+      </if>
+      <if test="chooseType != null" >
+        choose_type,
+      </if>
+      <if test="sortNum != null" >
+        sort_num,
+      </if>
+      <if test="disabled != null" >
+        disabled,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireId != null" >
+        #{questionnaireId,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null" >
+        #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="a != null" >
+        #{a,jdbcType=VARCHAR},
+      </if>
+      <if test="b != null" >
+        #{b,jdbcType=VARCHAR},
+      </if>
+      <if test="c != null" >
+        #{c,jdbcType=VARCHAR},
+      </if>
+      <if test="chooseType != null" >
+        #{chooseType,jdbcType=VARCHAR},
+      </if>
+      <if test="sortNum != null" >
+        #{sortNum,jdbcType=INTEGER},
+      </if>
+      <if test="disabled != null" >
+        #{disabled,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessage" >
+    update yd_questionnaire_message
+    <set >
+      <if test="questionnaireId != null" >
+        questionnaire_id = #{questionnaireId,jdbcType=VARCHAR},
+      </if>
+      <if test="question != null" >
+        question = #{question,jdbcType=VARCHAR},
+      </if>
+      <if test="a != null" >
+        a = #{a,jdbcType=VARCHAR},
+      </if>
+      <if test="b != null" >
+        b = #{b,jdbcType=VARCHAR},
+      </if>
+      <if test="c != null" >
+        c = #{c,jdbcType=VARCHAR},
+    </if>
+    <if test="chooseType != null" >
+      choose_type = #{chooseType,jdbcType=VARCHAR},
+    </if>
+    <if test="sortNum != null" >
+      sort_num = #{sortNum,jdbcType=INTEGER},
+    </if>
+    <if test="disabled != null" >
+      disabled = #{disabled,jdbcType=VARCHAR},
+    </if>
+    <if test="createTime != null" >
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+    </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessage" >
+    update yd_questionnaire_message
+    set questionnaire_id = #{questionnaireId,jdbcType=VARCHAR},
+      question = #{question,jdbcType=VARCHAR},
+      a = #{a,jdbcType=VARCHAR},
+      b = #{b,jdbcType=VARCHAR},
+      c = #{c,jdbcType=VARCHAR},
+      choose_type = #{chooseType,jdbcType=VARCHAR},
+      sort_num = #{sortNum,jdbcType=INTEGER},
+      disabled = #{disabled,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

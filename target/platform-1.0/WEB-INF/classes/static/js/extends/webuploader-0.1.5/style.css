@@ -1,0 +1,419 @@
+
+body {
+    font-family: "Myriad Pro","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Calibri,Helvetica,tahoma,arial,simsun,"宋体",sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+.jumbotron {
+    background: transparent url("../images/banner.jpg") repeat-x scroll 50% 0;
+    color: #fff;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 1px #3b3262;
+}
+.jumbotron .container {
+    position: relative;
+}
+.jumbotron .github-btns {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.fetature {
+    margin-top: 30px;
+}
+.page-body {
+    min-height: 450px;
+}
+.page-container {
+    margin-top: 10px;
+}
+.page-container h1, .page-container h2, .page-container h3 {
+    margin-top: -50px;
+    padding-top: 70px;
+}
+.logo {
+    padding-left: 60px;
+    position: relative;
+}
+.logo span {
+    font-size: 2em;
+    left: 15px;
+    position: absolute;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    top: 8px;
+}
+.logo.active {
+    color: #fff;
+}
+@media (min-width: 768px) {
+    .fetature .row .col-lg-4 {
+        min-height: 250px;
+    }
+}
+.footer {
+    background: #212121 none repeat scroll 0 0;
+    color: #f2f2f2;
+    margin-top: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+.footer-fixed-bottom {
+    bottom: 0;
+    position: fixed;
+}
+.footer a {
+    color: #f2f2f2;
+}
+.footer .footer-inner {
+    margin: 15px;
+}
+.wu-example {
+    background-color: #fafafa;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+    margin: 15px 0;
+    padding: 45px 15px 15px;
+    position: relative;
+}
+.wu-example::after {
+    color: #bbb;
+    content: "示例";
+    font-size: 12px;
+    font-weight: bold;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+@media (min-width: 768px) {
+    .bs-example {
+        background-color: #fff;
+        border-color: #ddd;
+        border-radius: 4px 4px 0 0;
+        border-width: 1px;
+        box-shadow: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.post-toc {
+    background-color: #f7f5fa;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 #fff;
+}
+.post-toc .nav > li > a {
+    color: #716b7a;
+    display: block;
+    padding: 5px 20px;
+}
+.post-toc .nav .nav > li > a {
+    font-size: 90%;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+.post-toc.affix {
+    position: static;
+}
+.post-toc .nav .nav {
+    display: none;
+    margin-bottom: 8px;
+}
+@media (min-width: 992px) {
+    .post-toc.affix {
+        position: fixed;
+        top: 50px;
+        width: 213px;
+    }
+    .post-toc .nav > .active > ul {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .post-toc.affix {
+        width: 263px;
+    }
+    .post-toc .nav > .active > ul {
+        display: block;
+    }
+}
+.post-toc .nav > .active > a, .post-toc .nav > .active:hover > a, .post-toc .nav > .active:focus > a {
+    background-color: transparent;
+    border-right: 1px solid #563d7c;
+    color: #563d7c;
+    font-weight: bold;
+}
+.friends-links {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.weixin {
+    display: inline-block;
+    text-align: center;
+}
+.weixin img {
+    width: 80px;
+}
+.comment {
+    background-color: transparent;
+    border-color: #cacaca;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+}
+.comment .commentheader {
+    background-image: linear-gradient(#f8f8f8, #e1e1e1);
+    border-bottom: 1px solid #cacaca;
+    color: black;
+    display: block;
+    float: left;
+    font-family: helvetica,arial,freesans,clean,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 33px;
+    line-height: 33px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.698);
+    white-space: nowrap;
+    width: 100%;
+}
+.comment .commentheader .commentgravatar {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: white;
+    background-image: none;
+    background-origin: padding-box;
+    border-color: #c8c8c8;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    display: inline-block;
+    float: none;
+    font-family: helvetica,arial,freesans,clean,sans-serif;
+    font-size: 1px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 24px;
+    line-height: 1px;
+    margin-left: 5px;
+    margin-right: 3px;
+    margin-top: -2px;
+    overflow: visible;
+    padding: 1px;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.698);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 24px;
+}
+.comment .commentheader a:link {
+    text-decoration: none;
+}
+.comment .commentheader a:hover {
+    border-bottom: 1px solid;
+}
+.comment .commentheader .commentuser {
+    background-color: transparent;
+    color: black;
+    display: inline;
+    float: none;
+    font-family: helvetica,arial,freesans,clean,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: 0;
+    line-height: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+    overflow: visible;
+    padding: 0;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.698);
+    white-space: nowrap;
+    width: 0;
+}
+.comment .commentheader .commentdate {
+    background-color: transparent;
+    color: #777;
+    display: inline;
+    float: none;
+    font-family: helvetica,arial,freesans,clean,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 0;
+    line-height: 33px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.698);
+    white-space: nowrap;
+    width: 20em;
+}
+.comment .commentbody {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: none;
+    background-origin: padding-box;
+    color: #333;
+    display: block;
+    margin: 40px 1em 1em;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    width: 96%;
+    word-wrap: break-word;
+}
+.comment .commentbody p {
+    margin: 0.5em 0;
+}
+.comment .commentbody pre {
+    background-color: #eef;
+    border: 0 solid #ddd;
+    padding: 0 0.4em;
+}
+.comment .commentbody pre code {
+    border: 0 solid #ddd;
+}
+.comment .commentbody code {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    font-size: 85%;
+    padding: 0 0.2em;
+}
+#picker {
+    display: inline-block;
+    line-height: 1.42857;
+    margin: 0 12px 0 0;
+    vertical-align: middle;
+}
+#picker .webuploader-pick {
+    display: block;
+    padding: 6px 12px;
+}
+#uploader-demo .thumbnail {
+    height: 110px;
+    width: 110px;
+}
+#uploader-demo .thumbnail img {
+    width: 100%;
+}
+.uploader-list {
+    overflow: hidden;
+    width: 100%;
+}
+.file-item {
+    float: left;
+    margin: 0 20px 20px 0;
+    padding: 4px;
+    position: relative;
+}
+.file-item .error {
+    background: red none repeat scroll 0 0;
+    color: white;
+    font-size: 14px;
+    height: 20px;
+    left: 4px;
+    line-height: 23px;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+}
+.file-item .info {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    bottom: 4px;
+    color: white;
+    font-size: 12px;
+    height: 20px;
+    left: 4px;
+    line-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    text-indent: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 10;
+}
+.upload-state-done::after {
+    -moz-osx-font-smoothing: grayscale;
+    bottom: 0;
+    color: #4cae4c;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    right: 4px;
+    z-index: 99;
+}
+.file-item .progress {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 0;
+    bottom: 4px;
+    height: 4px;
+    left: 4px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    z-index: 15;
+}
+.file-item .progress span {
+    animation: 2s linear 0s normal none infinite running progressmove;
+    background: #d14 url("../images/progress.png") repeat-x scroll 0 0;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    transition: width 200ms linear 0s;
+    width: 0;
+}
+@keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+@keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+a.travis {
+    position: relative;
+    right: 15px;
+    top: -4px;
+}

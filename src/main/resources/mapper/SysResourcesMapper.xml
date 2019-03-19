@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ctrl.platform.orm.mapper.SysResourcesMapper">
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.SysResources">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="pid" jdbcType="VARCHAR" property="pid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="ptree" jdbcType="VARCHAR" property="ptree" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="type_" jdbcType="VARCHAR" property="type" />
+    <result column="deep" jdbcType="INTEGER" property="deep" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, pid, name, code, url, ptree, icon, sort, type_, deep, status, del_flag, create_time, 
+    create_by, update_time, update_by, remark
+  </sql>
+  <select id="findResourcesByRoleId" parameterType="String" resultMap="BaseResultMap">
+    SELECT  DISTINCT  resource.* from role_and_resources roleResources
+    INNER JOIN sys_resources resource
+    ON roleResources.resources_id = resource.id WHERE resource.pid is NOT  NULL AND roleResources.role_id IN
+    <foreach collection="array" index="index" item="item" open="(" separator="," close=")">
+      #{item}
+    </foreach>
+    ORDER  BY resource.sort ASC
+  </select>
+  <!--wanghuifeng  获取所有的菜单资源-->
+  <select id="selectAllMenuResources" resultMap="BaseResultMap">
+    select * FROM  sys_resources where sys_resources.type_= '1' ORDER  BY sort ASC
+  </select>
+
+  <!--zhangya  通过url获取单个菜单资源-->
+  <select id="selectByUrl" resultMap="BaseResultMap" parameterType="cn.ctrl.platform.orm.entity.SysResources">
+    select * FROM  sys_resources where sys_resources.url= #{url}
+  </select>
+
+  <!--zhangya  通过模块名称查询模块（用于判断模块名称重复）-->
+  <select id="selectByName" resultMap="BaseResultMap" parameterType="cn.ctrl.platform.orm.entity.SysResources">
+    select * FROM  sys_resources where sys_resources.name= #{name}
+  </select>
+  <select id="queryAll" resultMap="BaseResultMap">
+    SELECT * from sys_resources ORDER by sort asc
+  </select>
+</mapper>

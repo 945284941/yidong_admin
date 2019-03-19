@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdQuestionnaireMessageProprietorMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="community_id" property="communityId" jdbcType="VARCHAR" />
+    <result column="proprietor_id" property="proprietorId" jdbcType="VARCHAR" />
+    <result column="questionnaire_id" property="questionnaireId" jdbcType="VARCHAR" />
+    <result column="questionnaire_message_id" property="questionnaireMessageId" jdbcType="VARCHAR" />
+    <result column="a" property="a" jdbcType="VARCHAR" />
+    <result column="b" property="b" jdbcType="VARCHAR" />
+    <result column="c" property="c" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, community_id, proprietor_id, questionnaire_id, questionnaire_message_id, a, b, 
+    c
+  </sql>
+  <select id="findAll" resultType="long" parameterType="java.util.Map">
+
+    select count(*)
+    from yd_questionnaire_message_proprietor
+
+      <where>
+        <if test="communityId != null" >
+          and   community_id = #{communityId,jdbcType=VARCHAR}
+        </if>
+        <if test="proprietorId != null" >
+          and  proprietor_id = #{proprietorId,jdbcType=VARCHAR}
+        </if>
+        <if test="questionnaireId != null" >
+          and  questionnaire_id = #{questionnaireId,jdbcType=VARCHAR}
+        </if>
+        <if test="questionnaireMessageId != null" >
+          and  questionnaire_message_id = #{questionnaireMessageId,jdbcType=VARCHAR}
+        </if>
+        <if test="a != null" >
+          and   a = #{a,jdbcType=VARCHAR}
+        </if>
+        <if test="b != null" >
+          and  b = #{b,jdbcType=VARCHAR}
+        </if>
+        <if test="c != null" >
+          and   c = #{c,jdbcType=VARCHAR}
+        </if>
+      </where>
+
+  </select>
+  <select id="selectByPrimaryKeyy" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from yd_questionnaire_message_proprietor
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String" >
+    delete from yd_questionnaire_message_proprietor
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
+    insert into yd_questionnaire_message_proprietor (id, community_id, proprietor_id, 
+      questionnaire_id, questionnaire_message_id, 
+      a, b, c)
+    values (#{id,jdbcType=VARCHAR}, #{communityId,jdbcType=VARCHAR}, #{proprietorId,jdbcType=VARCHAR}, 
+      #{questionnaireId,jdbcType=VARCHAR}, #{questionnaireMessageId,jdbcType=VARCHAR}, 
+      #{a,jdbcType=VARCHAR}, #{b,jdbcType=VARCHAR}, #{c,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
+    insert into yd_questionnaire_message_proprietor
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="communityId != null" >
+        community_id,
+      </if>
+      <if test="proprietorId != null" >
+        proprietor_id,
+      </if>
+      <if test="questionnaireId != null" >
+        questionnaire_id,
+      </if>
+      <if test="questionnaireMessageId != null" >
+        questionnaire_message_id,
+      </if>
+      <if test="a != null" >
+        a,
+      </if>
+      <if test="b != null" >
+        b,
+      </if>
+      <if test="c != null" >
+        c,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="communityId != null" >
+        #{communityId,jdbcType=VARCHAR},
+      </if>
+      <if test="proprietorId != null" >
+        #{proprietorId,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireId != null" >
+        #{questionnaireId,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireMessageId != null" >
+        #{questionnaireMessageId,jdbcType=VARCHAR},
+      </if>
+      <if test="a != null" >
+        #{a,jdbcType=VARCHAR},
+      </if>
+      <if test="b != null" >
+        #{b,jdbcType=VARCHAR},
+      </if>
+      <if test="c != null" >
+        #{c,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
+    update yd_questionnaire_message_proprietor
+    <set >
+      <if test="communityId != null" >
+        community_id = #{communityId,jdbcType=VARCHAR},
+      </if>
+      <if test="proprietorId != null" >
+        proprietor_id = #{proprietorId,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireId != null" >
+        questionnaire_id = #{questionnaireId,jdbcType=VARCHAR},
+      </if>
+      <if test="questionnaireMessageId != null" >
+        questionnaire_message_id = #{questionnaireMessageId,jdbcType=VARCHAR},
+      </if>
+      <if test="a != null" >
+        a = #{a,jdbcType=VARCHAR},
+      </if>
+      <if test="b != null" >
+        b = #{b,jdbcType=VARCHAR},
+      </if>
+      <if test="c != null" >
+        c = #{c,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyy" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
+    update yd_questionnaire_message_proprietor
+    set community_id = #{communityId,jdbcType=VARCHAR},
+      proprietor_id = #{proprietorId,jdbcType=VARCHAR},
+      questionnaire_id = #{questionnaireId,jdbcType=VARCHAR},
+      questionnaire_message_id = #{questionnaireMessageId,jdbcType=VARCHAR},
+      a = #{a,jdbcType=VARCHAR},
+      b = #{b,jdbcType=VARCHAR},
+      c = #{c,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

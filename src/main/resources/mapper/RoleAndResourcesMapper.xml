@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ctrl.platform.orm.mapper.RoleAndResourcesMapper">
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.RoleAndResources">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="resources_id" jdbcType="VARCHAR" property="resourcesId" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+
+  <resultMap id="BaseResultMapWithRoleName" type="cn.ctrl.platform.orm.entity.RoleAndResources">
+    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, role_id, resources_id, status, del_flag, create_time, create_by, update_time, 
+    update_by, remark
+  </sql>
+  <select id="selectWithRoleName" parameterType="cn.ctrl.platform.orm.entity.RoleAndResources" resultMap="BaseResultMapWithRoleName">
+    select rar.*,role.name as role_name from role_and_resources rar  INNER  JOIN  sys_role role  ON  rar.role_id = role.id where resources_id = #{resourcesId}
+  </select>
+</mapper>

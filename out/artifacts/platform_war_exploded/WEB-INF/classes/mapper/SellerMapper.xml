@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.SellerMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Seller" >
+      <id column="id" property="id" jdbcType="VARCHAR" />
+      <result column="name" property="name" jdbcType="VARCHAR" />
+      <result column="floor_id" property="floorId" jdbcType="VARCHAR" />
+      <result column="floor" property="floor" jdbcType="VARCHAR" />
+      <result column="type_id" property="typeId" jdbcType="VARCHAR" />
+      <result column="type" property="type" jdbcType="VARCHAR" />
+      <result column="img_logo" property="imgLogo" jdbcType="VARCHAR" />
+      <result column="phone" property="phone" jdbcType="VARCHAR" />
+      <result column="state" property="state" jdbcType="INTEGER" />
+      <result column="start_date" property="startDate" jdbcType="VARCHAR" />
+      <result column="address" property="address" jdbcType="VARCHAR" />
+      <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+   id, name, floor_id, floor, type_id, type, img_logo, phone, state, start_date, address,
+    remark
+  </sql>
+
+  <select id="selectSellerByPhone" resultMap="BaseResultMap" parameterType="Map" >
+    select
+    <include refid="Base_Column_List" />
+    from seller
+    where 1 = 1
+    <if test="Phone != null and Phone != '' ">
+       and phone like '%${Phone}%'
+    </if>
+  </select>
+
+  <delete id="delectSellerById" parameterType="string">
+        delete from seller where id = #{id}
+  </delete>
+
+  <select id="selectSellerById" resultMap="BaseResultMap" parameterType="string">
+    select
+    <include refid="Base_Column_List" />
+    from seller
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+   <update id="updateSeller" parameterType="Map" >
+       update seller
+       <set >
+           <if test="name != null" >
+               name = #{name,jdbcType=VARCHAR},
+           </if>
+           <if test="floorId != null" >
+               floor_id = #{floorId,jdbcType=VARCHAR},
+           </if>
+           <if test="floor != null" >
+               floor = #{floor,jdbcType=VARCHAR},
+           </if>
+           <if test="typeId != null" >
+               type_id = #{typeId,jdbcType=VARCHAR},
+           </if>
+           <if test="type != null" >
+               type = #{type,jdbcType=VARCHAR},
+           </if>
+           <if test="imgLogo != null" >
+               img_logo = #{imgLogo,jdbcType=VARCHAR},
+           </if>
+           <if test="phone != null" >
+               phone = #{phone,jdbcType=VARCHAR},
+           </if>
+           <if test="state != null" >
+               state = #{state,jdbcType=INTEGER},
+           </if>
+           <if test="startDate != null" >
+               start_date = #{startDate,jdbcType=VARCHAR},
+           </if>
+           <if test="address != null" >
+               address = #{address,jdbcType=VARCHAR},
+           </if>
+           <if test="remark != null" >
+               remark = #{remark,jdbcType=VARCHAR},
+           </if>
+       </set>
+       where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+    <insert id="insertSeller" parameterType="cn.ctrl.platform.orm.entity.Seller" >
+        insert into seller
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="floorId != null" >
+                floor_id,
+            </if>
+            <if test="floor != null" >
+                floor,
+            </if>
+            <if test="typeId != null" >
+                type_id,
+            </if>
+            <if test="type != null" >
+                type,
+            </if>
+            <if test="imgLogo != null" >
+                img_logo,
+            </if>
+            <if test="phone != null" >
+                phone,
+            </if>
+            <if test="state != null" >
+                state,
+            </if>
+            <if test="startDate != null" >
+                start_date,
+            </if>
+            <if test="address != null" >
+                address,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="floorId != null" >
+                #{floorId,jdbcType=VARCHAR},
+            </if>
+            <if test="floor != null" >
+                #{floor,jdbcType=VARCHAR},
+            </if>
+            <if test="typeId != null" >
+                #{typeId,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="imgLogo != null" >
+                #{imgLogo,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null" >
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null" >
+                #{state,jdbcType=INTEGER},
+            </if>
+            <if test="startDate != null" >
+                #{startDate,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null" >
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>
