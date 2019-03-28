@@ -4,6 +4,7 @@
     <th style="text-align: center;">新闻标题</th>
     <#--<th style="text-align: center;">地区名称</th>-->
     <th style="text-align: center;">新闻分类</th>
+    <th style="text-align: center;">内容分类</th>
     <th style="text-align: center;">图片</th>
     <th style="text-align: center;">创建者</th>
 
@@ -18,6 +19,16 @@
             <td>${(recharge.name)!"暂无"}</td>
             <#--<td>${(recharge.diquName)!"暂无"}</td>-->
             <td>${(recharge.newCatName)!"暂无"}</td>
+            <td>
+                <#if recharge.type??>
+                      <#if recharge.type == '0'>
+                      新闻
+                      </#if>
+                        <#if recharge.type == '1'>
+                        链接
+                        </#if>
+                </#if>
+            </td>
             <td> <img src="${(recharge.imgUrl)!""}" style="width: 100px;height: 100px;"> </td>
             <td>${(recharge.createName)!"暂无"}</td>
             <td>${(recharge.createTime)!?datetime}</td>

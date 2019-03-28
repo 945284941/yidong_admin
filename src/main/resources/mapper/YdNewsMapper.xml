@@ -9,13 +9,16 @@
     <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
     <result column="create_by_" property="createBy" jdbcType="VARCHAR" />
     <result column="cat_id_" property="catId" jdbcType="VARCHAR" />
+    <result column="type_" property="type" jdbcType="VARCHAR" />
+      <result column="url" property="url" jdbcType="VARCHAR" />
+
 
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="cn.ctrl.platform.orm.entity.YdNews" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, diqu_id, create_time, img_url,create_by_,cat_id_
+    id, name, diqu_id, create_time, img_url,create_by_,cat_id_,type_,url
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -56,8 +59,14 @@
         and   n.img_url = #{imgUrl,jdbcType=VARCHAR}
       </if>
       <if test="content != null" >
-     and   n.content = #{content,jdbcType=LONGVARCHAR}
+      and   n.content = #{content,jdbcType=LONGVARCHAR}
+    </if>
+      <if test="type != null" >
+        and   n.type_ = #{type,jdbcType=LONGVARCHAR}
       </if>
+        <if test="url != null" >
+            and   n.url = #{url,jdbcType=LONGVARCHAR}
+        </if>
     </where>
      order by create_time desc
   </select>
@@ -108,6 +117,12 @@
       <if test="catId != null" >
         cat_id_,
       </if>
+      <if test="type != null" >
+        type_,
+    </if>
+        <if test="url != null" >
+            url,
+        </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -134,6 +149,12 @@
       <if test="catId != null" >
         #{catId,jdbcType=VARCHAR},
       </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+        <if test="url != null" >
+            #{url,jdbcType=VARCHAR},
+        </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
@@ -157,6 +178,12 @@
       <if test="catId != null" >
        cat_id_ =  #{catId,jdbcType=VARCHAR},
       </if>
+      <if test="type != null" >
+        type_ =   #{type,jdbcType=VARCHAR},
+      </if>
+        <if test="url != null" >
+            url =    #{url,jdbcType=VARCHAR},
+        </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>

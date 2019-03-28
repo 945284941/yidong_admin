@@ -9,6 +9,16 @@ var ydNewsService = new Class({
     },
     init: function () {
     },
+
+contentTypeBaby: function (value) {
+    if(value == 0){
+        $('#content').css("display","block");
+        $('#url').css("display","none");
+    }else{
+        $('#content').css("display","none");
+        $('#url').css("display","block");
+    }
+},
     loadTable: function () {
         var _this =this ;
         var param = $('#'+this.options.formId).formToJson();

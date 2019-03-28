@@ -10,11 +10,45 @@
     <result column="a" property="a" jdbcType="VARCHAR" />
     <result column="b" property="b" jdbcType="VARCHAR" />
     <result column="c" property="c" jdbcType="VARCHAR" />
+
+    <result column="content" property="content" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, community_id, proprietor_id, questionnaire_id, questionnaire_message_id, a, b, 
-    c
+    id, community_id, proprietor_id, questionnaire_id, questionnaire_message_id, a, b,
+    c,content
   </sql>
+  <select id="findAllByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
+       select  p.*,y.name as memberName
+           from yd_questionnaire_message_proprietor p left join yd_yuangong y
+       on p.proprietor_id = y.id
+
+
+    <where>
+      <if test="communityId != null" >
+        and   p.community_id = #{communityId,jdbcType=VARCHAR}
+      </if>
+      <if test="proprietorId != null" >
+        and  p.proprietor_id = #{proprietorId,jdbcType=VARCHAR}
+      </if>
+      <if test="questionnaireId != null" >
+        and  p.questionnaire_id = #{questionnaireId,jdbcType=VARCHAR}
+      </if>
+      <if test="questionnaireMessageId != null" >
+        and  p.questionnaire_message_id = #{questionnaireMessageId,jdbcType=VARCHAR}
+      </if>
+      <if test="a != null" >
+        and   p.a = #{a,jdbcType=VARCHAR}
+      </if>
+      <if test="b != null" >
+        and  p.b = #{b,jdbcType=VARCHAR}
+      </if>
+      <if test="c != null" >
+        and   p.c = #{c,jdbcType=VARCHAR}
+      </if>
+         </where>
+
+  </select>
+
   <select id="findAll" resultType="long" parameterType="java.util.Map">
 
     select count(*)
@@ -88,7 +122,10 @@
         b,
       </if>
       <if test="c != null" >
-        c,
+      c,
+    </if>
+      <if test="content != null" >
+        content,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -116,6 +153,9 @@
       <if test="c != null" >
         #{c,jdbcType=VARCHAR},
       </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdQuestionnaireMessageProprietor" >
@@ -141,6 +181,9 @@
       </if>
       <if test="c != null" >
         c = #{c,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+       content =  #{content,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}

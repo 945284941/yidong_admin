@@ -13,6 +13,29 @@ public class YdQuestionnaireMessageProprietor {
 
     private String a;
 
+    private String memberName;
+
+
+
+
+    public String getMemberName() {
+        return memberName;
+    }
+
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
+    }
+
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     private String b;
 
     private String c;

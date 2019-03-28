@@ -6,6 +6,7 @@
     <th style="text-align: center;">a</th>
     <th style="text-align: center;">b</th>
     <th style="text-align: center;">c</th>
+    <th style="text-align: center;">类型</th>
     <#--<th style="text-align: center;">选择类型</th>-->
     <#--<th style="text-align: center;">发布状态</th>-->
     <#--<th style="text-align: center;">地区</th>-->
@@ -26,7 +27,16 @@
                 <td>${(recharge.a)!"暂无"}</td>
                 <td>${(recharge.b)!"暂无"}</td>
                 <td>${(recharge.c)!"暂无"}</td>
-
+                <td>
+                    <#if recharge.chooseType?? >
+                         <#if recharge.chooseType == '0'>
+                         选择
+                    </#if>
+                            <#if recharge.chooseType == '1'>
+                            问答
+                            </#if>
+                </#if>
+                </td>
             <#--<td>-->
             <#--<#if recharge.releaseState??>-->
                 <#--<#if recharge.releaseState == '0'>-->
@@ -54,8 +64,16 @@
 
 
                 <a onclick="Duang.getService('ydQuestionnaireService').messagedelete('${recharge.id}','${recharge.questionnaireId!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
-                <a onclick="Duang.getService('ydQuestionnaireService').tongji('${recharge.id}','${recharge.questionnaireId!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 投票统计</a>
 
+
+                    <#if recharge.chooseType?? >
+                        <#if recharge.chooseType == '0'>
+                           <a onclick="Duang.getService('ydQuestionnaireService').tongji('${recharge.id}','${recharge.questionnaireId!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 投票统计</a>
+                        </#if>
+                        <#if recharge.chooseType == '1'>
+                           <a onclick="Duang.getService('ydQuestionnaireService').contentManager('${recharge.id!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 查看回答</a>
+                        </#if>
+                    </#if>
             </td>
         </tr>
         </#list>

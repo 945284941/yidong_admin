@@ -21,4 +21,6 @@ public interface YdQuestionnaireMessageProprietorMapper extends MyMapper<YdQuest
     int updateByPrimaryKeyy(YdQuestionnaireMessageProprietor record);
 
     Long findAll(Map map);
+
+    List<YdQuestionnaireMessageProprietor> findAllByPage(Map map);
 }

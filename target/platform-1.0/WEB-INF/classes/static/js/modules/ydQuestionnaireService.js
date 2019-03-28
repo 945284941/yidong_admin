@@ -14,6 +14,12 @@ var ydQuestionnaireService = new Class({
             $('.page-content-body').html(data);
         })
     },
+    contentManager:function(id){
+        $.get(project.path + '/ydQuestionnaireMessageProprietor/manager?id='+id,function(data){
+            $('.page-content-body').html(data);
+        })
+    },
+
     loadTable: function () {
         var _this =this ;
         var param = $('#'+this.options.formId).formToJson();
@@ -29,12 +35,32 @@ var ydQuestionnaireService = new Class({
             $('#'+_this.options.contentName).html(data);
         })
     },
+    contentloadTable : function(){
+        var _this =this ;
+        var param = $('#'+this.options.formId).formToJson();
+
+        $.get(project.path + '/ydQuestionnaireMessageProprietor/table',param,function(data){
+            $('#'+_this.options.contentName).html(data);
+        })
+    },
     tongji: function(id){
         $("#" + this.options.modalName).modal({
             remote: project.path + "/ydQuestionnaireMessage/tongji?id=" + id
         });
 
         
+    },
+    contentloadTablePageList(pageNo){
+        var _this =this ;
+        if (!pageNo) {
+            pageNo = 1;
+        }
+        var param = $('#'+this.options.formId).formToJson();
+        param.pageNo=pageNo;
+
+        $.get(project.path + '/ydQuestionnaireMessageProprietor/table',param,function(data){
+            $('#'+_this.options.contentName).html(data);
+        })
     },
     messagepageList: function (pageNo,id) {
         var _this =this ;

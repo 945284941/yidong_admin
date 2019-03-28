@@ -88,6 +88,7 @@ cn/ctrl/platform/utils/UtilsJson.class
 cn/ctrl/platform/orm/mapper/SysRoleMapper.class
 cn/ctrl/platform/upload/Base64Uploader.class
 cn/ctrl/platform/component/shiro/realm/TicketRealm.class
+cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.class
 cn/ctrl/platform/modules/dmp/visitingRecord/service/VisitingRecordService.class
 cn/ctrl/platform/utils/ActionMap$1.class
 cn/ctrl/platform/hunter/ImageHunter.class
@@ -131,6 +132,7 @@ cn/ctrl/platform/utils/httpUtil/HttpRequest.class
 cn/ctrl/platform/modules/ydHuoDongCat/service/YdHuoDongCatService.class
 cn/ctrl/platform/modules/ydZhiWei/service/YdZhiWeiService.class
 cn/ctrl/platform/orm/entity/Lawyer.class
+cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.class
 cn/ctrl/platform/component/basic/Constants.class
 cn/ctrl/platform/orm/mapper/LawyerMapper.class
 cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class

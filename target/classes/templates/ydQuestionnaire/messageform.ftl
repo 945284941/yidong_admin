@@ -8,7 +8,7 @@
     <form id="system_expert_form_table" class="form-horizontal"
           novalidate="novalidate"     enctype="multipart/form-data">
         <input type="hidden"  name="id" value="${(recharge.id)!""}"/>
-        <div class="form-group">
+
 
         <div class="form-group">
         <label class="control-label col-md-3">调查问卷描述：
@@ -18,8 +18,33 @@
             <input type="text" data-required="1" name="question" value="${(recharge.question)!""}"
                    class="form-control">
         </div>
-    </div>
+        </div>
 
+        <div class="form-group">
+            <label class="control-label col-md-3">类型：
+                <span class="required" aria-required="true"> * </span>
+            </label>
+            <div class="col-md-7">
+                 <select name="chooseType" class="form-control" onchange="leixing(this.options[this.options.selectedIndex].value)">
+                         <#if recharge.chooseType??>
+                             <option value="0" <#if recharge.chooseType == '0'>selected="selected"</#if> >选择</option>
+                             <option value="1" <#if recharge.chooseType == '1'>selected="selected"</#if> >问答</option>
+                         </#if>
+                      <#if !recharge.chooseType??>
+                             <option value="0">选择</option>
+                             <option value="1">问答</option>
+                      </#if>
+                 </select>
+            </div>
+        </div>
+
+      <div id="baby"
+      <#if recharge.chooseType??>
+         <#if recharge.chooseType == '1'>
+         style="display: none;"
+         </#if>
+      </#if>
+      >
         <div class="form-group">
             <label class="control-label col-md-3">选项a：
                 <span class="required" aria-required="true"> * </span>
@@ -49,6 +74,7 @@
                        class="form-control">
             </div>
         </div>
+      </div>
 
         <#--<div class="form-group">-->
             <#--<label class="control-label col-md-3">选择类型：-->
@@ -106,3 +132,13 @@
             class="fa fa-save"></i> 保存
     </button>
 </div>
+
+<script type="text/javascript">
+  function  leixing(value){
+     if(value == '1'){
+         $('#baby').css("display","none");
+     }else{
+         $('#baby').css("display","block");
+     }
+  }
+</script>

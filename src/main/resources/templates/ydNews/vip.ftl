@@ -13,6 +13,7 @@
 <style>
 
     </style>
+
    <script>
        UE.delEditor('editor');
         var ue = UE.getEditor('editor');
@@ -60,33 +61,6 @@
                                                class="form-control">
                                     </div>
                                 </div>
-       <#--<#if roleId != '1'>-->
-                              <#--<input type="hidden" name="diquId" value="${diquId}">-->
-       <#--</#if>-->
-                        <#--<#if roleId == '1'>-->
-                                <#--<div class="form-group">-->
-                                    <#--<label class="control-label col-md-3">地区：-->
-                                        <#--<span class="required" aria-required="true"> * </span>-->
-                                    <#--</label>-->
-                                    <#--<div class="col-md-7">-->
-                            <#--<#if recharge.diquId??>-->
-                             <#--<select name="diquId"  class="form-control" disabled="disabled">-->
-                                 <#--<#list  diqu as diqu>-->
-                                     <#--<option value="${diqu.id!''}"  <#if diqu.id == recharge.diquId>selected="selected"</#if> >${diqu.name}</option>-->
-                                 <#--</#list>-->
-                             <#--</select>-->
-                            <#--</#if>-->
-                             <#--<#if !recharge.diquId??>-->
-                             <#--<select name="diquId"  class="form-control">-->
-                                  <#--<#list  diqu as diqu>-->
-                                      <#--<option value="${diqu.id!''}">${diqu.name}</option>-->
-                                  <#--</#list>-->
-                             <#--</select>-->
-                             <#--</#if>-->
-
-                                    <#--</div>-->
-                                <#--</div>-->
-  <#--</#if>-->
                                 <div class="form-group">
                                     <label class="control-label col-md-3">分类：
                                         <span class="required" aria-required="true"> * </span>
@@ -109,6 +83,48 @@
                                     </div>
                                 </div>
 
+                        <div class="form-group">
+                            <label class="control-label col-md-3">内容类型：
+                                <span class="required" aria-required="true"> * </span>
+                            </label>
+                            <div class="col-md-7">
+
+                             <select name="type"  class="form-control" onchange="
+                             Duang.getService('ydNewsService').contentTypeBaby(this.options[this.options.selectedIndex].value)
+                           ">
+                                   <#if recharge.type??>
+                                                 <option value="0"   <#if recharge.type=='0'>selected="selected"</#if> >新闻</option>
+                                    <option value="1"  <#if recharge.type=='1'>selected="selected"</#if>>链接</option>
+                                   </#if>
+                                    <#if !recharge.type??>
+                                        <option value="0">新闻</option>
+                                    <option value="1">链接</option>
+                                    </#if>
+                             </select>
+
+
+                            </div>
+                        </div>
+                        <div class="form-group" id="url"
+                        <#if !recharge.type??> style="display:none;"</#if>
+
+                        <#if recharge.type??>
+                              <#if recharge.type == '0'>
+                             style="display:none;"
+                             </#if>
+                            <#if recharge.type == '1'>
+                             style="display:block;"
+                            </#if>
+                        </#if>
+                        >
+                            <label class="control-label col-md-3">链接：
+                                <span class="required" aria-required="true"> * </span>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" data-required="1" name="url" value="${(recharge.url)!""}"
+                                       class="form-control">
+                            </div>
+                        </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3">封面图：
                                         <span class="required" aria-required="true"> * </span>
@@ -122,17 +138,32 @@
                                     </div>
                                 </div>
                    </form>
+
+                    <div id="content"
+                     <#if !recharge.type??> style="display:block;"</#if>
+
+                        <#if recharge.type??>
+                            <#if recharge.type == '0'>
+                             style="display:block;"
+                            </#if>
+                            <#if recharge.type == '1'>
+                             style="display:none;"
+                            </#if>
+                        </#if>
+                    >
                     <div class="form-group">
                         <label class="control-label col-md-3">内容：
                             <span class="required" aria-required="true"> * </span>
                         </label>
-                                            <div class="col-md-7">
-                            <#--<input type="text" data-required="1" name="content" value="${(recharge.content)!""}"-->
-                                   <#--class="form-control">-->
-                            <div style="width:100px;height: 40px"></div>
-                        </div>
+                             <div class="col-md-7">
+
+                                <div style="width:100px;height: 40px">
+
+                                </div>
+                            </div>
                     </div>
                     <!-- 代码 结束 -->
+
                     <div class="wxeditor" style="height:880px;">
                         <div class="clearfix">
                             <!--L S-->
@@ -4371,6 +4402,7 @@ display: inline-block;"><img src="/weixin/mmbiz/qt/003.png" style="width: 24em;"
 
                     </div>
                 </div>
+                        </div>
                 </div>
 
              </div>
@@ -4378,3 +4410,11 @@ display: inline-block;"><img src="/weixin/mmbiz/qt/003.png" style="width: 24em;"
 
 </div>
 
+
+
+
+        <script type="text/javascript">
+
+
+
+        </script>

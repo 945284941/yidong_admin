@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9d07b31a-876c-4d57-a016-dcbc16ee2e52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentMessage.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentTable.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdNews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdNews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/YdNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/YdNewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageProprietorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageProprietorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydQuestionnaireService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydQuestionnaireService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/weixin/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/weixin/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ROOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdNews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdNews.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/YdNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/YdNewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/YdQuestionnaireMessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/YdQuestionnaireMessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/YdQuestionnaireMessageProprietorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/YdQuestionnaireMessageProprietorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/modules/ydNewsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/modules/ydNewsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/modules/ydQuestionnaireService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/modules/ydQuestionnaireService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/weixin/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/weixin/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydNews/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydNews/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydNews/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydNews/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdNews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdNews.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdNewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdQuestionnaireMessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdQuestionnaireMessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdQuestionnaireMessageProprietorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdQuestionnaireMessageProprietorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydNewsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydNewsService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydQuestionnaireService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydQuestionnaireService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/weixin/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/weixin/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-392396625">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="4" />
+          <entry key="ftl" value="21" />
+          <entry key="java" value="21" />
+          <entry key="js" value="3" />
+          <entry key="json" value="1" />
+          <entry key="wsdl" value="3" />
+          <entry key="xml" value="10" />
+          <entry key="xsd" value="2" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="4" />
+          <entry key="FTL" value="21" />
+          <entry key="JAVA" value="21" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="3" />
+          <entry key="XML" value="15" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="1" />
+          <entry key="ftl" value="1056" />
+          <entry key="java" value="281" />
+          <entry key="js" value="46" />
+          <entry key="xml" value="224" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="1056" />
+          <entry key="JAVA" value="281" />
+          <entry key="JavaScript" value="46" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SQL" value="20" />
+          <entry key="XML" value="204" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3564">
+              <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdNewsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="182" column="11" lean-forward="true" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdNews.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/manager.ftl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="891">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>findAllByPage</find>
+      <find>slf4j</find>
+      <find>catchremoteimage</find>
+      <find>config</find>
+      <find>contentType</find>
+      <find>type</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/resources</dir>
+      <dir>$PROJECT_DIR$/src/main/java/cn/ctrl/platform</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/ydQuestionnaireService.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentTable.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentMessage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageProprietorMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/weixin/ueditor/ueditor.config.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdNews.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdNewsMapper.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="platform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1511" />
+    <option name="y" value="71" />
+    <option name="width" value="1414" />
+    <option name="height" value="918" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ydHuoDong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ydNews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ydNews" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
+              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="orm" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ydNews" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553744958968" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.ctrl.platform.modules.ydQuestionnaireMessageProprietor.service" />
+      <recent name="cn.ctrl.platform.modules.ydQuestionnaireMessageProprietor.web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="PlatformApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="platform" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.ctrl.platform.PlatformApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d07b31a-876c-4d57-a016-dcbc16ee2e52" name="Default Changelist" comment="" />
+      <created>1553000947476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553000947476</updated>
+      <workItem from="1553000950210" duration="9305000" />
+      <workItem from="1553065075095" duration="4980000" />
+      <workItem from="1553073337196" duration="753000" />
+      <workItem from="1553153293632" duration="311000" />
+      <workItem from="1553235428714" duration="276000" />
+      <workItem from="1553474851464" duration="84000" />
+      <workItem from="1553499304326" duration="1190000" />
+      <workItem from="1553501997450" duration="154000" />
+      <workItem from="1553504417740" duration="170000" />
+      <workItem from="1553520054327" duration="2765000" />
+      <workItem from="1553562005014" duration="2727000" />
+      <workItem from="1553742796031" duration="2111000" />
+      <workItem from="1553745481560" duration="287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="25113000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1511" y="71" width="1414" height="918" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22157435" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.14320987" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46296296" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.47407407" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32962963" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.058309037" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32944608" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/form.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2379" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3908" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagemanager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1169" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentMessage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/contentTable.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydQuestionnaireService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionaireMessage/web/YdQuestionaireMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaire/web/YdQuestionnaireController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdQuestionnaireMessageProprietorMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.4.RELEASE/spring-core-4.3.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3003">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12144">
+          <caret line="424" selection-start-line="424" selection-end-line="424" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE.jar!/org/springframework/aop/aspectj/AspectJAfterThrowingAdvice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/SB_SC_UUM_ImportExtractEmployeeInformationSrv.wsdl" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/SB_SC_UUM_ImportExtractEmployeeInformationSrv.wsdl" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/SB_SC_UUM_ImportExtractEmployeeInformationSrv.xsd" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/MsgHeader.xsd" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar!/org/apache/commons/logging/impl/SLF4JLogFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="58" column="61" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/question/web/QuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/question/service/QuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="47" column="57" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/index.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/weixin/ueditor/ueditor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3564">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdNewsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="182" column="11" lean-forward="true" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

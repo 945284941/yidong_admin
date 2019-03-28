@@ -2,6 +2,8 @@ package cn.ctrl.platform.orm.entity;
 
 import java.util.Date;
 
+
+
 public class YdQuestionnaireMessage {
     private String id;
 
@@ -10,6 +12,8 @@ public class YdQuestionnaireMessage {
     private String question;
 
     private String a;
+
+    
 
     private String b;
 
