@@ -5,6 +5,7 @@ cn/ctrl/platform/define/BaseState.class
 cn/ctrl/platform/orm/mapper/YdNewsMapper.class
 cn/ctrl/platform/modules/ydQuestionaireMessage/web/YdQuestionaireMessageController.class
 cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class
+cn/ctrl/platform/modules/cmpp/CMPP_CONNECT.class
 cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.class
 cn/ctrl/platform/utils/UtilsPermission.class
 cn/ctrl/platform/utils/JsonUtil$2.class
@@ -18,10 +19,12 @@ cn/ctrl/platform/orm/entity/YdZhiwei.class
 cn/ctrl/platform/utils/excel/ExportExcel$1.class
 cn/ctrl/platform/orm/mapper/YdHuodongMapper.class
 cn/ctrl/platform/modules/lawyer/service/LawyerService.class
+cn/ctrl/platform/utils/duanxin/TokenService.class
 cn/ctrl/platform/config/AopConfiguration.class
 cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.class
 cn/ctrl/platform/modules/question/service/QuestionService.class
 cn/ctrl/platform/define/FileType$1.class
+cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT.class
 cn/ctrl/platform/modules/system/web/ResourcesController.class
 cn/ctrl/platform/component/qiniu/RemoteFileService.class
 cn/ctrl/platform/component/basic/ErrorAdapter.class
@@ -52,7 +55,9 @@ cn/ctrl/platform/config/RedisSessionConfig.class
 cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class
 cn/ctrl/platform/define/AppInfo.class
 cn/ctrl/platform/orm/mapper/SysResourcesMapper.class
+cn/ctrl/platform/utils/httpUtil/HttpUtil.class
 cn/ctrl/platform/define/FileType.class
+cn/ctrl/platform/modules/cmpp/CMPP_CONNECT_RESP.class
 cn/ctrl/platform/utils/ActionEnter.class
 cn/ctrl/platform/modules/login/web/LoginController.class
 cn/ctrl/platform/orm/entity/YdHuodongYuangong.class
@@ -62,12 +67,14 @@ cn/ctrl/platform/orm/entity/SysLog.class
 cn/ctrl/platform/modules/ydBuMen/web/YdBuMenController.class
 cn/ctrl/platform/utils/ValidCodeUtils.class
 cn/ctrl/platform/modules/system/web/RoleController.class
+cn/ctrl/platform/utils/duanxin/HttpUtil.class
 cn/ctrl/platform/utils/DistanceUtil.class
 cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class
 cn/ctrl/platform/config/ShiroConfig.class
 cn/ctrl/platform/utils/JsonUtil.class
 cn/ctrl/platform/modules/system/service/ResourcesService.class
 cn/ctrl/platform/utils/Exceptions.class
+cn/ctrl/platform/modules/cmpp/TestMain.class
 cn/ctrl/platform/modules/aliyun/AliyunOSSClientUtil.class
 cn/ctrl/platform/orm/mapper/SysConfigMapper.class
 cn/ctrl/platform/orm/entity/SysResources.class
@@ -77,6 +84,7 @@ cn/ctrl/platform/orm/entity/Question.class
 cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.class
 cn/ctrl/platform/orm/entity/Member.class
 cn/ctrl/platform/modules/system/web/UserController.class
+cn/ctrl/platform/modules/cmpp/Message_Header.class
 cn/ctrl/platform/orm/mapper/YdQuestionnaireMapper.class
 cn/ctrl/platform/config/RedisConfig.class
 cn/ctrl/platform/define/MultiState.class
@@ -93,6 +101,7 @@ cn/ctrl/platform/modules/dmp/visitingRecord/service/VisitingRecordService.class
 cn/ctrl/platform/utils/ActionMap$1.class
 cn/ctrl/platform/hunter/ImageHunter.class
 cn/ctrl/platform/orm/mapper/SysLogMapper.class
+cn/ctrl/platform/modules/cmpp/CMPP_DELIVER.class
 cn/ctrl/platform/config/FreeMarkerExtendConfigurer.class
 cn/ctrl/platform/modules/ydQuestionnaire/web/YdQuestionnaireController.class
 cn/ctrl/platform/utils/UtilsSpringContext.class
@@ -103,7 +112,9 @@ cn/ctrl/platform/utils/UUIDUtils.class
 cn/ctrl/platform/utils/JsonUtil$3.class
 cn/ctrl/platform/orm/entity/SysRole.class
 cn/ctrl/platform/PathFormat.class
+cn/ctrl/platform/utils/duanxin/Token.class
 cn/ctrl/platform/modules/task/web/MatchTaskController.class
+cn/ctrl/platform/utils/duanxin/IdentificationService.class
 cn/ctrl/platform/orm/entity/YdNews.class
 cn/ctrl/platform/utils/JsonUtil$1.class
 cn/ctrl/platform/utils/ZtreeNode.class
@@ -113,6 +124,7 @@ cn/ctrl/platform/orm/entity/YdQuestionnaire.class
 cn/ctrl/platform/modules/ydQuestionaireMessage/YdQuestionaireMessageService.class
 cn/ctrl/platform/define/ActionMap.class
 cn/ctrl/platform/define/ActionMap$1.class
+cn/ctrl/platform/modules/cmpp/CMPP_CODEMSG.class
 cn/ctrl/platform/component/interceptor/BaseInterceptor.class
 cn/ctrl/platform/orm/entity/RoleAndUser.class
 cn/ctrl/platform/orm/mapper/YdYuangongMapper.class
@@ -137,6 +149,7 @@ cn/ctrl/platform/component/basic/Constants.class
 cn/ctrl/platform/orm/mapper/LawyerMapper.class
 cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class
 cn/ctrl/platform/utils/ZtreeNodeMore.class
+cn/ctrl/platform/modules/cmpp/MsgUtils.class
 cn/ctrl/platform/orm/mapper/RoleAndResourcesMapper.class
 cn/ctrl/platform/utils/excel/ImportExcel.class
 cn/ctrl/platform/utils/UtilsUpload.class
@@ -149,6 +162,7 @@ cn/ctrl/platform/aop/LoggingAspect.class
 cn/ctrl/platform/modules/question/web/QuestionController.class
 cn/ctrl/platform/orm/mapper/RoleAndUserMapper.class
 cn/ctrl/platform/modules/lawyer/web/LawyerController.class
+cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT_RESP.class
 cn/ctrl/platform/utils/excel/ImportExcel$1.class
 cn/ctrl/platform/utils/DateUtils.class
 cn/ctrl/platform/orm/entity/YdHuodongCat.class

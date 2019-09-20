@@ -3,11 +3,15 @@ package cn.ctrl.platform.modules.ydNews.web;
 import cn.ctrl.framework.common.basic.JsonContent;
 import cn.ctrl.platform.component.basic.BaseController;
 import cn.ctrl.platform.component.shiro.realm.UserRealm;
+import cn.ctrl.platform.modules.cmpp.TestMain;
 import cn.ctrl.platform.modules.system.service.RoleService;
 import cn.ctrl.platform.modules.ydDiQu.service.YdDiQuService;
+import cn.ctrl.platform.modules.ydNewCat.service.YdNewCatService;
 import cn.ctrl.platform.modules.ydNews.service.YdNewsService;
+import cn.ctrl.platform.orm.entity.YdNewCat;
 import cn.ctrl.platform.orm.entity.YdNews;
 import cn.ctrl.platform.orm.entity.YdZhiwei;
+import cn.ctrl.platform.orm.mapper.YdNewsMapper;
 import com.github.pagehelper.PageInfo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,21 +42,33 @@ public class YdNewsController extends BaseController {
     YdDiQuService ydDiQuService;
     @Autowired
     private RoleService userRealm;
+    @Autowired
+    YdNewCatService ydNewCatService;
+    @Autowired
+    YdNewsMapper ydNewsMapper;
 
     @GetMapping("manager")
     public String manager(Model model){
         return "ydNews/manager";
     }
+    @GetMapping("shanxingmanager")
+    public String shanxingmanager(Model model){
+        return "shanxingtongji/manager";
+    }
 
+    @GetMapping("shenhemanager")
+    public String shenhemanager(Model model){
+        return "ydNews/shenhemanager";
+    }
     @GetMapping("table")
     public String table(Model model,@RequestParam Map map,@RequestParam(value = "pageNo", defaultValue = "1") int pageNo,
                         @RequestParam(value = "pageSize", defaultValue = "10") int pageSize ){
 
-//        if(userRealm.getRole().getId().equals("1")){
-//            //超级管理员
-//        }else{
-//            map.put("diquId",userRealm.getRole().getDepartmentId());
-//        }
+        if(userRealm.getRole().getId().equals("1")){
+            //超级管理员
+        }else{
+            map.put("diquId",userRealm.getRole().getDepartmentId());
+        }
 
         PageInfo goods = rechargeService.findAll(map,pageNo,pageSize);
         model.addAttribute("recharge",goods);
@@ -60,6 +76,13 @@ public class YdNewsController extends BaseController {
     }
 
 
+    @GetMapping("shenhe")
+    public String shenhe(Model model,String id){
+
+     YdNews ydNews =  rechargeService.selectOne(id);
+       model.addAttribute("news",ydNews);
+        return "ydNews/form";
+    }
     @GetMapping("insert")
     public String add(Model model){
         YdZhiwei classification =new YdZhiwei();
@@ -132,5 +155,27 @@ public class YdNewsController extends BaseController {
         return  map;
     }
 
+
+    //新闻分类统计图
+
+    @RequestMapping("tongjiNewCat")
+    @ResponseBody
+    public Map tongjiNewCat(@RequestParam Map map){
+
+//        List<YdNewCat> newCats = ydNewCatService.findAllNoPage();
+
+          YdNewCat ydNewCat = ydNewCatService.selectOne(map.get("catId")+"");
+
+
+
+
+            map.put("name", ydNewCat.getName());
+
+            map.put("value",ydNewsMapper.findTongjiByQuYu(map));
+
+
+        return map;
+
+    }
 
 }

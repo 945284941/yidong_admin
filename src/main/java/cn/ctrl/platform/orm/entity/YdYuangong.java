@@ -7,6 +7,117 @@ public class YdYuangong {
 
     private String dianhua;
 
+    private String  shenqingTime;
+
+    private String sex;
+
+    private String minzu;
+
+    private String study;
+
+    private String mianmao;
+
+    private String birthday;
+
+
+    public String getShenqingTime() {
+        return shenqingTime;
+    }
+
+    public void setShenqingTime(String shenqingTime) {
+        this.shenqingTime = shenqingTime;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    private String state;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getMinzu() {
+        return minzu;
+    }
+
+    public void setMinzu(String minzu) {
+        this.minzu = minzu;
+    }
+
+    public String getStudy() {
+        return study;
+    }
+
+    public void setStudy(String study) {
+        this.study = study;
+    }
+
+    public String getMianmao() {
+        return mianmao;
+    }
+
+    public void setMianmao(String mianmao) {
+        this.mianmao = mianmao;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getPersonCard() {
+        return personCard;
+    }
+
+    public void setPersonCard(String personCard) {
+        this.personCard = personCard;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAihao() {
+        return aihao;
+    }
+
+    public void setAihao(String aihao) {
+        this.aihao = aihao;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    private String personCard;
+
+    private String address;
+
+    private String aihao;
+
+    private String createTime;
+
     private String departmentId;
 
     private String gonghao;

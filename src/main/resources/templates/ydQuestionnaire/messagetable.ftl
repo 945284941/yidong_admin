@@ -3,9 +3,9 @@
     <thead>
     <#--<th style="text-align: center;">调查问题标题</th>-->
     <th style="text-align: center;">调查问卷描述</th>
-    <th style="text-align: center;">a</th>
-    <th style="text-align: center;">b</th>
-    <th style="text-align: center;">c</th>
+    <#--<th style="text-align: center;">a</th>-->
+    <#--<th style="text-align: center;">b</th>-->
+    <#--<th style="text-align: center;">c</th>-->
     <th style="text-align: center;">类型</th>
     <#--<th style="text-align: center;">选择类型</th>-->
     <#--<th style="text-align: center;">发布状态</th>-->
@@ -24,9 +24,9 @@
             <#--<td>${(recharge.title)!"暂无"}</td>-->
             <td>${(recharge.question)!"暂无"}</td>
 
-                <td>${(recharge.a)!"暂无"}</td>
-                <td>${(recharge.b)!"暂无"}</td>
-                <td>${(recharge.c)!"暂无"}</td>
+                <#--<td>${(recharge.a)!"暂无"}</td>-->
+                <#--<td>${(recharge.b)!"暂无"}</td>-->
+                <#--<td>${(recharge.c)!"暂无"}</td>-->
                 <td>
                     <#if recharge.chooseType?? >
                          <#if recharge.chooseType == '0'>

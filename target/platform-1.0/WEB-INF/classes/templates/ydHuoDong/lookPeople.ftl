@@ -8,6 +8,7 @@
 
     <table class="table table-bordered table-hover">
         <thead>
+        <th style="text-align: center;">部门</th>
         <th style="text-align: center;">姓名</th>
 
         <th style="text-align: center;">手机号</th>
@@ -20,6 +21,7 @@
     <#if recharge?? && recharge.list?? && recharge.list?size gt 0>
         <#list recharge.list as recharge>
         <tr style="text-align: center;">
+            <td>${(recharge.bumenName)!"暂无"}</td>
             <td>${(recharge.name)!"暂无"}</td>
 
             <td>${(recharge.dianhua)!"暂无"}</td>

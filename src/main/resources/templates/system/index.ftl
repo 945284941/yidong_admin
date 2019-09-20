@@ -69,8 +69,8 @@
     <script src="${ctx}/plugins/kindeditor-4.1.7/kindeditor.js" type="text/javascript"></script>
 
 <!--多文件上传-->
-    <script src="${ctx}/plugins/muchUploadImg/upload.js" type="text/javascript"></script>
-    <script src="${ctx}/plugins/muchUploadimg/upload.min.js" type="text/javascript"></script>
+    <#--<script src="${ctx}/plugins/muchUploadImg/upload.js" type="text/javascript"></script>-->
+    <#--<script src="${ctx}/plugins/muchUploadimg/upload.min.js" type="text/javascript"></script>-->
     <link href="${ctx}/plugins/muchUploadImg/upload.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>

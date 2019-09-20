@@ -9,6 +9,16 @@ public class YdHuodongYuangong {
 
     private String status;
 
+    private String bumenName;
+
+    public String getBumenName() {
+        return bumenName;
+    }
+
+    public void setBumenName(String bumenName) {
+        this.bumenName = bumenName;
+    }
+
     public String getName() {
         return name;
     }

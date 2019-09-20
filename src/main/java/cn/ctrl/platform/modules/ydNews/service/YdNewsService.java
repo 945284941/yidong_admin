@@ -71,6 +71,7 @@ public class YdNewsService extends BaseService {
          if(equipment.getId() == null || equipment.getId().equals("")){
              equipment.setId(UUIDUtils.getUUID());
              equipment.setCreateTime(new Date());
+             equipment.setState("0");
             equipment.setCreateBy(this.getCurrentSysUser().getId());
              return rechargeMapper.insertSelectivee(equipment);
          }else{

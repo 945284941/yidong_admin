@@ -8,13 +8,22 @@
     <result column="a" property="a" jdbcType="VARCHAR" />
     <result column="b" property="b" jdbcType="VARCHAR" />
     <result column="c" property="c" jdbcType="VARCHAR" />
+    <result column="d" property="d" jdbcType="VARCHAR" />
+    <result column="e" property="e" jdbcType="VARCHAR" />
+    <result column="f" property="f" jdbcType="VARCHAR" />
+    <result column="g" property="g" jdbcType="VARCHAR" />
+    <result column="h" property="h" jdbcType="VARCHAR" />
+    <result column="i" property="i" jdbcType="VARCHAR" />
+    <result column="j" property="j" jdbcType="VARCHAR" />
+    <result column="k" property="k" jdbcType="VARCHAR" />
+
     <result column="choose_type" property="chooseType" jdbcType="VARCHAR" />
     <result column="sort_num" property="sortNum" jdbcType="INTEGER" />
     <result column="disabled" property="disabled" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, questionnaire_id, question, a, b, c, choose_type, sort_num, disabled, create_time
+    id, questionnaire_id, question, a, b, c, choose_type, sort_num, disabled, create_time,d,e,f,g,h,i,g,k,j
   </sql>
   <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
    select <include refid="Base_Column_List"/> from yd_questionnaire_message
@@ -94,6 +103,30 @@
       <if test="c != null" >
         c,
       </if>
+      <if test="d != null" >
+        d,
+      </if>
+      <if test="e != null" >
+        e,
+      </if>
+      <if test="f != null" >
+        f,
+      </if>
+      <if test="g != null" >
+        g,
+      </if>
+      <if test="h != null" >
+        h,
+      </if>
+      <if test="i != null" >
+        i,
+      </if>
+      <if test="j != null" >
+        j,
+      </if>
+      <if test="k != null" >
+        k,
+      </if>
       <if test="chooseType != null" >
         choose_type,
       </if>
@@ -125,6 +158,30 @@
       </if>
       <if test="c != null" >
         #{c,jdbcType=VARCHAR},
+      </if>
+      <if test="d != null" >
+        #{d,jdbcType=VARCHAR},
+      </if>
+      <if test="e != null" >
+        #{e,jdbcType=VARCHAR},
+      </if>
+      <if test="f != null" >
+        #{f,jdbcType=VARCHAR},
+      </if>
+      <if test="g != null" >
+        #{g,jdbcType=VARCHAR},
+      </if>
+      <if test="h != null" >
+        #{h,jdbcType=VARCHAR},
+      </if>
+      <if test="i != null" >
+        #{i,jdbcType=VARCHAR},
+      </if>
+      <if test="j != null" >
+        #{j,jdbcType=VARCHAR},
+      </if>
+      <if test="k != null" >
+        #{k,jdbcType=VARCHAR},
       </if>
       <if test="chooseType != null" >
         #{chooseType,jdbcType=VARCHAR},
@@ -158,6 +215,33 @@
       <if test="c != null" >
         c = #{c,jdbcType=VARCHAR},
     </if>
+
+      <if test="d != null" >
+       d = #{d,jdbcType=VARCHAR},
+      </if>
+      <if test="e != null" >
+       e= #{e,jdbcType=VARCHAR},
+      </if>
+      <if test="f != null" >
+       f= #{f,jdbcType=VARCHAR},
+      </if>
+      <if test="g != null" >
+      g=  #{g,jdbcType=VARCHAR},
+      </if>
+      <if test="h != null" >
+      h=  #{h,jdbcType=VARCHAR},
+      </if>
+      <if test="i != null" >
+       i= #{i,jdbcType=VARCHAR},
+      </if>
+      <if test="j != null" >
+       j= #{j,jdbcType=VARCHAR},
+      </if>
+      <if test="k != null" >
+      k=  #{k,jdbcType=VARCHAR},
+      </if>
+
+
     <if test="chooseType != null" >
       choose_type = #{chooseType,jdbcType=VARCHAR},
     </if>

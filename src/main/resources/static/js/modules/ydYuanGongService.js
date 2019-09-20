@@ -45,6 +45,11 @@ var ydYuanGongService = new Class({
             remote: project.path + "/ydYuanGong/insert"
         });
     },
+    shenhe: function (id) {
+        $("#" + this.options.modalName).modal({
+            remote: project.path + "/ydYuanGong/shenhe?id=" + id
+        });
+    },
     delete: function (id) {
         var r = window.confirm("确定删除?");
         if (r) {

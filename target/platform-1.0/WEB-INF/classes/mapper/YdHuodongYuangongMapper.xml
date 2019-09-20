@@ -12,10 +12,11 @@
   </sql>
   <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
     select
-    y.* ,g.name as name ,g.dianhua
+    y.* ,g.name as name ,g.dianhua , b.name as bumenName
     from yd_huodong_yuangong y left join yd_yuangong g on
-      y.yuangong_id = g.id
+      y.yuangong_id = g.id left join yd_bumen b on g.department_id = b.id
     <where>
+
       <if test="huodongId != null" >
      and   y.huodong_id = #{huodongId,jdbcType=VARCHAR}
       </if>

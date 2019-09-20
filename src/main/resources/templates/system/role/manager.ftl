@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-<script src="${ctx}/js/extends/treeTable/jquery.treeTable.min.js"></script>
+<#--<script src="${ctx}/js/extends/treeTable/jquery.treeTable.min.js"></script>-->
 <script>
     Duang.getService('roleservice').loadTreeTable();
 </script>

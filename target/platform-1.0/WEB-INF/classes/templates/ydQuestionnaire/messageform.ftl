@@ -74,6 +74,88 @@
                        class="form-control">
             </div>
         </div>
+
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项d：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="d" value="${(recharge.d)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项e：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="e" value="${(recharge.e)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项f：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="f" value="${(recharge.f)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项g：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="g" value="${(recharge.g)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项h：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="h" value="${(recharge.h)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项i
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="i" value="${(recharge.i)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项j：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="j" value="${(recharge.j)!""}"
+                         class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="control-label col-md-3">选项k：
+                  <span class="required" aria-required="true"> * </span>
+              </label>
+              <div class="col-md-7">
+                  <input type="text" data-required="1" name="k" value="${(recharge.k)!""}"
+                         class="form-control">
+              </div>
+          </div>
       </div>
 
         <#--<div class="form-group">-->

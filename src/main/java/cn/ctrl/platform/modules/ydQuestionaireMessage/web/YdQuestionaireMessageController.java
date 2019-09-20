@@ -133,18 +133,52 @@ public class YdQuestionaireMessageController extends BaseController {
         map.put("a","1");
         Long a =  ydQuestionnaireMessageProprietorMapper.findAll(map);
 
-        Map mapp= new HashMap();
-        mapp.put("questionnaireMessageId",id);
-        mapp.put("b","1");
+         map= new HashMap();
+        map.put("questionnaireMessageId",id);
+        map.put("b","1");
 
         Long b =  ydQuestionnaireMessageProprietorMapper.findAll(map);
-        Map maap = new HashMap();
-        maap.put("questionnaireMessageId",id);
-        maap.put("c","1");
+        map = new HashMap();
+        map.put("questionnaireMessageId",id);
+        map.put("c","1");
         Long c =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("d","1");
+        Long d =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("e","1");
+        Long e =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("f","1");
+        Long f =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("g","1");
+        Long g =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("h","1");
+        Long h =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("i","1");
+        Long ii =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("j","1");
+        Long j =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+        map.put("questionnaireMessageId",id);
+        map.put("k","1");
+        Long k =  ydQuestionnaireMessageProprietorMapper.findAll(map);
+
+
         //a的结果
         List<YdNewCat> ydNewCats = new ArrayList<>();
-        for (int  i =0 ; i <3 ;i++){
+        for (int  i =0 ; i <11 ;i++){
             YdNewCat ydNews = new YdNewCat();
 
             if(i == 0){
@@ -160,6 +194,48 @@ public class YdQuestionaireMessageController extends BaseController {
                 ydNews.setName("c");
                 ydNews.setDisabled(c+"");
             }
+
+            if(i == 3){
+                ydNews.setName("d");
+                ydNews.setDisabled(d+"");
+            }
+
+            if(i == 4){
+                ydNews.setName("e");
+                ydNews.setDisabled(e+"");
+            }
+
+            if(i == 5){
+                ydNews.setName("f");
+                ydNews.setDisabled(f+"");
+            }
+
+            if(i == 6){
+                ydNews.setName("g");
+                ydNews.setDisabled(g+"");
+            }
+
+            if(i == 7){
+                ydNews.setName("h");
+                ydNews.setDisabled(h+"");
+            }
+
+            if(i == 8){
+                ydNews.setName("i");
+                ydNews.setDisabled(ii+"");
+            }
+
+            if(i == 9){
+                ydNews.setName("j");
+                ydNews.setDisabled(j+"");
+            }
+
+            if(i == 10){
+                ydNews.setName("k");
+                ydNews.setDisabled(k+"");
+            }
+
+
             ydNewCats.add(ydNews);
         }
         return ydNewCats;

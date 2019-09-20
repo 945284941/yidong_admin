@@ -1,8 +1,8 @@
 package cn.ctrl.platform.utils.httpUtil;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import com.alibaba.fastjson.JSONObject;
+
+import java.io.*;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -85,11 +85,14 @@ public class HttpRequest {
             // 打开和URL之间的连接
             URLConnection conn = realUrl.openConnection();
             // 设置通用的请求属性
-            conn.setRequestProperty("accept", "*/*");
-            conn.setRequestProperty("connection", "Keep-Alive");
-            conn.setRequestProperty("user-agent",
-                    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            conn.setRequestProperty("accept", "application/json");
+
+//            conn.setRequestProperty("user-agent",
+//                    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            conn.setRequestProperty("connection", "keep-alive");
+            conn.setRequestProperty("Content-Type", "application/json; charset=utf-8");
             // 发送POST请求必须设置如下两行
+            conn.setUseCaches(false);
             conn.setDoOutput(true);
             conn.setDoInput(true);
             // 获取URLConnection对象对应的输出流
@@ -124,5 +127,83 @@ public class HttpRequest {
             }
         }
         return result;
+    }
+    public static String sendPostTwo(String url, String param) throws Exception {
+
+
+        URL localURL = new URL(url);
+        URLConnection connection = localURL.openConnection();
+        HttpURLConnection httpURLConnection = (HttpURLConnection)connection;
+
+        httpURLConnection.setDoOutput(true);
+        httpURLConnection.setRequestMethod("POST");
+        httpURLConnection.setRequestProperty("Accept-Charset", "utf-8");
+        httpURLConnection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+//        httpURLConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        httpURLConnection.setRequestProperty("Content-Length", String.valueOf(param.length()));
+        httpURLConnection.setUseCaches(false);
+        httpURLConnection.setDoOutput(true);
+        httpURLConnection.setDoInput(true);
+
+        OutputStream outputStream = null;
+        OutputStreamWriter outputStreamWriter = null;
+        InputStream inputStream = null;
+        InputStreamReader inputStreamReader = null;
+        BufferedReader reader = null;
+        StringBuffer resultBuffer = new StringBuffer();
+        String tempLine = null;
+
+        try {
+            outputStream = httpURLConnection.getOutputStream();
+            outputStreamWriter = new OutputStreamWriter(outputStream);
+
+            outputStreamWriter.write(param.toString());
+            outputStreamWriter.flush();
+
+//            if (httpURLConnection.getResponseCode() >= 300) {
+//                throw new Exception("HTTP Request is not success, Response code is " + httpURLConnection.getResponseCode());
+//            }
+
+            inputStream = httpURLConnection.getInputStream();
+            inputStreamReader = new InputStreamReader(inputStream);
+            reader = new BufferedReader(inputStreamReader);
+
+            while ((tempLine = reader.readLine()) != null) {
+                resultBuffer.append(tempLine);
+            }
+
+        } finally {
+
+            if (outputStreamWriter != null) {
+                outputStreamWriter.close();
+            }
+
+            if (outputStream != null) {
+                outputStream.close();
+            }
+
+            if (reader != null) {
+                reader.close();
+            }
+
+            if (inputStreamReader != null) {
+                inputStreamReader.close();
+            }
+
+            if (inputStream != null) {
+                inputStream.close();
+            }
+
+        }
+
+        return resultBuffer.toString();
+
+    }
+    public static void main(String[] baby) throws Exception {
+        JSONObject jsonObject =new JSONObject();
+        jsonObject.put("id",5);
+        jsonObject.put("charge_id",3);
+        jsonObject.put("card_charge",100);
+      System.out.println(HttpUtil.httpPostWithJson(jsonObject,"http://47.104.129.213:8099/console/card/charge"));
     }
 }

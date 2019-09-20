@@ -3,6 +3,7 @@ package cn.ctrl.platform.modules.login.web;
 import cn.ctrl.platform.component.basic.BaseController;
 import cn.ctrl.platform.component.basic.Constants;
 
+import cn.ctrl.platform.modules.cmpp.TestMain;
 import cn.ctrl.platform.modules.system.service.ResourcesService;
 import cn.ctrl.platform.modules.system.service.RoleService;
 import cn.ctrl.platform.modules.ydDiQu.service.YdDiQuService;
@@ -13,7 +14,12 @@ import cn.ctrl.platform.modules.ydYuanGong.service.YdYuanGongService;
 import cn.ctrl.platform.orm.entity.*;
 import cn.ctrl.platform.orm.mapper.*;
 import cn.ctrl.platform.utils.ActionEnter;
+import cn.ctrl.platform.utils.duanxin.Token;
+import cn.ctrl.platform.utils.httpUtil.HttpUtil;
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +37,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +72,51 @@ public class LoginController extends BaseController{
 
 
 
+    TestMain testMain = new TestMain();
+
+    @GetMapping("sendDuanXin")
+    @ResponseBody
+    public Map sendDuanXin(){
+        Map map = new HashMap();
+
+        String urlPath = "/openapi/restOauth2Server/access_token";
+        StringBuffer url = new StringBuffer();
+        //能力开放平台地址
+        url.append("http://10.19.240.86");
+        url.append(urlPath);
+        List<NameValuePair> formparams = new ArrayList<NameValuePair>();
+        formparams.add(new BasicNameValuePair("grant_type", "client_credentials"));
+        //能力开放平台下线配置提供
+        formparams.add(new BasicNameValuePair("client_id", "20190827102227554"));
+        formparams.add(new BasicNameValuePair("client_secret", "34f85ca80ec353d3052b8a2d3973a0c5"));
+        String message = cn.ctrl.platform.utils.duanxin.HttpUtil.httpPost(url.toString(), formparams, "", urlPath, "");
+        Token token = (Token) JSONObject.parseObject(message, Token.class);
+        System.out.println(token.getAccess_token());
+        System.out.println("token==="+token.getAccess_token());
+        StringBuffer requestParam = new StringBuffer();
+
+        String urlPathh = "/openapi/httpService/IdentificationService?";
+//        String method = "sendSmsInfo";
+//        String methodName = urlPath + method;
+        //能开接口地址
+//        requestParam.append("http://10.19.240.99");
+        requestParam.append("http://10.19.240.86");
+
+        requestParam.append(urlPathh);
+        requestParam.append("access_token=" + token.getAccess_token());
+        requestParam.append("&method=" + "getOrVerifyRandCode");
+        requestParam.append("&format=" + "json");
+        requestParam.append("&TELNUM=" + "18765155509");
+        requestParam.append("&version=" + "1.0.0");
+//        requestParam.append("&SMSCONTENT=" + smsContent);//短信内容
+        String uu = HttpUtil.httpPostWithJsonByGet(requestParam.toString());
+
+        JSONObject jsonObject =  JSONObject.parseObject(uu);
+        String   res_code =  jsonObject.get("res_code")+"";
+       System.out.println("res_code===="+res_code);
+        map.put("msg","发送成功");
+        return  map;
+    }
 
 
     @Autowired
@@ -157,10 +209,10 @@ public class LoginController extends BaseController{
         //人员
 
         int yuangong = 0;
-        if(ydYuangongMapper.findAllNoPage()  == null){
+        if(ydYuangongMapper.findAllNoPage(new HashMap())  == null){
 
         }else{
-            yuangong =  ydYuangongMapper.findAllNoPage().size();
+            yuangong =  ydYuangongMapper.findAllNoPage(new HashMap()).size();
         }
         model.addAttribute("yugong",yuangong);
 
@@ -191,7 +243,7 @@ public class LoginController extends BaseController{
     public Map babyTongji(){
 
         //区域新闻
-        List<YdNews> list = ydNewsMapper.findTongjiByQuYu();
+        List<YdNews> list = ydNewsMapper.findTongjiByQuYu(new HashMap());
 
 
         //区域调查问卷

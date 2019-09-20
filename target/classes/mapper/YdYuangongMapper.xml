@@ -8,9 +8,26 @@
     <result column="department_id" property="departmentId" jdbcType="VARCHAR" />
     <result column="gonghao" property="gonghao" jdbcType="VARCHAR" />
     <result column="zhiwei_id" property="zhiweiId" jdbcType="VARCHAR" />
+
+
+    <result column="shenqing_time" property="shenqingTime" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="minzu" property="minzu" jdbcType="VARCHAR" />
+    <result column="study" property="study" jdbcType="VARCHAR" />
+    <result column="mianmao" property="mianmao" jdbcType="VARCHAR" />
+    <result column="birthday_" property="birthday" jdbcType="VARCHAR" />
+    <result column="person_card" property="personCard" jdbcType="VARCHAR" />
+
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="aihao" property="aihao" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+
+
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, dianhua, department_id, gonghao, zhiwei_id
+    id, name, dianhua, department_id, gonghao, zhiwei_id,shenqing_time,sex,minzu,
+    study,mianmao,birthday_,person_card,address,aihao,create_time,state
   </sql>
   <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
 
@@ -36,6 +53,10 @@
        <if test="dianhua != null and dianhua != '' " >
          and  y.dianhua = #{dianhua,jdbcType=VARCHAR}
        </if>
+       <if test="state != null and dianhua != '' " >
+         and  y.state = #{state,jdbcType=VARCHAR}
+       </if>
+
        <if test="departmentId != null" >
          and  y.department_id = #{departmentId,jdbcType=VARCHAR}
        </if>
@@ -85,8 +106,44 @@
         gonghao,
       </if>
       <if test="zhiweiId != null" >
-        zhiwei_id,
+      zhiwei_id,
+    </if>
+
+
+      <if test="shenqingTime != null" >
+        shenqing_time,
       </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="minzu != null" >
+        minzu,
+      </if>
+      <if test="study != null" >
+        study,
+      </if>
+      <if test="mianmao != null" >
+        mianmao,
+      </if>
+      <if test="birthday != null" >
+        birthday_,
+      </if>
+      <if test="personCard != null" >
+        person_card,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="aihao != null" >
+        aihao,
+      </if>
+      <if test="createTime != null" >
+      create_time,
+    </if>
+      <if test="state != null" >
+        state,
+      </if>
+
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -106,6 +163,41 @@
       </if>
       <if test="zhiweiId != null" >
         #{zhiweiId,jdbcType=VARCHAR},
+      </if>
+
+
+      <if test="shenqingTime != null" >
+        #{shenqingTime,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="minzu != null" >
+        #{minzu,jdbcType=VARCHAR},
+      </if>
+      <if test="study != null" >
+        #{study,jdbcType=VARCHAR},
+      </if>
+      <if test="mianmao != null" >
+        #{mianmao,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="personCard != null" >
+        #{personCard,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="aihao != null" >
+        #{aihao,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -127,6 +219,43 @@
       <if test="zhiweiId != null" >
         zhiwei_id = #{zhiweiId,jdbcType=VARCHAR},
       </if>
+
+      <if test="state != null" >
+        state =   #{state,jdbcType=VARCHAR},
+      </if>
+
+      <if test="shenqingTime != null" >
+        shenqing_time =    #{shenqingTime,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex =   #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="minzu != null" >
+        minzu =  #{minzu,jdbcType=VARCHAR},
+      </if>
+      <if test="study != null" >
+        study =   #{study,jdbcType=VARCHAR},
+      </if>
+      <if test="mianmao != null" >
+        mianmao =  #{mianmao,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        birthday_ = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="personCard != null" >
+        person_card = #{personCard,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address =   #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="aihao != null" >
+        aihao =  #{aihao,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time =  #{createTime,jdbcType=VARCHAR},
+      </if>
+
+
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>

@@ -11,11 +11,24 @@
     <result column="b" property="b" jdbcType="VARCHAR" />
     <result column="c" property="c" jdbcType="VARCHAR" />
 
+    <result column="d" property="a" jdbcType="VARCHAR" />
+    <result column="e" property="b" jdbcType="VARCHAR" />
+    <result column="f" property="c" jdbcType="VARCHAR" />
+
+
+    <result column="j" property="a" jdbcType="VARCHAR" />
+    <result column="k" property="b" jdbcType="VARCHAR" />
+    <result column="h" property="c" jdbcType="VARCHAR" />
+
+
+    <result column="i" property="a" jdbcType="VARCHAR" />
+    <result column="g" property="c" jdbcType="VARCHAR" />
+
     <result column="content" property="content" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, community_id, proprietor_id, questionnaire_id, questionnaire_message_id, a, b,
-    c,content
+    c,content,d,e,f,g,h,i,j,k
   </sql>
   <select id="findAllByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
        select  p.*,y.name as memberName
@@ -44,6 +57,32 @@
       </if>
       <if test="c != null" >
         and   p.c = #{c,jdbcType=VARCHAR}
+      </if>
+
+
+      <if test="d != null" >
+        and   p.d = #{d,jdbcType=VARCHAR}
+      </if>
+      <if test="e != null" >
+        and   p.e = #{e,jdbcType=VARCHAR}
+      </if>
+      <if test="f != null" >
+        and   p.f = #{f,jdbcType=VARCHAR}
+      </if>
+      <if test="g != null" >
+        and   p.g = #{g,jdbcType=VARCHAR}
+      </if>
+      <if test="h != null" >
+        and   p.h = #{h,jdbcType=VARCHAR}
+      </if>
+      <if test="i != null" >
+        and   p.i = #{i,jdbcType=VARCHAR}
+      </if>
+      <if test="g != null" >
+        and   p.g = #{g,jdbcType=VARCHAR}
+      </if>
+      <if test="k != null" >
+        and   p.k = #{k,jdbcType=VARCHAR}
       </if>
          </where>
 
@@ -75,6 +114,32 @@
         </if>
         <if test="c != null" >
           and   c = #{c,jdbcType=VARCHAR}
+        </if>
+
+
+        <if test="d != null" >
+          and   d = #{d,jdbcType=VARCHAR}
+        </if>
+        <if test="e != null" >
+          and   e = #{e,jdbcType=VARCHAR}
+        </if>
+        <if test="f != null" >
+          and   f = #{f,jdbcType=VARCHAR}
+        </if>
+        <if test="g != null" >
+          and   g = #{g,jdbcType=VARCHAR}
+        </if>
+        <if test="h != null" >
+          and   h = #{h,jdbcType=VARCHAR}
+        </if>
+        <if test="i != null" >
+          and   i = #{i,jdbcType=VARCHAR}
+        </if>
+        <if test="g != null" >
+          and   g = #{g,jdbcType=VARCHAR}
+        </if>
+        <if test="k != null" >
+          and   k = #{k,jdbcType=VARCHAR}
         </if>
       </where>
 

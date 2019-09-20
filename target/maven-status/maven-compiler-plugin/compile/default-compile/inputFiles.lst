@@ -13,6 +13,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/Member.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/define/MIMEType.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/UtilsUpload.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/MsgUtils.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/question/web/QuestionController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/SpringBootStartApplication.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/Lawyer.java
@@ -32,6 +33,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdDiqu.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdQuestionnaire.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/httpUtil/HttpUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/Exceptions.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdZhiweiMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/lawyer/service/LawyerService.java
@@ -54,6 +56,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongCatMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/system/service/UserService.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_CODEMSG.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/JsonUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydHuoDongCat/web/YdHuoDongCatController.java
@@ -63,10 +66,12 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/UtilsJson.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/ConfigManager.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/define/FileType.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/duanxin/Token.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/ToolsUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/PasswordUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/BeanValidators.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/PathFormat.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_CONNECT_RESP.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/PlatformApplication.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/SysResources.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/SysRoleMapper.java
@@ -77,6 +82,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/upload/Uploader.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/RoleAndResources.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/config/AopConfiguration.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_DELIVER.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/define/BaseState.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java
@@ -98,10 +104,12 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/ZtreeNode.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/question/service/QuestionService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/Question.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_CONNECT.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionaireMessage/YdQuestionaireMessageService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdNewCat.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/Encoder.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/Encodes.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/TestMain.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionaireMessage/web/YdQuestionaireMessageController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/basic/BaseEntity.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/config/RedisSessionConfig.java
@@ -109,6 +117,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/SysConfigMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionnaire/service/YdQuestionnaireService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/shiro/realm/UserRealm.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/duanxin/IdentificationService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/shiro/realm/TicketRealm.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/basic/ErrorAdapter.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongYuangongMapper.java
@@ -120,6 +129,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdQuestionnaireMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/excel/ExportExcel.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/basic/Constants.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/duanxin/TokenService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdNewCatMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydDiQu/service/YdDiQuService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/RoleAndUser.java
@@ -135,6 +145,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdHuodong.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdYuangong.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/system/service/RoleService.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/duanxin/HttpUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdZhiwei.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdHuodongYuangong.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/ActionEnter.java
@@ -142,10 +153,13 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/basic/BaseService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/VisitingRecordMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydBuMen/service/YdBuMenService.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/qiniu/RemoteFileServiceImplByQiniu.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT_RESP.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/config/RedisConfig.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydZhiWei/web/YdZhiWeiController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/SysLogMapper.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/Message_Header.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/Reflections.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/VisitingRecord.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/DateUtils.java

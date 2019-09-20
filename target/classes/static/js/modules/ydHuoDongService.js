@@ -40,6 +40,11 @@ var ydHuoDongService = new Class({
             remote: project.path + "/ydHuoDong/edit?id=" + id
         });
     },
+    baominglv: function(id){
+        $("#" + this.options.modalName).modal({
+            remote: project.path + "/ydHuoDong/huodongcanyuqingkuang?id=" + id
+        });
+    },
     shenhe: function (id) {
         $("#" + this.options.modalName).modal({
             remote: project.path + "/ydHuoDong/shenhe?id=" + id

@@ -78,8 +78,8 @@ public class YdYuanGongService extends BaseService {
     }
 
 
-    public List<YdYuangong> findAllNoPage(){
-        return rechargeMapper.findAll(new HashMap());
+    public List<YdYuangong> findAllNoPage(Map map){
+        return rechargeMapper.findAll(map);
     }
 
 }

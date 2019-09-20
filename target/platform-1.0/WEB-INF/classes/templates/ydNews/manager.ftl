@@ -35,6 +35,7 @@
                                             </div>
                                         </div>
 
+                                        <input type="hidden" name="state" value="1">
 
                                         <#--<div class="col-lg-6">-->
                                             <#--<div class="form-group">-->

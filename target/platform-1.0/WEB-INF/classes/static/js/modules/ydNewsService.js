@@ -95,6 +95,11 @@ contentTypeBaby: function (value) {
          $('#'+this.options.formId)[0].reset();
 
     },
+    shenhe: function(id){
+        $("#" + this.options.modalName).modal({
+            remote: project.path + "/ydNews/shenhe?id="+id
+        });
+    },
     edit: function (id) {
         // $("#" + this.options.modalName).modal({
         //     remote: project.path + "/ydNews/edit?id=" + id
@@ -121,6 +126,21 @@ contentTypeBaby: function (value) {
                 }
             })
         }
+    },
+    updateStatuss:function(id,state){
+        var $this= this;
+         var param = {};
+         param.id =id;
+         param.state = state;
+        $.post(project.path + '/ydNews/save', param, function (data) {
+            if (data.success) {
+                $("#" + $this.options.modalName).modal('hide');
+                $this.loadTable();
+                Duang.success("提示", "保存成功");
+            } else {
+                Duang.error("提示", data.message);
+            }
+        }, 'json')
     },
     saveOrUpdate: function () {
         var $this = this;

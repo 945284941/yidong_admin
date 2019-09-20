@@ -11,14 +11,14 @@
     <result column="cat_id_" property="catId" jdbcType="VARCHAR" />
     <result column="type_" property="type" jdbcType="VARCHAR" />
       <result column="url" property="url" jdbcType="VARCHAR" />
-
+    <result column="state_" property="state" jdbcType="VARCHAR" />
 
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="cn.ctrl.platform.orm.entity.YdNews" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, diqu_id, create_time, img_url,create_by_,cat_id_,type_,url
+    id, name, diqu_id, create_time, img_url,create_by_,cat_id_,type_,url,state_
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -26,12 +26,20 @@
   <select id="findAllCount" resultType="long" parameterType="java.util.Map">
     select  count(*) from yd_news
   </select>
-  <select id="findTongjiByQuYu" resultMap="BaseResultMap">
+  <select id="findTongjiByQuYu" resultMap="BaseResultMap" parameterType="java.util.Map">
 
     select  ifnull(a.num,0) as num ,d.name as name from
      yd_diqu d
     left join   (
-    select diqu_id,count(*) as num from yd_news group by diqu_id
+    select diqu_id,count(*) as num from yd_news
+     <where>
+        <if test="catId != null and catId != '' ">
+        and   cat_id_ = #{catId,jdbcType=VARCHAR}
+        </if>
+
+     </where>
+
+    group by diqu_id
     )a on a.diqu_id = d.id
   </select>
 
@@ -46,6 +54,10 @@
       <if test="name != null and name != '' " >
       and   n.name like '%${name}%'
     </if>
+
+      <if test="state != null and state != '' " >
+        and   n.state_ = #{state,jdbcType=VARCHAR}
+      </if>
       <if test="diquName != null and diquName != '' " >
         and   d.name like '%${diquName}%'
       </if>
@@ -123,6 +135,9 @@
         <if test="url != null" >
             url,
         </if>
+      <if test="state != null" >
+        state_,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -155,6 +170,9 @@
         <if test="url != null" >
             #{url,jdbcType=VARCHAR},
         </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdNews" >
@@ -184,6 +202,9 @@
         <if test="url != null" >
             url =    #{url,jdbcType=VARCHAR},
         </if>
+      <if test="state != null" >
+       state_ =   #{state,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>

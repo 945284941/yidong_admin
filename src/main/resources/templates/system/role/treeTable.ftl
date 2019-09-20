@@ -1,6 +1,8 @@
 <#assign ctx=request.contextPath>
 <#assign firstRoot=0>
 <#macro buildNode root pid>
+<#--<script src="${ctx}/js/extends/treeTable/jquery.treeTable.min.js"></script>-->
+
 <tr data-tt-id="${root.id}"  data-tt-parent-id="${pid}"  <#if firstRoot==1>style="display: none;" </#if>class="branch collapsed">
     <td><span style="padding-left: 0px;"></span>${(root.name)!"角色名称丢失"}</td>
     <td>${(root.remark)!""}</td>

@@ -38,14 +38,16 @@
             <td class="text-center">
                 <a onclick="Duang.getService('ydHuoDongService').delete('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
 
-                <#if recharge.checkStatus == '1'>
-                <a href="javascript:Duang.getService('ydHuoDongService').lookPeople('1','${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 查看报名人员</a>
-                </#if>
-               <#if recharge.checkStatus == '0'>
-                    <a href="javascript:Duang.getService('ydHuoDongService').shenhe('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 审核 </a>
-                              <a href="javascript:Duang.getService('ydHuoDongService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>
 
-               </#if>
+                <a href="javascript:Duang.getService('ydHuoDongService').lookPeople('1','${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 查看报名人员</a>
+                <a href="javascript:Duang.getService('ydHuoDongService').baominglv('${recharge.id}')"
+                   class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 活动参与情况</a>
+
+               <#--<#if recharge.checkStatus == '0'>-->
+                    <#--<a href="javascript:Duang.getService('ydHuoDongService').shenhe('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 审核 </a>-->
+                              <#--<a href="javascript:Duang.getService('ydHuoDongService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>-->
+
+               <#--</#if>-->
             </td>
         </tr>
         </#list>

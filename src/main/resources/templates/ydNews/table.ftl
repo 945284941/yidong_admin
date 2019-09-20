@@ -5,6 +5,7 @@
     <#--<th style="text-align: center;">地区名称</th>-->
     <th style="text-align: center;">新闻分类</th>
     <th style="text-align: center;">内容分类</th>
+    <th style="text-align: center;">审核状态</th>
     <th style="text-align: center;">图片</th>
     <th style="text-align: center;">创建者</th>
 
@@ -29,12 +30,29 @@
                         </#if>
                 </#if>
             </td>
+            <td>
+                <#if recharge.state ??>
+                    <#if recharge.state == '0'>
+                    审核中
+                    </#if>
+                     <#if recharge.state == '1'>
+                     审核通过
+                     </#if>
+                     <#if recharge.state == '2'>
+                     审核未通过
+                     </#if>
+                </#if>
+            </td>
             <td> <img src="${(recharge.imgUrl)!""}" style="width: 100px;height: 100px;"> </td>
             <td>${(recharge.createName)!"暂无"}</td>
             <td>${(recharge.createTime)!?datetime}</td>
             <td class="text-center">
                 <a href="javascript:Duang.getService('ydNewsService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>
                 <a onclick="Duang.getService('ydNewsService').delete('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
+
+               <#if recharge.state == '0'>
+                  <a onclick="Duang.getService('ydNewsService').shenhe('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 审核</a>
+               </#if>
             </td>
         </tr>
         </#list>

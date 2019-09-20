@@ -80,11 +80,17 @@ public class YdYuanGongController extends BaseController {
     @ResponseBody
     public JsonContent save(@RequestParam Map  map, HttpServletRequest request, YdYuangong recharge){
 
-       if(rechargeService.addGoods(recharge,map) > 0){
-           return JsonContent.success("操作成功");
-       }else{
-           return JsonContent.fail("操作成功");
-       }
+        try{
+            if(rechargeService.addGoods(recharge,map) > 0){
+                return JsonContent.success("操作成功");
+            }else{
+                return JsonContent.fail("操作失败");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return JsonContent.fail("操作失败");
+        }
+
 
     }
 
@@ -117,6 +123,21 @@ public class YdYuanGongController extends BaseController {
         model.addAttribute("zhiwei",ydZhiWeiService.findAllNoPage());
         model.addAttribute("recharge",recharge);
       return "ydYuanGong/form";
+    }
+
+    @GetMapping("shenhe")
+    public String shenhe(Model model,String id){
+        Map map = new HashMap();
+        if(userRealm.getRole().getId().equals("1")){
+            //超级管理员
+        }else{
+            map.put("diquId",userRealm.getRole().getDepartmentId());
+        }
+        YdYuangong recharge = rechargeService.selectOne(id);
+        model.addAttribute("diqu",ydBuMenService.findAllNoPage(map));
+        model.addAttribute("zhiwei",ydZhiWeiService.findAllNoPage());
+        model.addAttribute("recharge",recharge);
+        return "ydYuanGong/shenhe";
     }
 
     @PostMapping("imgF")

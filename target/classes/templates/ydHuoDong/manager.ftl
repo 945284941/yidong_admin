@@ -1,4 +1,5 @@
 <#assign ctx=request.contextPath>
+<#assign ctx=request.contextPath>
 <!-- BEGIN PAGE BAR -->
 <div class="page-bar">
     <ul class="page-breadcrumb">
@@ -62,7 +63,7 @@
                                             </div>
                                         </div>
                                         <#if baby == '2'>
-                                         <input type="hidden" name="checkStatus" value="1">
+
                                         </#if>
                                         <#if baby == '4'>
                                             <div class="col-lg-6">

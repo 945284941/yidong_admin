@@ -26,5 +26,5 @@ public interface YdNewsMapper extends MyMapper<YdNews> {
 
     Long findAllCount(Map map);
 
-    List<YdNews> findTongjiByQuYu();
+    List<YdNews> findTongjiByQuYu(Map map);
 }
