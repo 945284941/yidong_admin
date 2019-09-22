@@ -18,6 +18,8 @@ project.config = (function() {
         ydNewCatService:"/js/modules/ydNewCatService.js",
         lawyerService:"/js/modules/lawyerService.js",
         questionService:"/js/modules/questionService.js",
+        bannerService:"/js/modules/bannerService.js",
+
 
 
 
