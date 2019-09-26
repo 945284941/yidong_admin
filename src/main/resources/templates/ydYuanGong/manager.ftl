@@ -50,7 +50,7 @@
 
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label class="col-lg-4 control-label">工号:</label>
+                                                <label class="col-lg-4 control-label">员工编码:</label>
                                                 <div class="col-lg-1">
                                                     <div class="input-group " style="width:200px;">
                                                         <input type="text" id="system_expert_manager_search_name" name="gonghao" class="form-control">

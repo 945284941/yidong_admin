@@ -2,7 +2,7 @@
 <table class="table table-bordered table-hover">
     <thead>
     <th style="text-align: center;">员工姓名</th>
-    <th style="text-align: center;">工号</th>
+    <th style="text-align: center;">员工编码</th>
     <th style="text-align: center;">手机号</th>
     <th style="text-align: center;">部门名称</th>
     <th style="text-align: center;">职位名称</th>

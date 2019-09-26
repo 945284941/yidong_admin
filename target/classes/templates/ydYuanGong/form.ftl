@@ -19,7 +19,7 @@
     </div>
 
         <div class="form-group">
-            <label class="control-label col-md-3">工号：
+            <label class="control-label col-md-3">员工编码：
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
@@ -134,8 +134,25 @@
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
-                <input type="text" data-required="1" name="study"     value="${(recharge.study)!""}"
-                       class="form-control">
+                <#--<input type="text" data-required="1" name="study"     value="${(recharge.study)!""}"-->
+                       <#--class="form-control">-->
+
+                <select name="study" class="form-control">
+                    <#if recharge.study??>
+                    <option value="0" <#if recharge.study == '0'>selected="selected"</#if>  >中专</option>
+                    <option value="1" <#if recharge.study == '1'>selected="selected"</#if>>大专</option>
+                    <option value="2" <#if recharge.study == '2'>selected="selected"</#if>>本科</option>
+                    <option value="3" <#if recharge.study == '3'>selected="selected"</#if>>硕士</option>
+                    <option value="4" <#if recharge.study == '4'>selected="selected"</#if>>博士</option>
+                    </#if>
+                       <#if !recharge.study??>
+                    <option value="0"  >中专</option>
+                    <option value="1" >大专</option>
+                    <option value="2" >本科</option>
+                    <option value="3" >硕士</option>
+                    <option value="4" >博士</option>
+                       </#if>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -143,8 +160,21 @@
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
-                <input type="text" data-required="1" name="mianmao"     value="${(recharge.mianmao)!""}"
-                       class="form-control">
+                <#--<input type="text" data-required="1" name="mianmao"     value="${(recharge.mianmao)!""}"-->
+                       <#--class="form-control">-->
+                    <select name="mianmao" class="form-control">
+                <#if recharge.mianmao??>
+                           <option value="0"  <#if recharge.mianmao == '0'>selected="selected"</#if> >群众</option>
+                    <option value="1" <#if recharge.mianmao == '1'>selected="selected"</#if> >团员</option>
+                    <option value="2" <#if recharge.mianmao == '2'>selected="selected"</#if> >党员</option>
+
+                </#if>
+                    <#if !recharge.mianmao??>
+                             <option value="0"  >群众</option>
+                            <option value="1" >团员</option>
+                            <option value="2" >党员</option>
+                    </#if>
+                    </select>
             </div>
         </div>
         <div class="form-group">

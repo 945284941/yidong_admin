@@ -123,6 +123,7 @@
                             <div class="col-md-7">
                                 <input type="text" data-required="1" name="url" value="${(recharge.url)!""}"
                                        class="form-control">
+                                <a href="${(recharge.url)!""}">打开链接</a>
                             </div>
                         </div>
                                 <div class="form-group">

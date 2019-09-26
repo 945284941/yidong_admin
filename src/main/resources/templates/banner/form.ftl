@@ -31,6 +31,27 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="control-label col-md-3">部门：
+                <span class="required" aria-required="true"> * </span>
+            </label>
+            <div class="col-md-7">
+                <#if recharge.diquId??>
+                 <select name="diquId"  class="form-control">
+                     <#list  diqu as diqu>
+                         <option value="${diqu.id!''}"  <#if diqu.id == recharge.diquId>selected="selected"</#if> >${diqu.name}</option>
+                     </#list>
+                 </select>
+                </#if>
+                 <#if !recharge.diquId??>
+                 <select name="diquId"  class="form-control">
+                      <#list  diqu as diqu>
+                          <option value="${diqu.id!''}">${diqu.name}</option>
+                      </#list>
+                 </select>
+                 </#if>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="control-label col-md-3">名称：
                 <span class="required" aria-required="true"> * </span>
             </label>
@@ -44,7 +65,7 @@
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
-                <input type="number" data-required="1" name="href" value="${(recharge.href)!""}"
+                <input type="text" data-required="1" name="href" value="${(recharge.href)!""}"
                        class="form-control">
             </div>
         </div>

@@ -57,6 +57,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongCatMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/system/service/UserService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_CODEMSG.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/BannerMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/JsonUtil.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydHuoDongCat/web/YdHuoDongCatController.java
@@ -77,6 +78,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/SysRoleMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydBuMen/web/YdBuMenController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/component/basic/ErrorController.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/Banner.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/define/State.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/upload/Uploader.java
@@ -85,6 +87,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/cmpp/CMPP_DELIVER.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/define/BaseState.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/banner/service/BannerService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/excel/annotation/ExcelField.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/RoleAndUserMapper.java
@@ -93,6 +96,7 @@
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/utils/ZtreeNodeCorp.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/SysRole.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/RoleAndResourcesMapper.java
+/CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/banner/web/BannerController.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/mapper/YdDiquMapper.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydYuanGong/service/YdYuanGongService.java
 /CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.java

@@ -15,7 +15,7 @@
                             <div class="yong-hu-num clearfix">
                                 <div class="yong-biao ">
                                     <img src="${ctx}/images/index/yong-hu1.png"/>
-                                    <input type="button" value="发送短信" onclick="sendEmail()">
+                                    <#--<input type="button" value="发送短信" onclick="sendEmail()">-->
                                     <h1>新闻量</h1>
                                 </div>
                             </div>

@@ -7,28 +7,33 @@
     <result column="pic_" property="pic" jdbcType="VARCHAR" />
     <result column="href_" property="href" jdbcType="VARCHAR" />
     <result column="type_" property="type" jdbcType="VARCHAR" />
+    <result column="diqu_id" property="diquId" jdbcType="VARCHAR" />
 
   </resultMap>
   <sql id="Base_Column_List" >
-    id_, name_, pic_, href_,type_
+    id_, name_, pic_, href_,type_,diqu_id
   </sql>
   <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from banner
+     select
+    b.*,m.name as bumenName
+    from banner b left join yd_bumen m on  b.diqu_id = m.id
+
 
     <where>
       <if test="name != null" >
-     and   name_ = #{name,jdbcType=VARCHAR}
+     and   b.name_ = #{name,jdbcType=VARCHAR}
       </if>
       <if test="pic != null" >
-        and  pic_ = #{pic,jdbcType=VARCHAR}
+        and  b.pic_ = #{pic,jdbcType=VARCHAR}
       </if>
       <if test="href != null" >
-        and   href_ = #{href,jdbcType=VARCHAR}
+        and   b.href_ = #{href,jdbcType=VARCHAR}
       </if>
       <if test="type != null and type != '' " >
-        and   type_ =  #{type,jdbcType=VARCHAR}
+      and   b.type_ =  #{type,jdbcType=VARCHAR}
+    </if>
+      <if test="diquId != null and diquId != '' " >
+        and   b.diqu_id =  #{diquId,jdbcType=VARCHAR}
       </if>
     </where>
 
@@ -68,6 +73,9 @@
       <if test="type != null" >
         type_,
       </if>
+      <if test="diquId != null" >
+        diqu_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -85,6 +93,9 @@
       <if test="type != null" >
         #{type,jdbcType=VARCHAR},
       </if>
+      <if test="diquId != null" >
+        #{diquId,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.Banner" >
@@ -101,6 +112,9 @@
       </if>
       <if test="type != null" >
       type_ =  #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+      diqu_id =   #{diquId,jdbcType=VARCHAR},
       </if>
     </set>
     where id_ = #{id,jdbcType=VARCHAR}

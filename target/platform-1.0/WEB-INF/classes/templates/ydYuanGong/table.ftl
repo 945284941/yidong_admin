@@ -6,7 +6,7 @@
     <th style="text-align: center;">手机号</th>
     <th style="text-align: center;">部门名称</th>
     <th style="text-align: center;">职位名称</th>
-
+    <th style="text-align: center;">审核状态</th>
 
     <th style="text-align: center;">操作</th>
     </thead>
@@ -20,9 +20,28 @@
             <td>${(recharge.dianhua)!"暂无"}</td>
             <td>${(recharge.departmentName)!"暂无"}</td>
             <td>${(recharge.zhiWeiName)!"暂无"}</td>
+            <td>
+
+               <#if recharge.state??>
+                  <#if recharge.state =='0'>
+                  审核中
+                  </#if>
+                   <#if recharge.state =='1'>
+                   审核成功
+                   </#if>
+                   <#if recharge.state =='2'>
+                   审核失败
+                   </#if>
+               </#if>
+                 <#if !recharge.state??>
+                 审核中
+                 </#if>
+            </td>
             <td class="text-center">
                 <a href="javascript:Duang.getService('ydYuanGongService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>
                 <a onclick="Duang.getService('ydYuanGongService').delete('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
+                <a onclick="Duang.getService('ydYuanGongService').shenhe('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 审核</a>
+
             </td>
         </tr>
         </#list>

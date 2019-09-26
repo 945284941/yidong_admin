@@ -5,7 +5,28 @@ public class Banner {
 
     private String name;
 
+    public String getBumenName() {
+        return bumenName;
+    }
+
+    public void setBumenName(String bumenName) {
+        this.bumenName = bumenName;
+    }
+
+    private String bumenName;
+
+    public String getDiquId() {
+        return diquId;
+    }
+
+    public void setDiquId(String diquId) {
+        this.diquId = diquId;
+    }
+
     private String pic;
+
+    private String diquId;
+
 
     public String getType() {
         return type;

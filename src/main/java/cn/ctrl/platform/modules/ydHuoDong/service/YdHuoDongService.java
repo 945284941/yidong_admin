@@ -89,7 +89,7 @@ public class YdHuoDongService extends BaseService {
              if(equipment.getBaby().equals("1")){
                  equipment.setCheckStatus("1");
              }else{
-                 equipment.setCheckStatus("0");
+//                 equipment.setCheckStatus("0");
              }
              return rechargeMapper.insertSelectivee(equipment);
          }else{

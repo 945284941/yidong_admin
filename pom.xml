@@ -26,7 +26,7 @@
 		<repository>
 			<id>thirdparty</id>
 			<name>nexus repository</name>
-			<url>http://114.118.15.96:9999/nexus/content/groups/repositorygroup</url>
+			<url>http://maven.17ido.com/nexus/content/groups/repositorygroup</url>
 		</repository>
 		<repository>
 			<id>spring-snapshots</id>

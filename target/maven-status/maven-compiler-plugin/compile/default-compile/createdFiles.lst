@@ -2,6 +2,7 @@ cn/ctrl/platform/modules/ydNews/web/YdNewsController.class
 cn/ctrl/platform/orm/mapper/YdZhiweiMapper.class
 cn/ctrl/platform/config/WebMVCConfig.class
 cn/ctrl/platform/define/BaseState.class
+cn/ctrl/platform/orm/entity/Banner.class
 cn/ctrl/platform/orm/mapper/YdNewsMapper.class
 cn/ctrl/platform/modules/ydQuestionaireMessage/web/YdQuestionaireMessageController.class
 cn/ctrl/platform/orm/entity/YdQuestionnaireMessage.class
@@ -27,6 +28,7 @@ cn/ctrl/platform/define/FileType$1.class
 cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT.class
 cn/ctrl/platform/modules/system/web/ResourcesController.class
 cn/ctrl/platform/component/qiniu/RemoteFileService.class
+cn/ctrl/platform/modules/banner/web/BannerController.class
 cn/ctrl/platform/component/basic/ErrorAdapter.class
 cn/ctrl/platform/SpringBootStartApplication.class
 cn/ctrl/platform/component/basic/BaseBase.class
@@ -72,6 +74,8 @@ cn/ctrl/platform/utils/DistanceUtil.class
 cn/ctrl/platform/orm/mapper/YdQuestionnaireMessageProprietorMapper.class
 cn/ctrl/platform/config/ShiroConfig.class
 cn/ctrl/platform/utils/JsonUtil.class
+cn/ctrl/platform/modules/banner/service/BannerService.class
+cn/ctrl/platform/orm/mapper/BannerMapper.class
 cn/ctrl/platform/modules/system/service/ResourcesService.class
 cn/ctrl/platform/utils/Exceptions.class
 cn/ctrl/platform/modules/cmpp/TestMain.class

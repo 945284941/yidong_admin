@@ -4,6 +4,7 @@ import cn.ctrl.framework.common.basic.JsonContent;
 import cn.ctrl.platform.component.basic.BaseController;
 import cn.ctrl.platform.modules.banner.service.BannerService;
 import cn.ctrl.platform.modules.system.service.RoleService;
+import cn.ctrl.platform.modules.ydBuMen.service.YdBuMenService;
 import cn.ctrl.platform.modules.ydDiQu.service.YdDiQuService;
 import cn.ctrl.platform.orm.entity.Banner;
 import cn.ctrl.platform.orm.entity.YdBumen;
@@ -33,6 +34,8 @@ public class BannerController extends BaseController {
 
     @Autowired
     BannerService rechargeService;
+    @Autowired
+    YdBuMenService ydBuMenService;
 
 
     @GetMapping("manager")
@@ -55,6 +58,7 @@ public class BannerController extends BaseController {
     public String add(Model model){
         Banner classification =new Banner();
         model.addAttribute("recharge",classification);
+        model.addAttribute("diqu",ydBuMenService.findAllNoPage(new HashMap()));
 
 //
 //        model.addAttribute("roleId",userRealm.getRole().getId());
@@ -96,6 +100,8 @@ public class BannerController extends BaseController {
     public String edit(Model model,String id){
 //        model.addAttribute("roleId",userRealm.getRole().getId());
         Banner recharge = rechargeService.selectOne(id);
+        model.addAttribute("diqu",ydBuMenService.findAllNoPage(new HashMap()));
+
 //        model.addAttribute("diqu",ydDiQuService.findAllNoPage());
         model.addAttribute("recharge",recharge);
       return "banner/form";

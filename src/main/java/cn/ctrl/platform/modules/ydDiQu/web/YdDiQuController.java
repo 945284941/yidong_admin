@@ -40,7 +40,7 @@ public class YdDiQuController extends BaseController {
 
     @GetMapping("table")
     public String table(Model model,@RequestParam Map map,@RequestParam(value = "pageNo", defaultValue = "1") int pageNo,
-                        @RequestParam(value = "pageSize", defaultValue = "10") int pageSize ){
+                        @RequestParam(value = "pageSize", defaultValue = "20") int pageSize ){
         PageInfo goods = rechargeService.findAll(map,pageNo,pageSize);
         model.addAttribute("recharge",goods);
         return "ydDiQu/table";

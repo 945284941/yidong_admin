@@ -5,7 +5,7 @@
     <th style="text-align: center;">轮播图</th>
     <th style="text-align: center;">跳转链接</th>
     <th style="text-align: center;">类型 </th>
-
+    <th style="text-align: center;">部门 </th>
     <th style="text-align: center;">操作</th>
     </thead>
     <tbody>
@@ -31,7 +31,9 @@
             </#if>
 
             </td>
-
+            <td>
+                ${recharge.bumenName!''}
+            </td>
             <td class="text-center">
                 <a href="javascript:Duang.getService('bannerService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>
                 <a onclick="Duang.getService('bannerService').delete('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
