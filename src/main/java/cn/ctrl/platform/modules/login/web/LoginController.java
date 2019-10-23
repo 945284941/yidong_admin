@@ -69,7 +69,8 @@ public class LoginController extends BaseController{
     YdYuanGongService ydYuangongMapper;
     @Autowired
     YdQuestionnaireMapper ydQuestionnaireMapper;
-
+    @Autowired
+    VisitsMapper visitsMapper;
 
 
     TestMain testMain = new TestMain();
@@ -186,7 +187,6 @@ public class LoginController extends BaseController{
         //-------------产品
 
 
-
         //新闻
        model.addAttribute("news",ydNewsMapper.findAllCount(new HashMap()));
         //活动
@@ -205,6 +205,12 @@ public class LoginController extends BaseController{
         }
         //答题
         model.addAttribute("activity",activity);
+
+        model.addAttribute("zong",visitsMapper.dangri(new Visits()));
+
+        Visits visits =new Visits();
+        visits.setDay("1");
+        model.addAttribute("jin",visitsMapper.dangri(visits));
 
         //人员
 

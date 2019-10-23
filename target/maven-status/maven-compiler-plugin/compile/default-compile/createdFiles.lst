@@ -27,6 +27,7 @@ cn/ctrl/platform/modules/question/service/QuestionService.class
 cn/ctrl/platform/define/FileType$1.class
 cn/ctrl/platform/modules/cmpp/CMPP_SUBMIT.class
 cn/ctrl/platform/modules/system/web/ResourcesController.class
+cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.class
 cn/ctrl/platform/component/qiniu/RemoteFileService.class
 cn/ctrl/platform/modules/banner/web/BannerController.class
 cn/ctrl/platform/component/basic/ErrorAdapter.class
@@ -43,6 +44,7 @@ cn/ctrl/platform/utils/UtilsExcel.class
 cn/ctrl/platform/component/shiro/realm/AuthorizingRealmAdaptor.class
 cn/ctrl/platform/orm/mapper/SysUserMapper.class
 cn/ctrl/platform/orm/mapper/YdHuodongCatMapper.class
+cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.class
 cn/ctrl/platform/modules/ydNewCat/web/YdNewCatController.class
 cn/ctrl/platform/utils/BeanValidators.class
 cn/ctrl/platform/modules/system/service/UserService.class
@@ -58,8 +60,10 @@ cn/ctrl/platform/orm/entity/YdQuestionnaireMessageProprietor.class
 cn/ctrl/platform/define/AppInfo.class
 cn/ctrl/platform/orm/mapper/SysResourcesMapper.class
 cn/ctrl/platform/utils/httpUtil/HttpUtil.class
+cn/ctrl/platform/orm/entity/Visits.class
 cn/ctrl/platform/define/FileType.class
 cn/ctrl/platform/modules/cmpp/CMPP_CONNECT_RESP.class
+cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.class
 cn/ctrl/platform/utils/ActionEnter.class
 cn/ctrl/platform/modules/login/web/LoginController.class
 cn/ctrl/platform/orm/entity/YdHuodongYuangong.class
@@ -77,6 +81,7 @@ cn/ctrl/platform/utils/JsonUtil.class
 cn/ctrl/platform/modules/banner/service/BannerService.class
 cn/ctrl/platform/orm/mapper/BannerMapper.class
 cn/ctrl/platform/modules/system/service/ResourcesService.class
+cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.class
 cn/ctrl/platform/utils/Exceptions.class
 cn/ctrl/platform/modules/cmpp/TestMain.class
 cn/ctrl/platform/modules/aliyun/AliyunOSSClientUtil.class
@@ -98,9 +103,11 @@ cn/ctrl/platform/modules/ydQuestionnaire/service/YdQuestionnaireService.class
 cn/ctrl/platform/utils/ZtreeNodeCorp.class
 cn/ctrl/platform/utils/UtilsJson.class
 cn/ctrl/platform/orm/mapper/SysRoleMapper.class
+cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.class
 cn/ctrl/platform/upload/Base64Uploader.class
 cn/ctrl/platform/component/shiro/realm/TicketRealm.class
 cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/service/YdQuestionnaireMessageProprietorService.class
+cn/ctrl/platform/orm/entity/Zhuanhui.class
 cn/ctrl/platform/modules/dmp/visitingRecord/service/VisitingRecordService.class
 cn/ctrl/platform/utils/ActionMap$1.class
 cn/ctrl/platform/hunter/ImageHunter.class
@@ -131,6 +138,7 @@ cn/ctrl/platform/define/ActionMap$1.class
 cn/ctrl/platform/modules/cmpp/CMPP_CODEMSG.class
 cn/ctrl/platform/component/interceptor/BaseInterceptor.class
 cn/ctrl/platform/orm/entity/RoleAndUser.class
+cn/ctrl/platform/orm/mapper/VisitsMapper.class
 cn/ctrl/platform/orm/mapper/YdYuangongMapper.class
 cn/ctrl/platform/PlatformApplication.class
 cn/ctrl/platform/utils/excel/ExportExcel.class
@@ -138,6 +146,7 @@ cn/ctrl/platform/define/ActionState.class
 cn/ctrl/platform/utils/JsonUtil$4.class
 cn/ctrl/platform/modules/aliyun/OSSClientConstants.class
 cn/ctrl/platform/define/MIMEType$1.class
+cn/ctrl/platform/modules/zhuanhui/service/ZhuanHuiService.class
 cn/ctrl/platform/orm/entity/VisitingRecord.class
 cn/ctrl/platform/utils/PasswordUtil.class
 cn/ctrl/platform/orm/mapper/YdBumenMapper.class
@@ -148,6 +157,7 @@ cn/ctrl/platform/utils/httpUtil/HttpRequest.class
 cn/ctrl/platform/modules/ydHuoDongCat/service/YdHuoDongCatService.class
 cn/ctrl/platform/modules/ydZhiWei/service/YdZhiWeiService.class
 cn/ctrl/platform/orm/entity/Lawyer.class
+cn/ctrl/platform/orm/entity/YdHuodongAnwer.class
 cn/ctrl/platform/modules/ydQuestionnaireMessageProprietor/web/YdQuestionnaireMessageProprietorController.class
 cn/ctrl/platform/component/basic/Constants.class
 cn/ctrl/platform/orm/mapper/LawyerMapper.class

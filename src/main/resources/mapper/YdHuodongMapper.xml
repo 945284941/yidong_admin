@@ -14,9 +14,11 @@
     <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
     <result column="check_status" property="checkStatus" jdbcType="VARCHAR" />
     <result column="diqu_id" property="diquId" jdbcType="VARCHAR" />
+    <result column="type_" property="type" jdbcType="VARCHAR" />
+
   </resultMap>
   <sql id="Base_Column_List" >
-    id, title, content, read_num, cat_id, create_id, img_url, create_time, start_time, 
+    id, title, content, read_num, cat_id, create_id, img_url, create_time, start_time, type_,
     end_time, check_status, diqu_id
   </sql>
 
@@ -48,6 +50,9 @@
       </if>
       <if test="content != null" >
         and y.content = #{content,jdbcType=VARCHAR}
+      </if>
+      <if test="type != null" >
+        and y.type_ = #{type,jdbcType=VARCHAR}
       </if>
       <if test="readNum != null" >
         and  y.read_num = #{readNum,jdbcType=INTEGER}
@@ -141,6 +146,9 @@
       <if test="diquId != null" >
         diqu_id,
       </if>
+      <if test="type != null" >
+        type_,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -179,6 +187,9 @@
       <if test="diquId != null" >
         #{diquId,jdbcType=VARCHAR},
       </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodong" >
@@ -216,6 +227,9 @@
       </if>
       <if test="diquId != null" >
         diqu_id = #{diquId,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type_ =  #{type,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}

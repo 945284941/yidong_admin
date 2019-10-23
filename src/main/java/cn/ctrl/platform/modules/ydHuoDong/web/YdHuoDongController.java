@@ -8,8 +8,10 @@ import cn.ctrl.platform.modules.ydBuMen.service.YdBuMenService;
 import cn.ctrl.platform.modules.ydDiQu.service.YdDiQuService;
 import cn.ctrl.platform.modules.ydHuoDong.service.YdHuoDongService;
 import cn.ctrl.platform.modules.ydHuoDongCat.service.YdHuoDongCatService;
+import cn.ctrl.platform.modules.ydHuodongAnwer.service.YdHuodongAnwerService;
 import cn.ctrl.platform.modules.ydYuanGong.service.YdYuanGongService;
 import cn.ctrl.platform.orm.entity.*;
+import cn.ctrl.platform.orm.mapper.YdHuodongAnwerMapper;
 import cn.ctrl.platform.orm.mapper.YdHuodongYuangongMapper;
 import com.github.pagehelper.PageInfo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
@@ -50,16 +52,26 @@ public class YdHuoDongController extends BaseController {
     private YdYuanGongService ydYuanGongService;
     @Autowired
     YdHuodongYuangongMapper ydHuodongYuangongMapper;
+    @Autowired
+    YdHuodongAnwerService ydHuodongAnwerService;
 
 
     @GetMapping("manager")
-    public String manager(Model model,String baby){
+    public String manager(Model model,String baby,String type){
 
         model.addAttribute("huodongCat",ydHuoDongCatService.findAllNoPage());
         model.addAttribute("baby",baby);
+        model.addAttribute("type",type);
         return "ydHuoDong/manager";
     }
+    @GetMapping("julebumanager")
+    public String julebumanager(Model model,String baby,String type){
 
+        model.addAttribute("huodongCat",ydHuoDongCatService.findAllNoPage());
+        model.addAttribute("baby",baby);
+        model.addAttribute("type",type);
+        return "ydHuoDong/julebumanager";
+    }
     @GetMapping("huodongcanyuqingkuang")
     public String huodongcanyuqingkuang(@RequestParam Map map,Model model){
 
@@ -112,6 +124,7 @@ public class YdHuoDongController extends BaseController {
     }
 
 
+
     @GetMapping("table")
     public String table(Model model,@RequestParam Map map,@RequestParam(value = "pageNo", defaultValue = "1") int pageNo,
                         @RequestParam(value = "pageSize", defaultValue = "10") int pageSize ){
@@ -128,7 +141,13 @@ public class YdHuoDongController extends BaseController {
 
         PageInfo goods = rechargeService.findAll(map,pageNo,pageSize);
         model.addAttribute("recharge",goods);
-        return "ydHuoDong/table";
+
+        if(map.get("type").equals("1")){
+            return "ydHuoDong/julebutable";
+
+        }else{
+            return "ydHuoDong/table";
+        }
     }
 
     @GetMapping("lookPeople")
@@ -136,21 +155,27 @@ public class YdHuoDongController extends BaseController {
                         @RequestParam(value = "pageSize", defaultValue = "10") int pageSize ){
         map.put("huodongId",map.get("id").toString());
 
-        PageInfo goods = rechargeService.findAllPeople(map,pageNo,pageSize);
+        PageInfo goods = ydHuodongAnwerService.findAll(map,pageNo,pageSize);
         model.addAttribute("recharge",goods);
         model.addAttribute("id",map.get("id").toString());
         return "ydHuoDong/lookPeople";
     }
     @GetMapping("insert")
-    public String add(Model model,String baby){
+    public String add(Model model,String baby,String type){
         YdHuodong classification =new YdHuodong();
         model.addAttribute("recharge",classification);
         model.addAttribute("baby",baby);
+        model.addAttribute("type",type);
         model.addAttribute("diquId",userRealm.getRole().getDepartmentId());
         model.addAttribute("roleId",userRealm.getRole().getId());
         model.addAttribute("huodongCat",ydHuoDongCatService.findAllNoPage());
         model.addAttribute("diqu",ydDiQuService.findAllNoPage());
-        return "ydHuoDong/form";
+        if(type.equals("1")){
+            return "ydHuoDong/julebuform";
+        }else{
+            return "ydHuoDong/form";
+        }
+
     }
     @PostMapping("save")
     @ResponseBody
@@ -189,6 +214,7 @@ public class YdHuoDongController extends BaseController {
         model.addAttribute("huodongCat",ydHuoDongCatService.findAllNoPage());
         model.addAttribute("diqu",ydDiQuService.findAllNoPage());
         model.addAttribute("recharge",recharge);
+//        model.addAttribute("type",type);
       return "ydHuoDong/form";
     }
 

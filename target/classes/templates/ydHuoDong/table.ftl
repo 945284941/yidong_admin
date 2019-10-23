@@ -21,9 +21,11 @@
 
     <#if recharge?? && recharge.list?? && recharge.list?size gt 0>
         <#list recharge.list as recharge>
-        <tr style="text-align: center;">
+        <tr style="text-align: center;height: 30px;">
             <td>${(recharge.title)!"暂无"}</td>
-            <td  >${(recharge.content)!"暂无"}</td>
+            <td  >    <div style="width:200px;height: 40px;overflow: hidden;">
+                ${(recharge.content)!"暂无"}
+            </div></td>
             <td>${(recharge.catName)!"暂无"}</td>
             <td>${(recharge.diQuName)!"暂无"}</td>
             <td>${(recharge.readNum)!"0"}</td>
@@ -39,10 +41,12 @@
                 <a onclick="Duang.getService('ydHuoDongService').delete('${recharge.id}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 删除</a>
 
 
-                <a href="javascript:Duang.getService('ydHuoDongService').lookPeople('1','${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 查看报名人员</a>
+                <a href="javascript:Duang.getService('ydHuoDongService').lookPeople('1','${recharge.id}')"
+                   class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 查看报名人员</a>
                 <a href="javascript:Duang.getService('ydHuoDongService').baominglv('${recharge.id}')"
                    class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 活动参与情况</a>
-
+                <a href="javascript:Duang.getService('ydHuoDongService').shezhibiaodan('${recharge.id}')"
+                   class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 设置表单</a>
                <#--<#if recharge.checkStatus == '0'>-->
                     <#--<a href="javascript:Duang.getService('ydHuoDongService').shenhe('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 审核 </a>-->
                               <#--<a href="javascript:Duang.getService('ydHuoDongService').edit('${recharge.id}')" class="btn btn-link" role="button" ><i class="fa fa-pencil-square"></i> 编辑</a>-->

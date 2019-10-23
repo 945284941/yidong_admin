@@ -2,7 +2,7 @@
 <table class="table table-bordered table-hover">
     <thead>
     <#--<th style="text-align: center;">调查问题标题</th>-->
-    <th style="text-align: center;">调查问卷描述</th>
+    <th style="text-align: center;">选项描述</th>
     <#--<th style="text-align: center;">a</th>-->
     <#--<th style="text-align: center;">b</th>-->
     <#--<th style="text-align: center;">c</th>-->
@@ -30,7 +30,7 @@
                 <td>
                     <#if recharge.chooseType?? >
                          <#if recharge.chooseType == '0'>
-                         选择
+                         分数
                     </#if>
                             <#if recharge.chooseType == '1'>
                             问答
@@ -68,7 +68,9 @@
 
                     <#if recharge.chooseType?? >
                         <#if recharge.chooseType == '0'>
-                           <a onclick="Duang.getService('ydQuestionnaireService').tongji('${recharge.id}','${recharge.questionnaireId!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 投票统计</a>
+                           <#--<a onclick="Duang.getService('ydQuestionnaireService').tongji('${recharge.id}','${recharge.questionnaireId!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 查看分数</a>-->
+                                                   <a onclick="Duang.getService('ydQuestionnaireService').contentManager('${recharge.id!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 查看分数</a>
+
                         </#if>
                         <#if recharge.chooseType == '1'>
                            <a onclick="Duang.getService('ydQuestionnaireService').contentManager('${recharge.id!''}')" class="btn btn-link" ><i class="fa fa-trash-o"></i> 查看回答</a>

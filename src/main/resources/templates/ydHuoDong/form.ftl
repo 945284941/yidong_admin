@@ -86,12 +86,12 @@
             </label>
             <div class="col-md-7">
                 <textarea   name="content"
-                            class="form-control">${(recharge.content)!""}</textarea>
+                            class="form-control infomation">${(recharge.content)!""}</textarea>
             </div>
         </div>
-
+       <input type="hidden" name="type" value="${type!''}">
         <div class="form-group">
-            <label class="control-label col-md-3">报名开始时间：
+            <label class="control-label col-md-3">日常活动开始时间：
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
@@ -106,7 +106,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-3">报名结束时间：
+            <label class="control-label col-md-3">日常活动结束时间：
                 <span class="required" aria-required="true"> * </span>
             </label>
             <div class="col-md-7">
@@ -134,6 +134,27 @@
     </button>
 </div>
 <script type="text/javascript">
+
+    window.setTimeout(function() {
+
+        editor = KindEditor.create('.infomation', {
+            width : '100px',
+            height : '300px',
+            items : [ 'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste', 'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright', 'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript', 'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/', 'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image','multiimage', 'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak', 'anchor', 'link', 'unlink' ],
+            uploadJson :'${ctx}/ydNews/imgF',
+
+            afterCreate : function() {
+                this.sync();
+            },
+            afterBlur:function(){
+                this.sync();
+            },
+
+
+        });
+        editor.readonly(false);
+
+    }, 1);
     $(".form_datetime").datetimepicker({
         format: 'yyyy-mm-dd',//显示格式
         todayHighlight: 1,//今天高亮

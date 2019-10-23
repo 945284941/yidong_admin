@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.VisitsMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Visits" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="dangri" resultType="java.lang.Integer" parameterType="cn.ctrl.platform.orm.entity.Visits">
+    select  IFNULL(count(*),0) as num from visits
+
+     <where>
+         <if test="day != null and day !=''">
+           DATE_FORMAT(create_time, '%Y-%m-%d')  =  DATE_FORMAT(now(), '%Y-%m-%d')
+         </if>
+     </where>
+
+  </select>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.Visits" >
+    insert into visits (id, create_time)
+    values (#{id,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.Visits" >
+    insert into visits
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

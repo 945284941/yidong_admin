@@ -123,10 +123,11 @@
                             <div class="col-md-7">
                                 <input type="text" data-required="1" name="url" value="${(recharge.url)!""}"
                                        class="form-control">
+                                <a href="${(recharge.url)!""}">打开链接</a>
                             </div>
                         </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3">封面图：
+                                    <label class="control-label col-md-3">封面图（正方形）：
                                         <span class="required" aria-required="true"> * </span>
                                     </label>
                                     <div class="col-md-7">
@@ -170,7 +171,10 @@
                             <div class="left clearfix">
                                 <div class="tabbox clearfix">
                                     <ul class="tabs" id="tabs">
-                                        <li><a class="current" href="http://www.yisutui.com/user/yst/?spreadid=6501826641936957" tab="tab0" target="_blank" style=" background:#ff0000; color:#fff;">吸粉游戏</a><div style=" position:absolute; top:15px; left:72px; z-index:10;"><img src="mmbiz/ad/gg.png"></div></li>
+                                        <li><a class="current" href="http://www.yisutui.com/user/yst/?spreadid=6501826641936957" tab="tab0" target="_blank" style=" background:#ff0000; color:#fff;">吸粉游戏</a><div style=" position:absolute; top:15px; left:72px; z-index:10;">
+                                            <#--<img src="mmbiz/ad/gg.png">-->
+                                        </div>
+                                        </li>
                                         <li><a href="javascript:void(0);" tab="tab1">关注</a></li>
                                         <li><a href="javascript:void(0);" tab="tab2">标题</a></li>
                                         <li><a href="javascript:void(0);" tab="tab3">正文</a></li>

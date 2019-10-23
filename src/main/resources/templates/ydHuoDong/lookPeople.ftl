@@ -7,24 +7,48 @@
 <div class="modal-body">
 
     <table class="table table-bordered table-hover">
-        <thead>
-        <th style="text-align: center;">部门</th>
-        <th style="text-align: center;">姓名</th>
+        <#--<thead>-->
+        <#--<th style="text-align: center;">部门</th>-->
+        <#--<th style="text-align: center;">姓名</th>-->
 
-        <th style="text-align: center;">手机号</th>
+        <#--<th style="text-align: center;">手机号</th>-->
 
 
 
-        </thead>
+        <#--</thead>-->
         <tbody>
 
     <#if recharge?? && recharge.list?? && recharge.list?size gt 0>
         <#list recharge.list as recharge>
         <tr style="text-align: center;">
-            <td>${(recharge.bumenName)!"暂无"}</td>
-            <td>${(recharge.name)!"暂无"}</td>
+            <#if recharge.one??>
+              <td>${(recharge.one)!"暂无"}</td>
+            </#if>
+                  <#if recharge.two??>
+              <td>${(recharge.two)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.three??>
+              <td>${(recharge.three)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.four??>
+              <td>${(recharge.four)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.five??>
+              <td>${(recharge.five)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.six??>
+              <td>${(recharge.six)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.seven??>
+              <td>${(recharge.seven)!"暂无"}</td>
+                  </#if>
+                  <#if recharge.egiht??>
+              <td>${(recharge.egiht)!"暂无"}</td>
+                  </#if>
+            <#--<td>${(recharge.bumenName)!"暂无"}</td>-->
+            <#--<td>${(recharge.name)!"暂无"}</td>-->
 
-            <td>${(recharge.dianhua)!"暂无"}</td>
+            <#--<td>${(recharge.dianhua)!"暂无"}</td>-->
 
 
 

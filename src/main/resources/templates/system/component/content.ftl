@@ -1,152 +1,309 @@
 <#assign ctx=request.contextPath>
 <link rel="stylesheet" href="${ctx}/css/yong.css">
-<style>
-    li {
-        margin-right: 0px;
-    }
-</style>
-<div class="container-fluid">
-    <div class="row clearfix">
-        <div class="col-lg-12 col-md-12 col-xs-12 yong-right-pad">
-            <div class="hu-yong">
-                <ul class="row clearfix">
-                    <li class="col-md-3 yong-pad">
-                        <div class="yong-zong bg-color1" style="min-height: 152px;position: relative">
-                            <div class="yong-hu-num clearfix">
-                                <div class="yong-biao ">
-                                    <img src="${ctx}/images/index/yong-hu1.png"/>
-                                    <#--<input type="button" value="发送短信" onclick="sendEmail()">-->
-                                    <h1>新闻量</h1>
-                                </div>
-                            </div>
-                            <div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>
-                            <#if news??>
-                                ${news}
-                            </#if>
+		<style>
+            /*body{background: #f8f8f8;}*/
+            .hc-container .panel,.hc-container .panel-default>.panel-heading{border: none;position: relative;}
+            .hc-container .panel-default>.panel-heading{padding-left: 30px;line-height: 30px;font-size: 18px;background: none;}
+            .hc-container .panel-default>.panel-heading:before{
+                content:'';position: absolute;left:15px;display: block;height:50%;top:25%;width: 6px;background: red;
+            }
 
-                            </i>条
-                            </div>
+            .hc-container .panel-default.headdefault>.panel-heading:before{background: #37BAC8;}
+            .hc-container .panel-default.headdefault .panel-body{color:#37BAC8 ;}
+            .hc-container .panel-default.headblue>.panel-heading{
+                background: -moz-linear-gradient(left, #E7F1FC 0%, #FFF 100%);
+                background: -webkit-gradient(linear, left, right, color-stop(0%,#E7F1FC), color-stop(100%,#FFF));
+                background: -webkit-linear-gradient(left, #E7F1FC,#FFF 100%);
+                background: -o-linear-gradient(left, #E7F1FC,#FFF 100%);
+                background: -ms-linear-gradient(left,#E7F1FC,#FFF 100%);
+                background: linear-gradient(to right, #E7F1FC,#FFF);
+            }
+            .hc-container .panel-default.headblue>.panel-heading:before{background: #649DFF;}
+            .hc-container .panel-default.headblue .panel-body{color:#649DFF ;}
+            .hc-container .panel-default.headred>.panel-heading{
+                background: -moz-linear-gradient(left, #FCEBEB 0%, #FFF 100%);
+                background: -webkit-gradient(linear, left, right, color-stop(0%,#FCEBEB), color-stop(100%,#FFF));
+                background: -webkit-linear-gradient(left, #FCEBEB,#FFF 100%);
+                background: -o-linear-gradient(left, #FCEBEB,#FFF 100%);
+                background: -ms-linear-gradient(left,#FCEBEB,#FFF 100%);
+                background: linear-gradient(to right, #FCEBEB,#FFF);
+            }
+            .hc-container .panel-default.headred>.panel-heading:before{background: #F87979;}
+            .hc-container .panel-default.headred .panel-body{color:#F87979 ;}
+            .hc-container .panel-default.headyellow>.panel-heading{
+                background: -moz-linear-gradient(left, #FAF3E6 0%, #FFF 100%);
+                background: -webkit-gradient(linear, left, right, color-stop(0%,#FAF3E6), color-stop(100%,#FFF));
+                background: -webkit-linear-gradient(left, #FAF3E6,#FFF 100%);
+                background: -o-linear-gradient(left, #FAF3E6,#FFF 100%);
+                background: -ms-linear-gradient(left,#FAF3E6,#FFF 100%);
+                background: linear-gradient(to right, #FAF3E6,#FFF);
+            }
+            .hc-container .panel-default.headyellow>.panel-heading:before{background: #EFA837;}
+            .hc-container .panel-default.headyellow .panel-body{color:#EFA837 ;}
+            .hc-container .panel-default.headygreen>.panel-heading{
+                background: -moz-linear-gradient(left, #DCF4ED 0%, #FFF 100%);
+                background: -webkit-gradient(linear, left, right, color-stop(0%,#DCF4ED), color-stop(100%,#FFF));
+                background: -webkit-linear-gradient(left, #DCF4ED,#FFF 100%);
+                background: -o-linear-gradient(left, #DCF4ED,#FFF 100%);
+                background: -ms-linear-gradient(left,#DCF4ED,#FFF 100%);
+                background: linear-gradient(to right, #DCF4ED,#FFF);
+            }
+            .hc-container .panel-default.headygreen>.panel-heading:before{background: #28B789;}
+            .hc-container .panel-default.headygreen .panel-body{color:#28B789 ;}
 
-                        </div>
-                    </li>
-                    <li class="col-md-3 yong-pad">
-                        <div class="yong-zong bg-color2" style="min-height: 152px;position: relative">
-                            <div class="yong-hu-num clearfix ">
-                                <div class="yong-biao ">
-                                    <img src="${ctx}/images/index/yong-hu2.png"/>
-                                    <h1>活动量</h1>
-                                </div>
-
-                            </div>
-                            <div class="yong-shu shu-mar" style="position: absolute;bottom: 5px; left:0px;width: 100%;">
-                                <i>
-                            <#if activity??>
-                                ${activity}
-                            </#if>
-                                </i>条
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3  yong-pad">
-                        <div class="yong-zong bg-color3" style="min-height: 152px;position: relative">
-                            <div class="yong-hu-num clearfix">
-                                <div class="yong-biao ">
-                                    <img src="${ctx}/images/index/yong-hu3.png"/>
-                                    <h1>调查问卷</h1>
-                                </div>
-
-                            </div>
-                            <div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>
-
-                            <#if questionNum??>
-                                ${questionNum}
-                            </#if>
-                            </i>条
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3  yong-pad">
-                        <div class="yong-zong " style="min-height: 152px;background: #4b4b4b;position: relative">
-                            <div class="yong-hu-num clearfix">
-                                <div class="yong-biao ">
-                                    <img src="${ctx}/images/index/yong-hu3.png"/>
-                                    <h1>员工</h1>
-                                </div>
-
-                            </div>
-                            <div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>
-
-                             <#if yugong??>
-                                 ${yugong}
-                             </#if>
-                            </i>名
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-
-
-            <div class="ying-shou">
-
-                <div class="shou-title clearfix">
-                    <h3></h3>
-
-                </div>
-                <div class="yong-canvas">
-                    <span>区域新闻统计</span>
+            .hc-container .panel-body{font-size: 50px;line-height: 150px;text-align: center;letter-spacing: 2px;}
+            .hc-container .headdefault .panel-body{padding-top:0;line-height: 90px;letter-spacing: 2px;}
+        </style>
+	<div class="container-fluid hc-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default headdefault">
+                    <div class="panel-heading">历史活动数量</div>
+                    <div class="panel-body">
+                    <#if activity??>
+                    ${activity}
+                    </#if>
+                    </div>
                 </div>
             </div>
-            <#--<div style="padding-left:7px;"><span>地区发布新闻比例</span></div>-->
-            <div id="containerBaby" style="width:50%;height: 350px;float:left;">
-            </div>
-
-            <div id="containerBaby1" style="width:50%;height: 350px;float:left;">
-            </div>
-
-
-
-
-
-                <div class="shou-title clearfix">
-                    <h3></h3>
-
+            <div class="col-sm-6">
+                <div class="panel panel-default headblue">
+                    <div class="panel-heading">新闻发布数量</div>
+                    <div class="panel-body">
+                    <#if news??>
+                    ${news}
+                    </#if>
+                    </div>
                 </div>
-                <div class="yong-canvas">
-                    <span>区域活动统计</span>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default headred">
+                    <div class="panel-heading">当日访问数量</div>
+                    <div class="panel-body">
+                    <#if jin??>
+                    ${jin}
+                    </#if>
+                    </div>
                 </div>
-
-
-            <div id="containerBabyy" style="width:50%;height: 350px;float:left;">
             </div>
-
-            <div id="containerBabyy1" style="width:50%;height: 350px;float:left;">
-            </div>
-
-
-
-
-
-                <div class="shou-title clearfix">
-                    <h3></h3>
-
+            <div class="col-sm-6">
+                <div class="panel panel-default headyellow">
+                    <div class="panel-heading">累计访问数量</div>
+                    <div class="panel-body">
+                    <#if zong??>
+                    ${zong}
+                    </#if>
+                    </div>
                 </div>
-                <div class="yong-canvas">
-                    <span>区域调查问卷统计</span>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default headygreen">
+                    <div class="panel-heading">会员数量</div>
+                    <div class="panel-body">
+                    <#if yugong??>
+                    ${yugong}
+                    </#if>
+                    </div>
                 </div>
-
-            <div id="containerBabyyy" style="width:50%;height: 350px;float:left;">
             </div>
-
-            <div id="containerBabyyy1" style="width:50%;height: 350px;float:left;">
-            </div>
-
-
         </div>
     </div>
+<#--<div class="container-fluid">-->
+    <#--<div class="row clearfix">-->
+        <#--<div class="col-lg-12 col-md-12 col-xs-12 yong-right-pad">-->
+            <#--<div class="hu-yong">-->
+                <#--<ul class="row clearfix">-->
+                    <#--<li class="col-md-3 yong-pad">-->
+                        <#--<div class="yong-zong bg-color1" style="min-height: 152px;position: relative">-->
+                            <#--<div class="yong-hu-num clearfix">-->
+                                <#--<div class="yong-biao ">-->
+                                    <#--<img src="${ctx}/images/index/yong-hu1.png"/>-->
+                                    <#--&lt;#&ndash;<input type="button" value="发送短信" onclick="sendEmail()">&ndash;&gt;-->
+                                    <#--<h1>新闻发布数量</h1>-->
+                                <#--</div>-->
+                            <#--</div>-->
+                            <#--<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>-->
+                            <#--<#if news??>-->
+                                <#--${news}-->
+                            <#--</#if>-->
 
-</div>
+                            <#--</i>条-->
+                            <#--</div>-->
+
+                        <#--</div>-->
+                    <#--</li>-->
+                    <#--<li class="col-md-3 yong-pad">-->
+                        <#--<div class="yong-zong bg-color2" style="min-height: 152px;position: relative">-->
+                            <#--<div class="yong-hu-num clearfix ">-->
+                                <#--<div class="yong-biao ">-->
+                                    <#--<img src="${ctx}/images/index/yong-hu2.png"/>-->
+                                    <#--<h1>历史活动数量</h1>-->
+                                <#--</div>-->
+
+                            <#--</div>-->
+                            <#--<div class="yong-shu shu-mar" style="position: absolute;bottom: 5px; left:0px;width: 100%;">-->
+                                <#--<i>-->
+                            <#--<#if activity??>-->
+                                <#--${activity}-->
+                            <#--</#if>-->
+                                <#--</i>条-->
+                            <#--</div>-->
+                        <#--</div>-->
+                    <#--</li>-->
+                    <#--&lt;#&ndash;<li class="col-md-3  yong-pad">&ndash;&gt;-->
+                        <#--&lt;#&ndash;<div class="yong-zong bg-color3" style="min-height: 152px;position: relative">&ndash;&gt;-->
+                            <#--&lt;#&ndash;<div class="yong-hu-num clearfix">&ndash;&gt;-->
+                                <#--&lt;#&ndash;<div class="yong-biao ">&ndash;&gt;-->
+                                    <#--&lt;#&ndash;<img src="${ctx}/images/index/yong-hu3.png"/>&ndash;&gt;-->
+                                    <#--&lt;#&ndash;<h1>调查问卷</h1>&ndash;&gt;-->
+                                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+                            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                            <#--&lt;#&ndash;<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>&ndash;&gt;-->
+
+                            <#--&lt;#&ndash;<#if questionNum??>&ndash;&gt;-->
+                                <#--&lt;#&ndash;${questionNum}&ndash;&gt;-->
+                            <#--&lt;#&ndash;</#if>&ndash;&gt;-->
+                            <#--&lt;#&ndash;</i>条&ndash;&gt;-->
+                            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                        <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                    <#--&lt;#&ndash;</li>&ndash;&gt;-->
+                    <#--<li class="col-md-3  yong-pad">-->
+                        <#--<div class="yong-zong bg-color3" style="min-height: 152px;position: relative">-->
+                            <#--<div class="yong-hu-num clearfix">-->
+                                <#--<div class="yong-biao ">-->
+                                    <#--<img src="${ctx}/images/index/yong-hu3.png"/>-->
+                                    <#--<h1>当日访问数量</h1>-->
+                                <#--</div>-->
+
+                            <#--</div>-->
+                            <#--<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>-->
+
+                            <#--<#if jin??>-->
+                                <#--${jin}-->
+                            <#--</#if>-->
+                            <#--</i>条-->
+                            <#--</div>-->
+                        <#--</div>-->
+                    <#--</li>-->
+                    <#--<li class="col-md-3  yong-pad">-->
+                        <#--<div class="yong-zong bg-color3" style="min-height: 152px;position: relative">-->
+                            <#--<div class="yong-hu-num clearfix">-->
+                                <#--<div class="yong-biao ">-->
+                                    <#--<img src="${ctx}/images/index/yong-hu3.png"/>-->
+                                    <#--<h1>累积访问数量</h1>-->
+                                <#--</div>-->
+
+                            <#--</div>-->
+                            <#--<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>-->
+
+                            <#--<#if zong??>-->
+                                <#--${zong}-->
+                            <#--</#if>-->
+                            <#--</i>条-->
+                            <#--</div>-->
+                        <#--</div>-->
+                    <#--</li>-->
+                    <#--&lt;#&ndash;<li class="col-md-3  yong-pad">&ndash;&gt;-->
+                        <#--&lt;#&ndash;<div class="yong-zong bg-color3" style="min-height: 152px;position: relative">&ndash;&gt;-->
+                            <#--&lt;#&ndash;<div class="yong-hu-num clearfix">&ndash;&gt;-->
+                                <#--&lt;#&ndash;<div class="yong-biao ">&ndash;&gt;-->
+                                    <#--&lt;#&ndash;<img src="${ctx}/images/index/yong-hu3.png"/>&ndash;&gt;-->
+                                    <#--&lt;#&ndash;<h1>调查问卷</h1>&ndash;&gt;-->
+                                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+                            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                            <#--&lt;#&ndash;<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>&ndash;&gt;-->
+
+                            <#--&lt;#&ndash;<#if questionNum??>&ndash;&gt;-->
+                                <#--&lt;#&ndash;${questionNum}&ndash;&gt;-->
+                            <#--&lt;#&ndash;</#if>&ndash;&gt;-->
+                            <#--&lt;#&ndash;</i>条&ndash;&gt;-->
+                            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                        <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                    <#--&lt;#&ndash;</li>&ndash;&gt;-->
+                    <#--<li class="col-md-3  yong-pad" style="padding-left: 10px;">-->
+                        <#--<div class="yong-zong " style="min-height: 152px;background: #4b4b4b;position: relative;margin-top: 10px;">-->
+                            <#--<div class="yong-hu-num clearfix">-->
+                                <#--<div class="yong-biao ">-->
+                                    <#--<img src="${ctx}/images/index/yong-hu3.png"/>-->
+                                    <#--<h1>会员数量</h1>-->
+                                <#--</div>-->
+
+                            <#--</div>-->
+                            <#--<div class="yong-shu" style="position: absolute;bottom: 5px; left:0px;width: 100%;"><i>-->
+
+                             <#--<#if yugong??>-->
+                                 <#--${yugong}-->
+                             <#--</#if>-->
+                            <#--</i>名-->
+                            <#--</div>-->
+                        <#--</div>-->
+                    <#--</li>-->
+                <#--</ul>-->
+            <#--</div>-->
+
+
+
+            <#--&lt;#&ndash;<div class="ying-shou">&ndash;&gt;-->
+
+                <#--&lt;#&ndash;<div class="shou-title clearfix">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<h3></h3>&ndash;&gt;-->
+
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="yong-canvas">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<span>区域新闻统计</span>&ndash;&gt;-->
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+            <#--&lt;#&ndash;&lt;#&ndash;<div style="padding-left:7px;"><span>地区发布新闻比例</span></div>&ndash;&gt;&ndash;&gt;-->
+            <#--&lt;#&ndash;<div id="containerBaby" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+            <#--&lt;#&ndash;<div id="containerBaby1" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+
+
+
+
+                <#--&lt;#&ndash;<div class="shou-title clearfix">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<h3></h3>&ndash;&gt;-->
+
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="yong-canvas">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<span>区域活动统计</span>&ndash;&gt;-->
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+
+            <#--&lt;#&ndash;<div id="containerBabyy" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+            <#--&lt;#&ndash;<div id="containerBabyy1" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+
+
+
+
+                <#--&lt;#&ndash;<div class="shou-title clearfix">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<h3></h3>&ndash;&gt;-->
+
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="yong-canvas">&ndash;&gt;-->
+                    <#--&lt;#&ndash;<span>区域调查问卷统计</span>&ndash;&gt;-->
+                <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+            <#--&lt;#&ndash;<div id="containerBabyyy" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+            <#--&lt;#&ndash;<div id="containerBabyyy1" style="width:50%;height: 350px;float:left;">&ndash;&gt;-->
+            <#--&lt;#&ndash;</div>&ndash;&gt;-->
+
+
+        <#--</div>-->
+    <#--</div>-->
+
+<#--</div>-->
 
 
 
@@ -633,7 +790,7 @@ function sendEmail() {
                         color: function(params) {
                             // build a color map as your need.
                             var colorList = [
-                                '#86D560', '#AF89D6', '#59ADF3', '#FF999A', '#FFCC67',
+                                '#86echartsD560', '#AF89D6', '#59ADF3', '#FF999A', '#FFCC67',
                                 '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
                                 '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
                             ];
@@ -645,7 +802,15 @@ function sendEmail() {
         ]
     };
     cdd.setOption(optiona, true);
-
+    $.ajax({
+        url:'zhuanhui/newLook',
+        method:'post',
+        success:function (_data) {
+           if(_data.success){
+               alert(_data.message)
+           }
+        }
+    })
 
 
 

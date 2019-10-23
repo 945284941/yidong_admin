@@ -7,7 +7,7 @@
             <i class="fa fa-circle"></i>
         </li>
         <li>
-            <span>调查问卷描述</span>
+            <span>选项描述</span>
         </li>
     </ul>
 </div>

@@ -37,6 +37,7 @@
             <div class="col-md-7">
                 <#if recharge.diquId??>
                  <select name="diquId"  class="form-control">
+                     <option value="9999" <#if '9999'== recharge.diquId>selected="selected"</#if> >全部</option>
                      <#list  diqu as diqu>
                          <option value="${diqu.id!''}"  <#if diqu.id == recharge.diquId>selected="selected"</#if> >${diqu.name}</option>
                      </#list>
@@ -44,7 +45,9 @@
                 </#if>
                  <#if !recharge.diquId??>
                  <select name="diquId"  class="form-control">
+                     <option value="9999" >全部</option>
                       <#list  diqu as diqu>
+
                           <option value="${diqu.id!''}">${diqu.name}</option>
                       </#list>
                  </select>

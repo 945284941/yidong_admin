@@ -173,6 +173,7 @@
                              <option value="0"  >群众</option>
                             <option value="1" >团员</option>
                             <option value="2" >党员</option>
+                            <option value="3" >其他党派</option>
                     </#if>
                     </select>
             </div>

@@ -164,14 +164,23 @@ public class YdNewsController extends BaseController {
 
 //        List<YdNewCat> newCats = ydNewCatService.findAllNoPage();
 
-          YdNewCat ydNewCat = ydNewCatService.selectOne(map.get("catId")+"");
+        try{
+            YdNewCat ydNewCat = ydNewCatService.selectOne(map.get("catId")+"");
 
 
+          if(ydNewCat == null){
+
+          }else{
+              map.put("name", ydNewCat.getName());
+
+              map.put("value",ydNewsMapper.findTongjiByQuYu(map));
+          }
 
 
-            map.put("name", ydNewCat.getName());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-            map.put("value",ydNewsMapper.findTongjiByQuYu(map));
 
 
         return map;

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.YdHuodongAnwerMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.YdHuodongAnwer" >
+    <result column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="create_by_" property="createBy" jdbcType="VARCHAR" />
+    <result column="create_time_" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="one_" property="one" jdbcType="VARCHAR" />
+    <result column="two_" property="two" jdbcType="VARCHAR" />
+    <result column="three_" property="three" jdbcType="VARCHAR" />
+    <result column="four_" property="four" jdbcType="VARCHAR" />
+    <result column="five_" property="five" jdbcType="VARCHAR" />
+    <result column="six_" property="six" jdbcType="VARCHAR" />
+    <result column="seven_" property="seven" jdbcType="VARCHAR" />
+    <result column="egiht_" property="egiht" jdbcType="VARCHAR" />
+    <result column="sort_" property="sort" jdbcType="VARCHAR" />
+    <result column="type_" property="type" jdbcType="VARCHAR" />
+    <result column="huodong_id_" property="huodongId" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectByPrimaryKeyy" parameterType="java.lang.String" resultMap="BaseResultMap">
+      select  * from  yd_huodong_anwer where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKeyy" parameterType="java.lang.String">
+      delete from  yd_huodong_anwer where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <select id="findAll" parameterType="cn.ctrl.platform.orm.entity.YdHuodongAnwer" resultMap="BaseResultMap">
+
+     select * from  yd_huodong_anwer
+      <where>
+
+        <if test="createBy != null" >
+          and create_by_  = #{createBy,jdbcType=VARCHAR}
+        </if>
+        <if test="createTime != null" >
+          and create_time_  = #{createBy,jdbcType=VARCHAR}
+        </if>
+        <if test="one != null" >
+          and one_  = #{one,jdbcType=VARCHAR}
+        </if>
+        <if test="two != null" >
+          and  two_  = #{two,jdbcType=VARCHAR}
+        </if>
+        <if test="three != null" >
+          and  three_  = #{three,jdbcType=VARCHAR}
+        </if>
+        <if test="four != null" >
+          and  four_  = #{four,jdbcType=VARCHAR}
+        </if>
+        <if test="five != null" >
+          and   five_  = #{five,jdbcType=VARCHAR}
+        </if>
+        <if test="six != null" >
+          and   six_  = #{six,jdbcType=VARCHAR}
+        </if>
+        <if test="seven != null" >
+          and seven_  = #{seven,jdbcType=VARCHAR}
+        </if>
+        <if test="egiht != null" >
+          and  egiht_  = #{egiht,jdbcType=VARCHAR}
+        </if>
+        <if test="sort != null" >
+          and sort_  = #{sort,jdbcType=VARCHAR}
+        </if>
+        <if test="type != null" >
+          and  type_  = #{type,jdbcType=VARCHAR}
+        </if>
+        <if test="huodongId != null" >
+        and  huodong_id_  = #{huodongId,jdbcType=VARCHAR}
+        </if>
+        order by create_time_
+      </where>
+  </select>
+  <update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodongAnwer">
+    update yd_huodong_anwer
+    <set>
+
+      <if test="createBy != null" >
+        create_by_  = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time_  = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="one != null" >
+        one_  = #{one,jdbcType=VARCHAR},
+      </if>
+      <if test="two != null" >
+        two_  = #{two,jdbcType=VARCHAR},
+      </if>
+      <if test="three != null" >
+        three_  = #{three,jdbcType=VARCHAR},
+      </if>
+      <if test="four != null" >
+        four_  = #{four,jdbcType=VARCHAR},
+      </if>
+      <if test="five != null" >
+        five_  = #{five,jdbcType=VARCHAR},
+      </if>
+      <if test="six != null" >
+        six_  = #{six,jdbcType=VARCHAR},
+      </if>
+      <if test="seven != null" >
+        seven_  = #{seven,jdbcType=VARCHAR},
+      </if>
+      <if test="egiht != null" >
+        egiht_  = #{egiht,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null" >
+        sort_  = #{sort,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type_  = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="huodongId != null" >
+        huodong_id_  = #{huodongId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id_ = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.YdHuodongAnwer" >
+    insert into yd_huodong_anwer (id_, create_by_, create_time_, 
+      one_, two_, three_, four_, 
+      five_, six_, seven_, egiht_, 
+      sort_, type_, huodong_id_
+      )
+    values (#{id,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{one,jdbcType=VARCHAR}, #{two,jdbcType=VARCHAR}, #{three,jdbcType=VARCHAR}, #{four,jdbcType=VARCHAR}, 
+      #{five,jdbcType=VARCHAR}, #{six,jdbcType=VARCHAR}, #{seven,jdbcType=VARCHAR}, #{egiht,jdbcType=VARCHAR}, 
+      #{sort,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{huodongId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.YdHuodongAnwer" >
+    insert into yd_huodong_anwer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id_,
+      </if>
+      <if test="createBy != null" >
+        create_by_,
+      </if>
+      <if test="createTime != null" >
+        create_time_,
+      </if>
+      <if test="one != null" >
+        one_,
+      </if>
+      <if test="two != null" >
+        two_,
+      </if>
+      <if test="three != null" >
+        three_,
+      </if>
+      <if test="four != null" >
+        four_,
+      </if>
+      <if test="five != null" >
+        five_,
+      </if>
+      <if test="six != null" >
+        six_,
+      </if>
+      <if test="seven != null" >
+        seven_,
+      </if>
+      <if test="egiht != null" >
+        egiht_,
+      </if>
+      <if test="sort != null" >
+        sort_,
+      </if>
+      <if test="type != null" >
+        type_,
+      </if>
+      <if test="huodongId != null" >
+        huodong_id_,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="one != null" >
+        #{one,jdbcType=VARCHAR},
+      </if>
+      <if test="two != null" >
+        #{two,jdbcType=VARCHAR},
+      </if>
+      <if test="three != null" >
+        #{three,jdbcType=VARCHAR},
+      </if>
+      <if test="four != null" >
+        #{four,jdbcType=VARCHAR},
+      </if>
+      <if test="five != null" >
+        #{five,jdbcType=VARCHAR},
+      </if>
+      <if test="six != null" >
+        #{six,jdbcType=VARCHAR},
+      </if>
+      <if test="seven != null" >
+        #{seven,jdbcType=VARCHAR},
+      </if>
+      <if test="egiht != null" >
+        #{egiht,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null" >
+        #{sort,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="huodongId != null" >
+        #{huodongId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

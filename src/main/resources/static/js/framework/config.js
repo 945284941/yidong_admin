@@ -19,6 +19,9 @@ project.config = (function() {
         lawyerService:"/js/modules/lawyerService.js",
         questionService:"/js/modules/questionService.js",
         bannerService:"/js/modules/bannerService.js",
+        zhuanhuiService:"/js/modules/zhuanhuiService.js",
+
+
 
 
 

@@ -18,7 +18,7 @@
         </div>
     </div>
         <div class="form-group">
-        <label class="control-label col-md-3">调查问卷描述：
+        <label class="control-label col-md-3">选项描述：
             <span class="required" aria-required="true"> * </span>
         </label>
         <div class="col-md-7">

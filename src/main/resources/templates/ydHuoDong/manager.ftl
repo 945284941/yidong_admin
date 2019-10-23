@@ -62,6 +62,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <input type="hidden" name="type" value="${type!''}">
+
                                         <#if baby == '2'>
 
                                         </#if>
@@ -99,7 +101,7 @@
                                onclick="Duang.getService('ydHuoDongService').reset();"><i class="glyphicon glyphicon-refresh"></i>
                                 重置</a>
                             <a class="btn btn-circle green"
-                               href="javascript:Duang.getService('ydHuoDongService').add('${baby!''}')" role="button"><i
+                               href="javascript:Duang.getService('ydHuoDongService').add('${baby!''}','${type!''}')" role="button"><i
                                     class="icon-users"></i> 添加</a>
                         </div>
                     </div>
@@ -112,7 +114,7 @@
                  aria-labelledby="myModalLabel" aria-hidden="true"
                  style="display:none; padding-right: 17px;">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" style="width: 1000px;">
 
                     </div>
                 </div>
@@ -146,7 +148,10 @@
             $('#system_expert_manager_search_treeList').show();
             $("body").bind("mousedown", onBodyDown);
         });
-        Duang.getService('ydHuoDongService').loadTable();
+
+            Duang.getService('ydHuoDongService').loadTable();
+
+
 
     })
 </script>

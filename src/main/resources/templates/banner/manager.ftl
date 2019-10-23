@@ -7,7 +7,7 @@
             <i class="fa fa-circle"></i>
         </li>
         <li>
-            <span>部门列表</span>
+            <span>轮播图列表</span>
         </li>
     </ul>
 </div>

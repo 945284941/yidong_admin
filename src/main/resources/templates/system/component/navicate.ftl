@@ -3,7 +3,7 @@
 <#macro buildNode root>
     <li class="nav-item start">
         <a href="<#if root.sub?? >javascript:void(0) <#else> ${ctx}${root.url}</#if>" class="<#if root.sub?? >nav-link nav-toggle <#else> ajaxify</#if>">
-            <i class="${root.icon!'icon-home'}"></i>
+            <i class="${root.icon!''}"></i>
             <span class="title">${root.name!}</span>
             <span class="selected"></span>
             <#if root.sub?? ><span class="arrow"></span></#if>

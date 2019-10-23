@@ -9,6 +9,7 @@ var ydHuoDongService = new Class({
     },
     init: function () {
     },
+
     loadTable: function () {
         var _this =this ;
         var param = $('#'+this.options.formId).formToJson();
@@ -34,6 +35,11 @@ var ydHuoDongService = new Class({
         $.get(project.path + '/ydHuoDong/table',function(data){
             $('#'+_this.options.contentName).html(data);
         })
+    },
+    shezhibiaodan : function(id){
+        $("#" + this.options.modalName).modal({
+            remote: project.path + "/ydHuodongAnwer/edit?huodongId=" + id
+        });
     },
     edit: function (id) {
         $("#" + this.options.modalName).modal({
@@ -71,9 +77,9 @@ var ydHuoDongService = new Class({
             remote: project.path + "/ydHuoDong/lookPeople?id=" + id+"&pageNo="+page
         });
     },
-    add: function (baby) {
+    add: function (baby,type) {
         $("#" + this.options.modalName).modal({
-            remote: project.path + "/ydHuoDong/insert?baby="+baby
+            remote: project.path + "/ydHuoDong/insert?baby="+baby+"&type="+type
         });
     },
     delete: function (id) {
@@ -89,6 +95,20 @@ var ydHuoDongService = new Class({
                 }
             })
         }
+    },
+    baodansave:function(){
+        var $this = this;
+        var param = $('#' + this.options.formName).formToJson();
+
+        $.post(project.path + '/ydHuodongAnwer/save', param, function (data) {
+            if (data.success) {
+                $("#" + $this.options.modalName).modal('hide');
+                $this.loadTable();
+                Duang.success("提示", "保存成功");
+            } else {
+                Duang.error("提示", data.message);
+            }
+        }, 'json')
     },
     saveOrUpdate: function () {
         var $this = this;

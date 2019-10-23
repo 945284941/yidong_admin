@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style>
+			body{background: #f8f8f8;}
+			.hc-container .panel,.hc-container .panel-default>.panel-heading{border: none;position: relative;}
+			.hc-container .panel-default>.panel-heading{padding-left: 30px;line-height: 30px;font-size: 18px;background: none;}
+			.hc-container .panel-default>.panel-heading:before{
+				content:'';position: absolute;left:15px;display: block;height:50%;top:25%;width: 6px;background: red;
+			}
+			
+			.hc-container .panel-default.headdefault>.panel-heading:before{background: #37BAC8;}
+			.hc-container .panel-default.headdefault .panel-body{color:#37BAC8 ;}
+			.hc-container .panel-default.headblue>.panel-heading{
+				background: -moz-linear-gradient(left, #E7F1FC 0%, #FFF 100%);
+			    background: -webkit-gradient(linear, left, right, color-stop(0%,#E7F1FC), color-stop(100%,#FFF));
+			    background: -webkit-linear-gradient(left, #E7F1FC,#FFF 100%);
+			    background: -o-linear-gradient(left, #E7F1FC,#FFF 100%);
+			    background: -ms-linear-gradient(left,#E7F1FC,#FFF 100%);
+			    background: linear-gradient(to right, #E7F1FC,#FFF);
+			}
+			.hc-container .panel-default.headblue>.panel-heading:before{background: #649DFF;}
+			.hc-container .panel-default.headblue .panel-body{color:#649DFF ;}
+			.hc-container .panel-default.headred>.panel-heading{
+				background: -moz-linear-gradient(left, #FCEBEB 0%, #FFF 100%);
+			    background: -webkit-gradient(linear, left, right, color-stop(0%,#FCEBEB), color-stop(100%,#FFF));
+			    background: -webkit-linear-gradient(left, #FCEBEB,#FFF 100%);
+			    background: -o-linear-gradient(left, #FCEBEB,#FFF 100%);
+			    background: -ms-linear-gradient(left,#FCEBEB,#FFF 100%);
+			    background: linear-gradient(to right, #FCEBEB,#FFF);
+			}
+			.hc-container .panel-default.headred>.panel-heading:before{background: #F87979;}
+			.hc-container .panel-default.headred .panel-body{color:#F87979 ;}
+			.hc-container .panel-default.headyellow>.panel-heading{
+				background: -moz-linear-gradient(left, #FAF3E6 0%, #FFF 100%);
+			    background: -webkit-gradient(linear, left, right, color-stop(0%,#FAF3E6), color-stop(100%,#FFF));
+			    background: -webkit-linear-gradient(left, #FAF3E6,#FFF 100%);
+			    background: -o-linear-gradient(left, #FAF3E6,#FFF 100%);
+			    background: -ms-linear-gradient(left,#FAF3E6,#FFF 100%);
+			    background: linear-gradient(to right, #FAF3E6,#FFF);
+			}
+			.hc-container .panel-default.headyellow>.panel-heading:before{background: #EFA837;}
+			.hc-container .panel-default.headyellow .panel-body{color:#EFA837 ;}
+			.hc-container .panel-default.headygreen>.panel-heading{
+				background: -moz-linear-gradient(left, #DCF4ED 0%, #FFF 100%);
+			    background: -webkit-gradient(linear, left, right, color-stop(0%,#DCF4ED), color-stop(100%,#FFF));
+			    background: -webkit-linear-gradient(left, #DCF4ED,#FFF 100%);
+			    background: -o-linear-gradient(left, #DCF4ED,#FFF 100%);
+			    background: -ms-linear-gradient(left,#DCF4ED,#FFF 100%);
+			    background: linear-gradient(to right, #DCF4ED,#FFF);
+			}
+			.hc-container .panel-default.headygreen>.panel-heading:before{background: #28B789;}
+			.hc-container .panel-default.headygreen .panel-body{color:#28B789 ;}
+			
+			.hc-container .panel-body{font-size: 50px;line-height: 150px;text-align: center;letter-spacing: 2px;}
+			.hc-container .headdefault .panel-body{padding-top:0;line-height: 90px;letter-spacing: 2px;}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid hc-container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-default headdefault">
+						<div class="panel-heading">会员数量（名）</div>
+						<div class="panel-body">
+							453423
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-default headblue">
+						<div class="panel-heading">会员数量（名）</div>
+						<div class="panel-body">
+							453423
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-default headred">
+						<div class="panel-heading">会员数量（名）</div>
+						<div class="panel-body">
+							453423
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-default headyellow">
+						<div class="panel-heading">会员数量（名）</div>
+						<div class="panel-body">
+							453423
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-default headygreen">
+						<div class="panel-heading">会员数量（名）</div>
+						<div class="panel-body">
+							453423
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

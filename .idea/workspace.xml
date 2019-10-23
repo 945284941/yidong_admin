@@ -2,6 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef317947-cc4e-442e-91bf-ac88c180d42c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/service/ZhuanHuiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Visits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodongAnwer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Zhuanhui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/VisitsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/YdHuodongAnwerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZhuanhuiMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/modules/zhuanhuiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shanxingtongji/pie-doughnut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/system/component/huiyuanshuliang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebuform.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebumanager.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebutable.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuodongAnwer/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/manager.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/table.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/zhuanhui/service/ZhuanHuiService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdHuodongAnwer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/Zhuanhui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/YdHuodongAnwerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ZhuanhuiMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/modules/zhuanhuiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/julebuform.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/julebutable.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/ydHuodongAnwer/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/zhuanhui/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/zhuanhui/manager.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/zhuanhui/table.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/zhuanhui/service/ZhuanHuiService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdHuodongAnwer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/Zhuanhui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdHuodongAnwerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/ZhuanhuiMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/zhuanhuiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/julebuform.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/julebutable.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuodongAnwer/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/zhuanhui/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/zhuanhui/manager.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/zhuanhui/table.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/spring.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log.1" afterDir="false" />
@@ -11,47 +67,89 @@
       <change beforePath="$PROJECT_DIR$/log/spring.log.5" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log.5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/spring.log.6" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log.6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/spring.log.7" beforeDir="false" afterPath="$PROJECT_DIR$/log/spring.log.7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/web/BannerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/web/BannerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Banner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Banner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BannerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BannerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/YdHuodongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/YdHuodongMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/framework/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/framework/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydHuoDongService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/modules/ydHuoDongService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/banner/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/banner/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/component/navicate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/component/navicate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/system/resources/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/system/resources/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/lookPeople.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/lookPeople.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/manager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/table.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagemanager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagemanager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/form.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/manager.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/table.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/banner/web/BannerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/banner/web/BannerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/Banner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/Banner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BannerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BannerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/vip的副本.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/vip的副本.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/login/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/login/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydNews/web/YdNewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/modules/ydNews/web/YdNewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdHuodong.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/ctrl/platform/orm/entity/YdHuodong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/YdHuodongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/YdHuodongMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/framework/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/framework/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/modules/ydHuoDongService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/modules/ydHuoDongService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/banner/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/banner/form.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/banner/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/banner/manager.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/banner/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/banner/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/component/content.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/component/content.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/component/navicate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/component/navicate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/system/resources/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/system/resources/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/lookPeople.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/lookPeople.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/manager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydHuoDong/table.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagemanager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagemanager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/form.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/manager.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/shenhe.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/shenhe.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/vip的副本.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ydYuanGong/vip的副本.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/aliyun/AliyunOSSClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/aliyun/AliyunOSSClientUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/aliyun/OSSClientConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/aliyun/OSSClientConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdYuangong.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdYuangong.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdYuangongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdYuangongMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/login/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/login/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydNews/web/YdNewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/modules/ydNews/web/YdNewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdHuodong.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/cn/ctrl/platform/orm/entity/YdHuodong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdHuodongMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/mapper/YdHuodongMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/framework/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/framework/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydYuanGongService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydYuanGongService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydHuoDongService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/static/js/modules/ydHuoDongService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/banner/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/banner/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/banner/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/banner/manager.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/component/content.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/component/content.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/component/navicate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/component/navicate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/resources/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/system/resources/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/lookPeople.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/lookPeople.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/manager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydHuoDong/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/vip.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydNews/vip.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messageform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messageform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagemanager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagemanager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydQuestionnaire/messagetable.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/form.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/form.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/manager.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/table.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/table.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/vip的副本.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/classes/templates/ydYuanGong/vip的副本.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/platform-1.0/WEB-INF/lib/qiniu-java-sdk-7.2.26.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,57 +163,64 @@
     <session id="-392396625">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
-          <entry key="project.open.time.0" value="8" />
-          <entry key="project.open.time.1" value="6" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.closed" value="43" />
+          <entry key="project.open.time.0" value="9" />
+          <entry key="project.open.time.1" value="11" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.2" value="3" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="ftl" value="27" />
-          <entry key="java" value="52" />
-          <entry key="js" value="8" />
-          <entry key="xml" value="10" />
-          <entry key="yml" value="2" />
+          <entry key="class" value="10" />
+          <entry key="css" value="1" />
+          <entry key="ftl" value="91" />
+          <entry key="html" value="5" />
+          <entry key="java" value="107" />
+          <entry key="js" value="20" />
+          <entry key="xml" value="25" />
+          <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="FTL" value="27" />
-          <entry key="JAVA" value="52" />
-          <entry key="JavaScript" value="8" />
-          <entry key="XML" value="10" />
-          <entry key="YAML" value="2" />
+          <entry key="CLASS" value="10" />
+          <entry key="CSS" value="1" />
+          <entry key="FTL" value="91" />
+          <entry key="HTML" value="5" />
+          <entry key="JAVA" value="107" />
+          <entry key="JavaScript" value="20" />
+          <entry key="XML" value="25" />
+          <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="6" />
-          <entry key="ftl" value="1327" />
-          <entry key="java" value="1048" />
-          <entry key="js" value="37" />
-          <entry key="xml" value="374" />
+          <entry key="dummy" value="31" />
+          <entry key="ftl" value="2674" />
+          <entry key="html" value="2" />
+          <entry key="java" value="2421" />
+          <entry key="js" value="108" />
+          <entry key="xml" value="1675" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="FTL" value="1327" />
-          <entry key="JAVA" value="1048" />
-          <entry key="JavaScript" value="37" />
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SQL" value="43" />
-          <entry key="XML" value="331" />
+          <entry key="FTL" value="2674" />
+          <entry key="HTML" value="2" />
+          <entry key="JAVA" value="2421" />
+          <entry key="JavaScript" value="108" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="SQL" value="90" />
+          <entry key="XML" value="1585" />
         </counts>
       </usages-collector>
     </session>
@@ -123,28 +228,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/form.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="137" selection-end-column="48" />
+            <state relative-caret-position="286">
+              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/manager.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="159">
+              <caret line="59" column="67" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebumanager.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+            <state relative-caret-position="1320">
+              <caret line="40" column="89" selection-start-line="40" selection-start-column="89" selection-end-line="40" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -153,29 +258,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>requestParam</find>
-      <find>getOrVerifyRandCode</find>
-      <find>userMobile</find>
-      <find>sendEmail</find>
-      <find>sendDuanXin</find>
-      <find>createTime</find>
-      <find>shengQingTime</find>
-      <find>disabled=&quot;disabled&quot;</find>
-      <find>saver</find>
-      <find>study</find>
-      <find>shenqing</find>
-      <find>state</find>
-      <find>shenqingTime</find>
-      <find>delete</find>
-      <find>com.gx.model.Banner</find>
-      <find>deleteByPrimaryKey</find>
-      <find>YdBumen</find>
+      <find>deleteByPrimaryKeyy</find>
       <find>ydBuMen</find>
       <find>ydBuMenService</find>
-      <find>name</find>
-      <find>bannerService</find>
-      <find>departmentId</find>
+      <find>state</find>
+      <find>system_expert_form_table</find>
+      <find>updateByPrimaryKeySelectivee</find>
       <find>工号</find>
+      <find>add</find>
+      <find>insert</find>
+      <find>KindEditor</find>
+      <find>infomation</find>
+      <find>modal-content</find>
+      <find>选项A</find>
+      <find>com.gx.model.YdHuodongAnwer</find>
+      <find>YdDiqu</find>
+      <find>ydDiQu</find>
+      <find>eight</find>
+      <find>edit</find>
+      <find>lookPeople</find>
+      <find>echarts</find>
+      <find>containerBabyyy1</find>
+      <find>mmbiz/ad/gg.png</find>
+      <find>shanxingmanager</find>
+      <find>tongjiNewCat</find>
+      <find>调查问卷描述</find>
+      <find>icon-home</find>
+      <find>shenhemanager</find>
+      <find>loadTable</find>
+      <find>zong</find>
+      <find>type</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -183,11 +295,21 @@
       <replace>banner</replace>
       <replace>bannerService</replace>
       <replace>员工编码</replace>
+      <replace>cn.ctrl.platform.orm.entity.Zhuanhui</replace>
+      <replace>zhuanhui</replace>
+      <replace>zhuanhuiService</replace>
+      <replace>cn.ctrl.platform.orm.entity.YdHuodongAnwer</replace>
+      <replace>ydHuodongAnwer</replace>
+      <replace>选项描述</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src/main/java</dir>
+      <dir>$PROJECT_DIR$/src/main/resources/templates</dir>
+      <dir>$PROJECT_DIR$/src/main/resources</dir>
+      <dir>$PROJECT_DIR$/src/main/java/cn/ctrl</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -196,38 +318,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/httpUtil/HttpRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/httpUtil/HttpUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/HttpUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/IdentificationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/TokenService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/system/web/ResourcesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdYuangong.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdYuangongMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/ydYuanGongService.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/table.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/shenhe.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/aliyun/OSSClientConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/BannerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/service/YdBuMenService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/service/BannerService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/bannerService.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/framework/config.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/BannerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Banner.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/banner/table.ftl" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/web/BannerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/web/YdDiQuController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/framework/config.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/zhuanhuiService.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Zhuanhui.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/manager.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/service/ZhuanHuiService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ZhuanhuiMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodong.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdHuodongMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/manager.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebuform.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messageform.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydQuestionnaire/messagetable.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodongAnwer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdDiQuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/modules/ydHuoDongService.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuodongAnwer/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/lookPeople.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/YdHuodongAnwerMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/table.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Visits.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/VisitsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/vip的副本.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/zhuanhui/table.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/shanxingtongji/manager.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/shanxingtongji/pie-doughnut.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/component/navicate.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/system/resources/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebutable.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/VisitsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebumanager.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java" />
       </list>
     </option>
   </component>
@@ -237,11 +378,27 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="platform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="platform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="23" />
-    <option name="width" value="1499" />
-    <option name="height" value="1027" />
+    <option name="x" value="-15" />
+    <option name="y" value="80" />
+    <option name="width" value="1294" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -249,7 +406,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,17 +469,6 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="ctrl" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="ctrl" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,7 +480,8 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="ctrl" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="orm" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ydHuoDong" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform" type="b2602c69:ProjectViewProjectNode" />
@@ -344,8 +492,9 @@
               <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="ctrl" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="orm" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ydHuoDong" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="platform" type="b2602c69:ProjectViewProjectNode" />
@@ -369,14 +518,22 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="ydYuanGong" type="462c0819:PsiDirectoryNode" />
+              <item name="banner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yidong_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ydHuoDong" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,10 +543,10 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="ydyuangong&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java&#10;ydyua&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdYuangong.java&#10;yuangongc&#9;PSI&#9;JAVA://cn.ctrl.platform.modules.ydYuanGong.web.YdYuanGongController&#10;yuangong&#9;PSI&#9;JAVA://cn.ctrl.platform.orm.entity.YdYuangong&#10;sendSms&#9;PSI&#9;JAVA://cn.ctrl.platform.utils.duanxin.IdentificationService#sendSms" />
+    <property name="SearchEverywhereHistoryKey" value="banner&#9;PSI&#9;JAVA://cn.ctrl.platform.orm.entity.Banner&#10;shanxingmanager&#9;PSI&#9;JAVA://cn.ctrl.platform.modules.ydNews.web.YdNewsController#shanxingmanager&#10;shanxingtongji&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/resources/templates/shanxingtongji&#10;zhuanhui&#9;PSI&#9;JAVA://cn.ctrl.platform.orm.mapper.ZhuanhuiMapper&#10;news&#9;PSI&#9;JAVA://cn.ctrl.platform.modules.ydNews.web.YdNewsController&#10;hudong&#9;PSI&#9;JAVA://cn.ctrl.platform.modules.ydHuoDong.web.YdHuoDongController&#10;ydhuodong&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/resources/static/js/modules/ydHuoDongService.js&#10;huodong&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/resources/mapper/YdHuodongMapper.xml&#10;zhuanhuiCon&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.java&#10;zhuanh&#9;PSI&#9;JAVA://cn.ctrl.platform.orm.entity.Zhuanhui&#10;ydyuangong&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java&#10;ydyua&#9;FILE&#9;file:///CTRL/yidong_admin/src/main/java/cn/ctrl/platform/orm/entity/YdYuangong.java&#10;yuangongc&#9;PSI&#9;JAVA://cn.ctrl.platform.modules.ydYuanGong.web.YdYuanGongController&#10;yuangong&#9;PSI&#9;JAVA://cn.ctrl.platform.orm.entity.YdYuangong&#10;sendSms&#9;PSI&#9;JAVA://cn.ctrl.platform.utils.duanxin.IdentificationService#sendSms" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569477827510" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571816446927" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -400,16 +557,20 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/ydHuoDong" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/system/component" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/ydHuodongAnwer" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.ctrl.platform.orm.entity" />
       <recent name="cn.ctrl.platform.orm.mapper" />
+      <recent name="mapper" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js/modules" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/shanxingtongji" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -509,17 +670,33 @@
       <workItem from="1569459048901" duration="1959000" />
       <workItem from="1569461628718" duration="69000" />
       <workItem from="1569461896059" duration="335000" />
-      <workItem from="1569468853149" duration="1890000" />
+      <workItem from="1569468853149" duration="2487000" />
+      <workItem from="1569479007391" duration="582000" />
+      <workItem from="1569996401848" duration="3360000" />
+      <workItem from="1570427052373" duration="33837000" />
+      <workItem from="1570583422200" duration="460000" />
+      <workItem from="1570584550668" duration="10875000" />
+      <workItem from="1570758307669" duration="842000" />
+      <workItem from="1570933457621" duration="582000" />
+      <workItem from="1571102599913" duration="2176000" />
+      <workItem from="1571200441767" duration="538000" />
+      <workItem from="1571203850394" duration="3678000" />
+      <workItem from="1571208157183" duration="537000" />
+      <workItem from="1571225993723" duration="1448000" />
+      <workItem from="1571548696655" duration="10202000" />
+      <workItem from="1571646445970" duration="1491000" />
+      <workItem from="1571808552294" duration="3672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54913000" />
+    <option name="totallyTimeSpent" value="129790000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="23" width="1499" height="1027" extended-state="0" />
+    <frame x="-15" y="80" width="1294" height="771" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19679786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27434313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -529,16 +706,16 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0712766" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36914894" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5511696" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23264782" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24574468" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32904884" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -547,7 +724,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.05873261" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -561,338 +738,350 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/httpUtil/httpUtil/HttpUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/httpUtil/HttpRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdHuodongAnwer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-593">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="297">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/aop/LoggingAspect.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdHuodongAnwerMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/ZhuanhuiMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="396">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.15/fastjson-1.2.15.jar!/com/alibaba/fastjson/JSON.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/YdHuodongAnwerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+        <state relative-caret-position="526">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/TokenService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuodongAnwer/form.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="240">
+          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/IdentificationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/web/YdHuodongAnwerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        <state relative-caret-position="240">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/duanxin/HttpUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydHuoDongService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        <state relative-caret-position="282">
+          <caret line="76" column="57" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/utils/httpUtil/HttpUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdHuodongAnwerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="94" column="46" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="46" />
+        <state relative-caret-position="310">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/shiro/realm/UserRealm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuodongAnwer/service/YdHuodongAnwerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="297">
+          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/shiro/realm/TicketRealm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/lookPeople.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="1386">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/shiro/realm/AuthorizingRealmAdaptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/zhuanhui/web/ZhuanHuiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="555">
+          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/interceptor/BaseInterceptor.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/ctrl/framework/common/3.0.3/common-3.0.3.jar!/cn/ctrl/framework/common/basic/JsonContent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/config/RedisSessionConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="81" column="66" lean-forward="true" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydYuanGong/service/YdYuanGongService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="75" column="50" lean-forward="true" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/table.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydYuanGongService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="49" column="54" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/shenhe.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/YdYuangong.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/YdYuangongMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8118">
-          <caret line="246" column="11" selection-start-line="246" selection-start-column="11" selection-end-line="246" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/system/web/ResourcesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/aliyun/OSSClientConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LawyerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydBuMen/web/YdBuMenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/BannerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.4.2.RELEASE/spring-boot-1.4.2.RELEASE.jar!/org/springframework/boot/Banner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/userservice.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/bannerService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/framework/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/questionService.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Lawyer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydYuanGong/web/YdYuanGongController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3069">
-          <caret line="121" column="33" selection-start-line="121" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3696">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/banner/table.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BannerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/service/BannerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Banner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/banner/web/BannerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4389">
-          <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/service/YdHuoDongService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydDiQu/web/YdDiQuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="110" column="20" lean-forward="true" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/manager.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/shenhemanager.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/form.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/form.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="137" selection-end-column="48" />
+        <state relative-caret-position="198">
+          <caret line="168" column="32" selection-start-line="168" selection-start-column="32" selection-end-line="168" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/table.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Visits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/mapper/VisitsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/basic/MyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/component/qiniu/RemoteFileServiceImplByQiniu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydYuanGong/vip的副本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="143" column="21" lean-forward="true" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/zhuanhui/table.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="38" column="186" selection-start-line="38" selection-start-column="186" selection-end-line="38" selection-end-column="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/yong.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/shanxingtongji/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/shanxingtongji/pie-doughnut.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="7" selection-start-line="7" selection-end-line="14" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/component/huiyuanshuliang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNewCat/service/YdNewCatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.4.RELEASE/spring-core-4.3.4.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="719" selection-start-line="719" selection-end-line="719" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE-sources.jar!/org/springframework/aop/aspectj/MethodInvocationProceedingJoinPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/aop/LoggingAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/component/navicate.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydNews/web/YdNewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4620">
+          <caret line="175" column="66" selection-start-line="175" selection-start-column="66" selection-end-line="175" selection-end-column="66" />
+          <folding>
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/resources/form.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="56" column="84" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/orm/entity/Banner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/vip.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4422">
+          <caret line="134" column="44" selection-start-line="134" selection-start-column="44" selection-end-line="134" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/shenhemanager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4257">
+          <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/modules/ydNewsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydNews/table.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1551">
+          <caret line="47" selection-start-line="46" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/framework/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/banner/form.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/system/component/content.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/login/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="208" column="49" selection-start-line="208" selection-start-column="49" selection-end-line="208" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VisitsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/banner/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebuform.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="82" column="32" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebutable.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="59" column="67" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ydHuoDong/julebumanager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="40" column="89" selection-start-line="40" selection-start-column="89" selection-end-line="40" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/ctrl/platform/modules/ydHuoDong/web/YdHuoDongController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>

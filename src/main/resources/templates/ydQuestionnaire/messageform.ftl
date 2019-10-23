@@ -11,7 +11,7 @@
 
 
         <div class="form-group">
-        <label class="control-label col-md-3">调查问卷描述：
+        <label class="control-label col-md-3">选项描述：
             <span class="required" aria-required="true"> * </span>
         </label>
         <div class="col-md-7">
@@ -31,7 +31,7 @@
                              <option value="1" <#if recharge.chooseType == '1'>selected="selected"</#if> >问答</option>
                          </#if>
                       <#if !recharge.chooseType??>
-                             <option value="0">选择</option>
+                             <option value="0">分数</option>
                              <option value="1">问答</option>
                       </#if>
                  </select>
@@ -45,117 +45,117 @@
          </#if>
       </#if>
       >
-        <div class="form-group">
-            <label class="control-label col-md-3">选项a：
-                <span class="required" aria-required="true"> * </span>
-            </label>
-            <div class="col-md-7">
-                <input type="text" data-required="1" name="a" value="${(recharge.a)!""}"
-                       class="form-control">
-            </div>
-        </div>
+        <#--<div class="form-group">-->
+            <#--<label class="control-label col-md-3">选项a：-->
+                <#--<span class="required" aria-required="true"> * </span>-->
+            <#--</label>-->
+            <#--<div class="col-md-7">-->
+                <#--<input type="text" data-required="1" name="a" value="${(recharge.a)!""}"-->
+                       <#--class="form-control">-->
+            <#--</div>-->
+        <#--</div>-->
 
-        <div class="form-group">
-            <label class="control-label col-md-3">选项b：
-                <span class="required" aria-required="true"> * </span>
-            </label>
-            <div class="col-md-7">
-                <input type="text" data-required="1" name="b" value="${(recharge.b)!""}"
-                       class="form-control">
-            </div>
-        </div>
+        <#--<div class="form-group">-->
+            <#--<label class="control-label col-md-3">选项b：-->
+                <#--<span class="required" aria-required="true"> * </span>-->
+            <#--</label>-->
+            <#--<div class="col-md-7">-->
+                <#--<input type="text" data-required="1" name="b" value="${(recharge.b)!""}"-->
+                       <#--class="form-control">-->
+            <#--</div>-->
+        <#--</div>-->
 
-        <div class="form-group">
-            <label class="control-label col-md-3">选项c：
-                <span class="required" aria-required="true"> * </span>
-            </label>
-            <div class="col-md-7">
-                <input type="text" data-required="1" name="c" value="${(recharge.c)!""}"
-                       class="form-control">
-            </div>
-        </div>
-
-
-          <div class="form-group">
-              <label class="control-label col-md-3">选项d：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="d" value="${(recharge.d)!""}"
-                         class="form-control">
-              </div>
-          </div>
+        <#--<div class="form-group">-->
+            <#--<label class="control-label col-md-3">选项c：-->
+                <#--<span class="required" aria-required="true"> * </span>-->
+            <#--</label>-->
+            <#--<div class="col-md-7">-->
+                <#--<input type="text" data-required="1" name="c" value="${(recharge.c)!""}"-->
+                       <#--class="form-control">-->
+            <#--</div>-->
+        <#--</div>-->
 
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项e：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="e" value="${(recharge.e)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项d：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="d" value="${(recharge.d)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项f：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="f" value="${(recharge.f)!""}"
-                         class="form-control">
-              </div>
-          </div>
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项g：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="g" value="${(recharge.g)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项e：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="e" value="${(recharge.e)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项h：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="h" value="${(recharge.h)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项f：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="f" value="${(recharge.f)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项i
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="i" value="${(recharge.i)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项g：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="g" value="${(recharge.g)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项j：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="j" value="${(recharge.j)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项h：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="h" value="${(recharge.h)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
 
-          <div class="form-group">
-              <label class="control-label col-md-3">选项k：
-                  <span class="required" aria-required="true"> * </span>
-              </label>
-              <div class="col-md-7">
-                  <input type="text" data-required="1" name="k" value="${(recharge.k)!""}"
-                         class="form-control">
-              </div>
-          </div>
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项i-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="i" value="${(recharge.i)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
+
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项j：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="j" value="${(recharge.j)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
+
+          <#--<div class="form-group">-->
+              <#--<label class="control-label col-md-3">选项k：-->
+                  <#--<span class="required" aria-required="true"> * </span>-->
+              <#--</label>-->
+              <#--<div class="col-md-7">-->
+                  <#--<input type="text" data-required="1" name="k" value="${(recharge.k)!""}"-->
+                         <#--class="form-control">-->
+              <#--</div>-->
+          <#--</div>-->
       </div>
 
         <#--<div class="form-group">-->

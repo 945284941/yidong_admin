@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ctrl.platform.orm.mapper.ZhuanhuiMapper" >
+  <resultMap id="BaseResultMap" type="cn.ctrl.platform.orm.entity.Zhuanhui" >
+    <result column="id_" property="id" jdbcType="VARCHAR" />
+    <result column="yuangong_id_" property="yuangongId" jdbcType="VARCHAR" />
+    <result column="diqu_id_" property="diquId" jdbcType="VARCHAR" />
+    <result column="state_" property="state" jdbcType="VARCHAR" />
+    <result column="create_time_" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="look" property="look" jdbcType="VARCHAR" />
+
+  </resultMap>
+  <select id="selectByPrimaryKeyy"  parameterType="java.lang.String" resultMap="BaseResultMap" >
+      select * from zhuanhui where id_ = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="deleteByPrimaryKeyy"  parameterType="java.lang.String"  >
+      delete from  zhuanhui where id_ =  #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="findAll" resultMap="BaseResultMap" parameterType="java.util.Map">
+    select  z.*,a.name as  xiangonghui,  b.name as shengonghui,g.name as yuangongName
+    from zhuanhui z left join  yd_yuangong g  on z.yuangong_id_  = g.id
+
+      left join  yd_bumen n on n.id = g.department_id   left join  yd_diqu a  on
+       n.diqu_id  = a.id  left join  yd_diqu b on b.id = z.diqu_id_
+     <where>
+       <if test="yuangongId != null" >
+        and z.yuangong_id_ = #{yuangongId,jdbcType=VARCHAR}
+       </if>
+       <if test="diquId != null" >
+         and  z.diqu_id_= #{diquId,jdbcType=VARCHAR}
+       </if>
+       <if test="state != null and state != '' " >
+         and  z.state_= #{state,jdbcType=VARCHAR}
+       </if>
+       <if test="look != null and look != '' " >
+         and  z.look= #{look,jdbcType=VARCHAR}
+       </if>
+       <if test="createTime != null" >
+         and  z.create_time_= #{createTime,jdbcType=VARCHAR}
+       </if>
+     </where>
+
+  </select>
+  <update id="updateLook" >
+    update zhuanhui set look = '1'
+  </update>
+
+<update id="updateByPrimaryKeySelectivee" parameterType="cn.ctrl.platform.orm.entity.Zhuanhui" >
+   update  zhuanhui
+     <set>
+       <if test="yuangongId != null" >
+         yuangong_id_ = #{yuangongId,jdbcType=VARCHAR},
+       </if>
+       <if test="diquId != null" >
+         diqu_id_= #{diquId,jdbcType=VARCHAR},
+       </if>
+       <if test="state != null and state != '' " >
+         state_= #{state,jdbcType=VARCHAR},
+       </if>
+       <if test="createTime != null" >
+         create_time_= #{createTime,jdbcType=VARCHAR},
+       </if>
+       <if test="look != null" >
+         look= #{look,jdbcType=VARCHAR},
+       </if>
+     </set>
+ where id_ = #{id,jdbcType=VARCHAR}
+</update>
+  <insert id="insertt" parameterType="cn.ctrl.platform.orm.entity.Zhuanhui" >
+    insert into zhuanhui (id_, yuangong_id_, diqu_id_, 
+      state_, create_time_)
+    values (#{id,jdbcType=VARCHAR}, #{yuangongId,jdbcType=VARCHAR}, #{diquId,jdbcType=VARCHAR}, 
+      #{state,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelectivee" parameterType="cn.ctrl.platform.orm.entity.Zhuanhui" >
+    insert into zhuanhui
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id_,
+      </if>
+      <if test="yuangongId != null" >
+        yuangong_id_,
+      </if>
+      <if test="diquId != null" >
+        diqu_id_,
+      </if>
+      <if test="state != null" >
+        state_,
+      </if>
+      <if test="createTime != null" >
+        create_time_,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="yuangongId != null" >
+        #{yuangongId,jdbcType=VARCHAR},
+      </if>
+      <if test="diquId != null" >
+        #{diquId,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

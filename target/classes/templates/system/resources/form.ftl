@@ -58,6 +58,16 @@
                  </div>
             </div>
             <div class="form-group">
+                <label class="control-label col-md-4">图标：
+                    <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-6">
+                    <input type="text" data-required="1" class="form-control input-large" name="icon"
+                           value="${(res.icon)!""}" required="required">
+                </div>
+            </div>
+
+            <div class="form-group">
                  <label class="control-label col-md-4">模块路径：
                      <span class="required" aria-required="true">  </span>
                  </label>
